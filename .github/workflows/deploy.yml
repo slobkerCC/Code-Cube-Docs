@@ -6,32 +6,25 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          node-version: '16.x'
-
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.ACCESS_TOKEN }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          python-version: '3.x'
 
       - name: Install dependencies
-        run: npm install
+        run: pip install mkdocs mkdocs-material
 
       - name: Build site
-        run: npm run build
+        run: mkdocs build
 
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
