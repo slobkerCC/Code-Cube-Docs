@@ -2,7 +2,7 @@
 
 ## How to set up the tag monitor
 
-To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly.
+To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly...
 
 1. Make sure the Code Cube infrastructure is ready
 
