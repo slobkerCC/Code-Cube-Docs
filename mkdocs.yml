@@ -1,0 +1,5 @@
+site_name: Code Cube docs
+theme:
+  name: mkdocs
+  features:
+    - navigation.tabs
