@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Implementation client-side Tag Monitor - Code Cube docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Code Cube docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Implementation client-side Tag Monitor</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../error-monitoring-server-side/" class="nav-link">Implementation server-side Tag Monitor</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../tag-monitor/" class="nav-link">Tag monitor</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../error-monitoring-server-side/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#implementation-client-side-tag-monitor" class="nav-link">Implementation client-side Tag Monitor</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#how-to-set-up-the-tag-monitor" class="nav-link">How to set up the tag monitor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#you-are-done-lets-go-live" class="nav-link">You are done. Let’s go live!</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="implementation-client-side-tag-monitor">Implementation client-side Tag Monitor</h1>
+<h2 id="how-to-set-up-the-tag-monitor">How to set up the tag monitor</h2>
+<p>To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly.</p>
+<ol>
+<li>Make sure the Code Cube infrastructure is ready</li>
+</ol>
+<p>Let us know that you would like to implement the Tag Monitor for a new client and we will prepare this implementation in our cloud environment.</p>
+<p>As a result you will receive a request endpoint, which you need in a later step. Example: https://europe-west1-code-cube.cloudfunctions.net/tag-monitor-{{client_name}}
+2. Update your Google Tag Manager container</p>
+<p>Import the Tag Monitor template into your Tag Manager container
+   - You can find the template <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Code_Cube_Client_Tag_Monitor_Template.tpl">here</a> in this repository.
+   - Go to templates in your Tag Manager container and click on ‘New’.</p>
+<p><img alt="add-template" src="uploads/d2661ff53621d619a334cce47a837d1e/add-template.png" /></p>
+<ol>
+<li>Import the template into your workspace</li>
+<li>Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.</li>
+</ol>
+<p><img alt="import-template" src="uploads/025f264cd6892ea467196a62ea1bdaaf/import-template.png" /></p>
+<ol>
+<li>Create a new tag based on this template</li>
+<li>Create a new tag under ‘Tags’ in the menu.</li>
+<li>Select the Tag Monitor Template as tag type, this is the template you have just added to the container.</li>
+</ol>
+<p><img alt="add-tag" src="uploads/155cf7b14c15db4d3f672f6fa82e939b/add-tag.png" /></p>
+<ol>
+<li>Configure the tag</li>
+<li>Add the request endpoint in the field ‘GET request endpoint’. Give the tag a descriptive name. <img alt="config-tag" src="uploads/a64bf84a8065a4fe320599dc1e770b53/config-tag.png" /></li>
+<li>Add a new Custom Event Trigger to the tag</li>
+<li>Create a trigger for a custom event where event name equals .* (use regex matching). With that regular expression for the event name, the monitor tag will fire for every single dataLayer event.\
+     <img alt="add-trigger" src="uploads/e6af69ba97514bef88ba9d9a81ee8e38/add-trigger.png" /></li>
+<li>To limit the number of times Tag Monitor fires, click "Some custom events" and select Random Number in the first dropdown menu.\
+     If it's not in the list, create a built-in variable Random Number and repeat.</li>
+<li>For 10% of the events choose: Random number ends with 1.</li>
+<li>For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647*0.05).</li>
+<li>Update all your tags to include the tag name in the meta data</li>
+<li>
+<p>For each tag, expand the Advanced Settings and check the ‘’Include tag name’ checkbox under Additional Tag Metadata. Set the key name to name as well.
+  <img alt="tag-name-add" src="uploads/69179deb67888eeee748256916714e1a/tag-name-add.png" /></p>
+</li>
+<li>
+<p>If you're dealing with a large number of tags, please follow <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/wikis/Tags-bulk-edit">these steps</a> to update them.</p>
+</li>
+</ol>
+<h2 id="you-are-done-lets-go-live">You are done. Let’s go live!</h2>
+<ol>
+<li>Publish your Tag Manager container to your production environment.</li>
+<li>You’ve received access to the Portal from us. In the Portal you can find your Tag Monitor dashboard. Data should now automatically come in!</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
