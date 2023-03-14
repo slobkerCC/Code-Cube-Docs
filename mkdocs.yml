@@ -1,5 +1,8 @@
-site_name: Code Cube docs
+site_name: Code Cube Docs
 theme:
-  name: material
+  name: material 
+  logo: logo.png
+  favicon: logo.png
   features:
-    - navigation.tabs
+    - navigation.top
+extra_css : [extra.css]
