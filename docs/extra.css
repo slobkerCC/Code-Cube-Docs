@@ -1,0 +1,35 @@
+.md-header {
+    background-color: #2b2bb5;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    height: 1.8rem;
+}
+
+.md-search__input::placeholder, .md-search__icon .md-icon{
+    color: #000;
+}
+
+
+@media screen and (min-width: 60em){
+.md-search__input+.md-search__icon {
+    color: #000;
+}
+}
+
+
+.md-search__input{
+    background-color: #fff;
+}
+
+
+.md-ellipsis{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+
+div.md-sidebar.md-sidebar--primary > div {
+    border-right: 1.8px solid #2b2bb551;
+}
+

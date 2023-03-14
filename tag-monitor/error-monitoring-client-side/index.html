@@ -9,20 +9,24 @@
       
       
       
+        <link rel="prev" href="../a-tag-monitor/">
       
-      <link rel="icon" href="/logo.png">
+      
+        <link rel="next" href="../error-monitoring-server-side/">
+      
+      <link rel="icon" href="../../logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
-        <title>Code Cube Docs</title>
+        <title>client-side Tag Monitor Implementation - Code Cube Docs</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7bf56d0a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7bf56d0a.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -38,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="/extra.css">
+      <link rel="stylesheet" href="../../extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#client-side-tag-monitor-implementation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -76,9 +85,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Code Cube Docs" class="md-header__button md-logo" aria-label="Code Cube Docs" data-md-component="logo">
+    <a href="../.." title="Code Cube Docs" class="md-header__button md-logo" aria-label="Code Cube Docs" data-md-component="logo">
       
-  <img src="/logo.png" alt="logo">
+  <img src="../../logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -94,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              client-side Tag Monitor Implementation
             
           </span>
         </div>
@@ -161,9 +170,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Code Cube Docs" class="md-nav__button md-logo" aria-label="Code Cube Docs" data-md-component="logo">
+    <a href="../.." title="Code Cube Docs" class="md-nav__button md-logo" aria-label="Code Cube Docs" data-md-component="logo">
       
-  <img src="/logo.png" alt="logo">
+  <img src="../../logo.png" alt="logo">
 
     </a>
     Code Cube Docs
@@ -179,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Welcome to Code Cube Documentation
       </a>
     </li>
@@ -221,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/datalayer-guard/datalayer_guard/" class="md-nav__link">
+      <a href="../../datalayer-guard/datalayer_guard/" class="md-nav__link">
         Datalayer guard
       </a>
     </li>
@@ -270,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/site-speed-monitoring/site_speed/" class="md-nav__link">
+      <a href="../../site-speed-monitoring/site_speed/" class="md-nav__link">
         Site speed
       </a>
     </li>
@@ -290,14 +299,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -306,7 +317,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Tag monitor
@@ -319,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tag-monitor/a-tag-monitor/" class="md-nav__link">
+      <a href="../a-tag-monitor/" class="md-nav__link">
         Product Description
       </a>
     </li>
@@ -331,11 +342,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/tag-monitor/error-monitoring-client-side/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          client-side Tag Monitor Implementation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         client-side Tag Monitor Implementation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-set-up-the-tag-monitor" class="md-nav__link">
+    How to set up the tag monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-are-done-lets-go-live" class="md-nav__link">
+    You are done. Let’s go live!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -347,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tag-monitor/error-monitoring-server-side/" class="md-nav__link">
+      <a href="../error-monitoring-server-side/" class="md-nav__link">
         server-side Tag Monitor Implementation
       </a>
     </li>
@@ -361,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tag-monitor/tag-inactivity/" class="md-nav__link">
+      <a href="../tag-inactivity/" class="md-nav__link">
         Tag Inactivity Monitoring
       </a>
     </li>
@@ -392,6 +451,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-set-up-the-tag-monitor" class="md-nav__link">
+    How to set up the tag monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-are-done-lets-go-live" class="md-nav__link">
+    You are done. Let’s go live!
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -403,8 +486,73 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="client-side-tag-monitor-implementation">client-side Tag Monitor Implementation</h1>
+<h2 id="how-to-set-up-the-tag-monitor">How to set up the tag monitor</h2>
+<p>To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly.         </p>
+<p>1.<strong>Make sure the Code Cube infrastructure is ready</strong></p>
+<ul>
+<li>
+<p>Let us know that you would like to implement the Tag Monitor for a new client and we will prepare this implementation in our cloud environment.</p>
+</li>
+<li>
+<p>As a result you will receive a request endpoint, which you need in a later step. Example: https://europe-west1-code-cube.cloudfunctions.net/tag-monitor-{{client_name}}                </p>
+</li>
+</ul>
+<p>2.<strong>Update your Google Tag Manager container</strong></p>
+<ul>
+<li>Import the Tag Monitor template into your Tag Manager container
+   You can find the template <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/   gtm-templates/Code_Cube_Client_Tag_Monitor_Template.tpl">here</a> in this repository.</li>
+<li>Go to templates in your Tag Manager container and click on ‘New’.</li>
+</ul>
+<p><img alt="add-template" src="../../images/import-temp.png" /></p>
+<p>3.<strong>Import the template into your workspace</strong>      </p>
+<ul>
+<li>Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.</li>
+</ul>
+<p><img alt="import-template" src="../../images/temp-editor.png" /></p>
+<p>4.<strong>Create a new tag based on this template</strong></p>
+<ul>
+<li>Create a new tag under ‘Tags’ in the menu.</li>
+<li>Select the Tag Monitor Template as tag type, this is the template you have just added to the container.</li>
+</ul>
+<p><img alt="add-tag" src="../../images/create-tag.png" /></p>
+<p>5.<strong>Configure the tag</strong></p>
+<ul>
+<li>Add the request endpoint in the field ‘GET request endpoint’. Give the tag a descriptive name. <img alt="config-tag" src="../../images/add-request.png" /></li>
+</ul>
+<p>6.<strong>Add a new Custom Event Trigger to the tag</strong></p>
+<ul>
+<li>Create a trigger for a custom event where event name equals .* (use regex matching). With that regular expression for the event name, the monitor tag will fire for every single dataLayer event.
+     <img alt="add-trigger" src="../../images/add-trigger.png" /></li>
+<li>To limit the number of times Tag Monitor fires, click "Some custom events" and select Random Number in the first dropdown menu.\
+     If it's not in the list, create a built-in variable Random Number and repeat.</li>
+<li>For 10% of the events choose: Random number ends with 1.</li>
+<li>For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647*0.05).</li>
+</ul>
+<p>7.<strong>Update all your tags to include the tag name in the meta data</strong></p>
+<ul>
+<li>
+<p>For each tag, expand the Advanced Settings and check the ‘’Include tag name’ checkbox under Additional Tag Metadata. Set the key name to name as well.
+  <img alt="tag-name-add" src="../../images/add-metadata.png" /></p>
+</li>
+<li>
+<p>If you're dealing with a large number of tags, please follow <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/wikis/Tags-bulk-edit">these steps</a> to update them.</p>
+</li>
+</ul>
+<h2 id="you-are-done-lets-go-live">You are done. Let’s go live!</h2>
+<ol>
+<li>Publish your Tag Manager container to your production environment.</li>
+<li>You’ve received access to the Portal from us. In the Portal you can find your Tag Monitor dashboard. Data should now automatically come in!</li>
+</ol>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -441,10 +589,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top"], "search": "/assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.fc8c2696.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
     
   </body>
