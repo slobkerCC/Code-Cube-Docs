@@ -6,8 +6,7 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 
 
 
-
-1.**Make sure the Code Cube infrastructure is ready**
+1. #### **Make sure the Code Cube infrastructure is ready**
 
 -  Let us know that you would like to implement the Tag Monitor for a new client and we will prepare this implementation in our cloud environment.
 
@@ -16,7 +15,7 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 
 
 
-2.**Update your Google Tag Manager container**
+2. #### **Update your Google Tag Manager container**
 
 -   Import the Tag Monitor template into your Tag Manager container
    You can find the template [here](https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/   gtm-templates/Code_Cube_Client_Tag_Monitor_Template.tpl) in this repository.
@@ -24,27 +23,27 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 
 ![add-template](../images/import-temp.png)
 
-3.**Import the template into your workspace**      
+3. #### **Import the template into your workspace**      
 
 
 -   Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.
 
 ![import-template](../images/temp-editor.png)
 
-4.**Create a new tag based on this template**
+4. #### **Create a new tag based on this template**
 
 -   Create a new tag under ‘Tags’ in the menu.
 -   Select the Tag Monitor Template as tag type, this is the template you have just added to the container.
   
 ![add-tag](../images/create-tag.png)
 
-5.**Configure the tag**
+5. #### **Configure the tag**
 
 
    - Add the request endpoint in the field ‘GET request endpoint’. Give the tag a descriptive name. ![config-tag](../images/add-request.png)
 
 
-6.**Add a new Custom Event Trigger to the tag**
+6. #### **Add a new Custom Event Trigger to the tag**
 
 
    - Create a trigger for a custom event where event name equals .\* (use regex matching). With that regular expression for the event name, the monitor tag will fire for every single dataLayer event.
@@ -55,7 +54,7 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
    - For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647\*0.05).
 
    
-7.**Update all your tags to include the tag name in the meta data**
+7. #### **Update all your tags to include the tag name in the meta data**
 
 
    - For each tag, expand the Advanced Settings and check the ‘’Include tag name’ checkbox under Additional Tag Metadata. Set the key name to name as well.
@@ -67,3 +66,9 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 
 1. Publish your Tag Manager container to your production environment.
 2. You’ve received access to the Portal from us. In the Portal you can find your Tag Monitor dashboard. Data should now automatically come in!
+
+
+## Set Up Error Monitoring Notifications        
+
+
+Once you have completed the aforementioned steps, head over to our [portal](https://portal.code-cube.io/configurations/tag_monitor) and complete the Tag Monitor Configuration Form to start receiving error monitoring notifications as you prefer.
