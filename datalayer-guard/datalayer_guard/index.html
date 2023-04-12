@@ -19,7 +19,7 @@
     
     
       
-        <title>Datalayer guard - Code Cube Docs</title>
+        <title>Product Description - Code Cube Docs</title>
       
     
     
@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#product-description" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Datalayer guard
+              Product Description
             
           </span>
         </div>
@@ -233,10 +238,50 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Product Description
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Datalayer guard
+        Product Description
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-description_1" class="md-nav__link">
+    Product Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    How it works
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -285,7 +330,7 @@
   
     <li class="md-nav__item">
       <a href="../../site-speed-monitoring/site_speed/" class="md-nav__link">
-        Site speed
+        Product Description
       </a>
     </li>
   
@@ -406,6 +451,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-description_1" class="md-nav__link">
+    Product Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    How it works
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -420,9 +489,17 @@
                   
 
 
-  <h1>Datalayer guard</h1>
-
-
+<h1 id="product-description">Product Description</h1>
+<h2 id="product-description_1">Product Description</h2>
+<p>This repository contains the DataLayer Guard source code and terraform documents. DataLayer Guard crawls through the provided pages and collect dataLayer objects. Then those objects are compared with the provided templates and checked for errors. After the script ends its work all the dataLayer snapshots together with checked URLs are saved to the BigQuery tables so as errors. If there's any errors found the client receive a message next morning with detailed description of the error and all the checkup information.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>The main point of DataLayer Guard work is to get the dataLayer object from the page after page loading or imitating the potential user actions on the page. To perform those actions DataLayer Guard using the advanced page crawling algorythms.</p>
+<p>To set the configuration user must fill out the configuration form on <strong>Code Cube Portal</strong> for customers.</p>
+<p><strong>Steps needed for complete the implementation:</strong>
+1. Select the checkup frequency (how many times per day should we run checkups)
+2. Set the list of emails which should be notified about the errors
+3. Turn on the slack alerts as well if it's needed
+4. Fill the dataLayer events: custom event name, URL and JSON-object of the dataLayer template which would be used to check the page dataLayer</p>
 
 
 
