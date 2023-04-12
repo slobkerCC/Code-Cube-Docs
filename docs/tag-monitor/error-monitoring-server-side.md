@@ -1,5 +1,10 @@
 # server-side Tag Monitor Implementation
 
+
+## How to set up the tag monitor
+
+To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly.   
+
 1. #### Build a custom GTM template
 
     In Google Tag Manager, open up the Templates view, and create a new tag template. You can download template [here](https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Server_Container_Tag_Monitor.tpl) and [import](https://www.simoahava.com/analytics/custom-templates-guide-for-google-tag-manager/#importing-and-exporting) it directly into your container. If you require more fields set in the database, you need to update the template by adding additional rows, e.g. `+ tagPrefix + 'domain=' + 'NL';`
@@ -49,3 +54,7 @@
     - The service account under which the server-side tracking is added.
     - The **compute engine** service.
 
+
+## Set Up Error Monitoring Notifications        
+
+Once you have completed the aforementioned steps, head over to our [portal](https://portal.code-cube.io/configurations/tag_monitor) and complete the Tag Monitor Configuration Form to start receiving error monitoring notifications as you prefer.
