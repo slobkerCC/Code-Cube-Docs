@@ -12,6 +12,7 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 
 
 
+#### 1. **Make sure the Code Cube infrastructure is ready**
 
 #### 2. **Update your Google Tag Manager container**
 
@@ -38,7 +39,9 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 #### 5. **Configure the tag**
 
 
-   - Add the request endpoint in the field ‘GET request endpoint’. Give the tag a descriptive name. ![config-tag](../images/add-request.png)
+   -   Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.
+
+   ![import-template](../images/temp-editor.png)                 
 
 
 #### 6. **Add a new Custom Event Trigger to the tag**
@@ -49,7 +52,8 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
    - To limit the number of times Tag Monitor fires, click "Some custom events" and select Random Number in the first dropdown menu.\
    If it's not in the list, create a built-in variable Random Number and repeat.
    - For 10% of the events choose: Random number ends with 1.
-   - For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647\*0.05).
+   - For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647\*0.05).           
+
 
    
 #### 7. **Update all your tags to include the tag name in the meta data**
