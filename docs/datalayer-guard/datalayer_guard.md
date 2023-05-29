@@ -13,3 +13,6 @@ To set the configuration user must fill out the configuration form on **Code Cub
 2. Set the list of emails which should be notified about the errors
 3. Turn on the slack alerts as well if it's needed
 4. Fill the dataLayer events: custom event name, URL and JSON-object of the dataLayer template which would be used to check the page dataLayer
+
+## Configuring Error Monitoring Notifications
+Follow the steps [here](../notifications.md){:target="_blank"} to enable notifications for Dataleyer Guard.
