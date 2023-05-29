@@ -392,44 +392,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build-a-custom-gtm-template" class="md-nav__link">
-    Build a custom GTM template
+  <a href="#1-build-a-custom-gtm-template" class="md-nav__link">
+    1. Build a custom GTM template
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-monitoring-tag" class="md-nav__link">
-    Create a monitoring tag
+  <a href="#2-create-a-monitoring-tag" class="md-nav__link">
+    2. Create a monitoring tag
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-a-trigger" class="md-nav__link">
-    Add a trigger
+  <a href="#3-add-a-trigger" class="md-nav__link">
+    3. Add a trigger
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
-    Update all your tags to include the tag name metadata
+  <a href="#4-update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
+    4. Update all your tags to include the tag name metadata
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-results" class="md-nav__link">
-    Check results
+  <a href="#5-check-results" class="md-nav__link">
+    5. Check results
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#grant-permission" class="md-nav__link">
-    Grant Permission
+  <a href="#6-grant-permission" class="md-nav__link">
+    6. Grant Permission
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-error-monitoring-notifications" class="md-nav__link">
+    Configuring Error Monitoring Notifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Error Monitoring Notifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-notifications" class="md-nav__link">
+    Email Notifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack-notifications" class="md-nav__link">
+    Slack Notifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teams-notifications" class="md-nav__link">
+    Teams Notifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -489,44 +523,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build-a-custom-gtm-template" class="md-nav__link">
-    Build a custom GTM template
+  <a href="#1-build-a-custom-gtm-template" class="md-nav__link">
+    1. Build a custom GTM template
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-monitoring-tag" class="md-nav__link">
-    Create a monitoring tag
+  <a href="#2-create-a-monitoring-tag" class="md-nav__link">
+    2. Create a monitoring tag
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-a-trigger" class="md-nav__link">
-    Add a trigger
+  <a href="#3-add-a-trigger" class="md-nav__link">
+    3. Add a trigger
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
-    Update all your tags to include the tag name metadata
+  <a href="#4-update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
+    4. Update all your tags to include the tag name metadata
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-results" class="md-nav__link">
-    Check results
+  <a href="#5-check-results" class="md-nav__link">
+    5. Check results
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#grant-permission" class="md-nav__link">
-    Grant Permission
+  <a href="#6-grant-permission" class="md-nav__link">
+    6. Grant Permission
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-error-monitoring-notifications" class="md-nav__link">
+    Configuring Error Monitoring Notifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Error Monitoring Notifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-notifications" class="md-nav__link">
+    Email Notifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack-notifications" class="md-nav__link">
+    Slack Notifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teams-notifications" class="md-nav__link">
+    Teams Notifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -546,13 +614,9 @@
 
 
 <h1 id="server-side-tag-monitor-implementation">server-side Tag Monitor Implementation</h1>
-<ol>
-<li>
-<h4 id="build-a-custom-gtm-template">Build a custom GTM template</h4>
+<h4 id="1-build-a-custom-gtm-template">1. <strong>Build a custom GTM template</strong></h4>
 <p>In Google Tag Manager, open up the Templates view, and create a new tag template. You can download template <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Server_Container_Tag_Monitor.tpl">here</a> and <a href="https://www.simoahava.com/analytics/custom-templates-guide-for-google-tag-manager/#importing-and-exporting">import</a> it directly into your container. If you require more fields set in the database, you need to update the template by adding additional rows, e.g. <code>+ tagPrefix + 'domain=' + 'NL';</code></p>
-</li>
-<li>
-<h4 id="create-a-monitoring-tag">Create a monitoring tag</h4>
+<h4 id="2-create-a-monitoring-tag">2. <strong>Create a monitoring tag</strong></h4>
 <p>In GTM, go to Tags and create a new tag. Select the template you just created from the tag type selector. Now you need to configure the tag. There are three fields you need to set:
 - Project ID – set to the GCP project ID of the project where the BigQuery table is. If it’s the same project as the one running your Server container, you can leave this field blank.
 - Dataset ID – set to the Dataset ID of the BigQuery table.
@@ -561,28 +625,45 @@
 Expand Advanced Settings and scroll down to Additional Tag Metadata. Click it open, then click the + Add Metadata button, and set these values:
     Key: <code>exclude</code>
     Value: <code>true</code></p>
-</li>
-<li>
-<h4 id="add-a-trigger">Add a trigger</h4>
+<h4 id="3-add-a-trigger">3. <strong>Add a trigger</strong></h4>
 <p>Go to Triggers and click NEW to create a new trigger which will fire on all events. Add this trigger to your monitoring tag, and then save the tag. To limit the number of times Tag Monitor fires, click "Some events" and select Random Number in the first dropdown menu (if it's not in the list, create a built-in variable Random Number and repeat). For 10% of the events, choose Random number -&gt; ends with -&gt; 1. For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number -&gt; less than or equals to -&gt; 107,374,182 (2,147,483,647*0.05).        </p>
-</li>
-<li>
-<h4 id="update-all-your-tags-to-include-the-tag-name-metadata">Update all your tags to include the tag name metadata</h4>
+<h4 id="4-update-all-your-tags-to-include-the-tag-name-metadata">4. <strong>Update all your tags to include the tag name metadata</strong></h4>
 <p>For each tag, expand the Advanced Settings and check the Include tag name checkbox under Additional Tag Metadata. Set the key name to <code>name</code>. If you're dealing with a large number of tags, please follow <a href="https://gitlab.com/code-cube-standards/tag-monitor/-/wikis/Tags-bulk-edit">these steps</a> to update them. If needed, you can add even more key-value pairs to the tag metadata – you just need to modify the monitoring template to add these to the BigQuery API call. And, of course, you need a BigQuery table schema that accepts the new values.                    </p>
-</li>
-<li>
-<h4 id="check-results">Check results</h4>
+<h4 id="5-check-results">5. <strong>Check results</strong></h4>
 <p>Open Preview and validate that everything works as expected. Note that in the server container preview mode a webpage is not opened automatically, so you should manually open it to see the data streaming. Another way to validate that Tag Monitor is working is to check the results in the BigQuery table.   </p>
 <p><strong>Note:</strong> To check the results in preview, you need to open the preview on GTM client container simultaneously with the server-side preview. </p>
-</li>
-<li>
-<h4 id="grant-permission">Grant Permission</h4>
+<h4 id="6-grant-permission">6. <strong>Grant Permission</strong></h4>
 <p>This can be done in IAM &amp; Admin &gt; Service Accounts in Google Cloud Platform. Copy the email of associated services below and send it to us in order to be granted access to our BigQuery.</p>
 <ul>
 <li>The service account under which the server-side tracking is added.</li>
 <li>The <strong>compute engine</strong> service.</li>
 </ul>
-</li>
+<h2 id="configuring-error-monitoring-notifications">Configuring Error Monitoring Notifications</h2>
+<p>To enable error monitoring notifications, you can access our portal and navigate to the tag monitor configuration page. From there, select your desired method of receiving notifications based on your subscription model, such as Email, Slack, or Teams. Fill in the required fields accordingly for each method.
+To configure error monitoring notifications, follow the steps below:</p>
+<h4 id="email-notifications"><strong>Email Notifications</strong></h4>
+<ol>
+<li>Go to our portal and access the tag monitor configuration page.</li>
+<li>Activate the toggle switch to enable email updates.</li>
+<li>Provide the email addresses where you wish to receive the notifications.</li>
+</ol>
+<h4 id="slack-notifications"><strong>Slack Notifications</strong></h4>
+<ol>
+<li>Go to our portal and access the tag monitor configuration page.</li>
+<li>Activate the toggle switch to enable Slack updates.</li>
+<li>Open your Slack Workspace and copy the workspace ID by clicking on the workspace name. 
+<img alt="workspace ID" src="../images/workspace-id.png" /></li>
+<li>Paste the workspace ID into the corresponding field in the configuration page and save the form.</li>
+<li>You will be prompted to log in to your workspace and authorize our Tag Monitor Alerts app.</li>
+<li>After authorizing the app, add it to your workspace by clicking the <strong>add apps</strong> button and selecting the app.</li>
+<li>Invite the app to the desired channel where you want to receive the notifications by clicking on the channel name, going to the integrations tab and, adding the app.</li>
+</ol>
+<h4 id="teams-notifications"><strong>Teams Notifications</strong></h4>
+<ol>
+<li>Go to our portal and access the tag monitor configuration page.</li>
+<li>Activate the toggle switch to enable Teams updates.</li>
+<li>Follow <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=dotnet" target="_blank">these steps</a> to create an incoming webhook for the channel where you want to receive the notifications.</li>
+<li>Copy the generated Webhook URL and paste it into the corresoinding field and save the form.</li>
 </ol>
 
 
