@@ -11,3 +11,4 @@ To set the configuration user must fill out the configuration form on **Code Cub
 1. Select the checkup frequency (how many times per day should we run checkups)
 2. Set the list of emails which should be notified about the results
 3. Turn on the slack alerts as well if it's needed
+

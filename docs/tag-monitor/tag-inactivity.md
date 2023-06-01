@@ -10,6 +10,7 @@ Overall, the Tag Inactivity Monitoring solution provides an easy-to-use, conveni
 
 ## Implementation
 
-To implement the Tag Inactivity Monitoring solution, you must fill out a configuration form on the [Code Cube portal](https://portal.code-cube.io/configurations/tag_monitor). Once the form is submitted, we will take care of the rest, setting up the solution to monitor the specified tag and sending notifications as needed.
+To implement the Tag Inactivity Monitoring solution, users must fill out a configuration form on the Code Cube portal. Once the form is submitted, we will take care of the rest, setting up the solution to monitor the specified tag and sending notifications as needed.
 
-
+## Configuring Error Monitoring Notifications
+Follow the steps [here](../notifications.md){:target="_blank"} to enable notifications for Tag Inactivity.
