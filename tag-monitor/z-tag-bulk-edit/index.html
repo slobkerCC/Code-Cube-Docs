@@ -9,17 +9,15 @@
       
       
       
-        <link rel="prev" href="../../site-speed-monitoring/site_speed/">
+        <link rel="prev" href="../tag-inactivity/">
       
-      
-        <link rel="next" href="../error-monitoring-client-side/">
       
       <link rel="icon" href="../../logo.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Product Description - Code Cube Docs</title>
+        <title>Tag Bulk Edit - Code Cube Docs</title>
       
     
     
@@ -63,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#product-description" class="md-skip">
+        <a href="#tag-bulk-edit" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Product Description
+              Tag Bulk Edit
             
           </span>
         </div>
@@ -337,59 +335,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Product Description
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../a-tag-monitor/" class="md-nav__link">
         Product Description
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#product-description_1" class="md-nav__link">
-    Product Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    How it works
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -441,11 +391,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../z-tag-bulk-edit/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tag Bulk Edit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Tag Bulk Edit
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-all-your-tags-to-include-the-tag-name-in-the-meta-data" class="md-nav__link">
+    Update all your tags to include the tag name in the meta data
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -484,15 +475,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#product-description_1" class="md-nav__link">
-    Product Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    How it works
+  <a href="#update-all-your-tags-to-include-the-tag-name-in-the-meta-data" class="md-nav__link">
+    Update all your tags to include the tag name in the meta data
   </a>
   
 </li>
@@ -512,16 +496,89 @@
                   
 
 
-<h1 id="product-description">Product Description</h1>
-<h2 id="product-description_1">Product Description</h2>
-<p>This repository contains the Tag Monitor source code and terraform documents. Tag Monitor uses <a href="https://tagmanager.google.com/#/home">Google Tag Management</a> which is a tag delivery system that allows you to quickly and easily update measurement codes and related code fragments (collectively known as tags) on a website or mobile app. Tag monitoring will allow you to understand if important tags are actually firing for real users and see when they break down in a well formatted table. </p>
-<h2 id="how-it-works">How it works</h2>
-<p>The key deliverable of Tag monitor is a BigQuery view that collects data from a website. This is supported by a Cloud Function that collects the pixel and stores it into BigQuery. The data will be sent by way of a new Google Tag Manager custom template, and it will comprise statistics of all the tags (or a random portion of it) that have fired on the website for any given dataLayer event.</p>
-<p><img alt="image" src="../../images/product-desc.png" /></p>
-<p>The basic setup of the monitor collects the following metadata from each dataLayer event:
-- Event name and timestamp (to uniquely distinguish events with the same name from each other).
-- Tag ID, name, firing status, and execution time for every tag that fired for that event (or null if no tags fired for the event).</p>
-<p>This solution can be easily extended to include other metadata, like container ID, domain etc.</p>
+<h1 id="tag-bulk-edit">Tag Bulk Edit</h1>
+<h2 id="update-all-your-tags-to-include-the-tag-name-in-the-meta-data">Update all your tags to include the tag name in the meta data</h2>
+<p>In cases when many GTM tags need to be updated for proper functioning of the Tag Monitor and in order to avoid hours of manual and repetitive work, this guide might be useful. 
+Steps to bulk edit your tags:                     </p>
+<ol>
+<li>
+<p>Export your GTM containerunder Admin -&gt; Export Container -&gt; YOUR WORKSPACE -&gt; Export.                         </p>
+</li>
+<li>
+<p>Open the downloaded container file in an advanced text editor (like notepad++) and locate the tags block.                      </p>
+</li>
+<li>
+<p>Open a json file named 'tags.json' and paste the tag block into it (wrap the whole tag block in {}) and save it.                          </p>
+<pre><code>{
+"tag": []
+}
+</code></pre>
+</li>
+<li>
+<p>In VSCode, open an html file and paste the code below into the file.                  </p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;meta name="description" content=""&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;link rel="stylesheet" href=""&gt;
+    &lt;/head&gt;
+    &lt;script&gt;
+        window.onload = (event) =&gt; {
+            function readSingleFile(evt) {
+                var f = evt.target.files[0];
+                if (f) {
+                    const r = new FileReader();
+                    r.onload = function(e) {
+                        const contents = e.target.result;
+                        const json = JSON.parse(contents);
+                        let beforeCount = 0;
+
+                        json.tag.forEach(el =&gt;
+                            el.monitoringMetadataTagNameKey ? beforeCount++ : undefined);
+
+                        console.log(`We have ${beforeCount} properties in ${json.tag.length} tags`);
+
+                        json.tag.forEach(el =&gt;
+                            el.monitoringMetadataTagNameKey === undefined ? el.monitoringMetadataTagNameKey = "name" : undefined);
+
+                        let afterCount = 0;
+
+                        json.tag.forEach(el =&gt;
+                            el.monitoringMetadataTagNameKey ? afterCount++ : undefined);
+
+                        console.log(`Now we have ${afterCount} properties in ${json.tag.length} tags after the script work done!`);
+
+                        navigator.clipboard.writeText(JSON.stringify(json.tag));
+
+                        alert('Job done! Now you can do Ctrl+V and change the data anywhere you want!')
+                    }
+                    r.readAsText(f);
+                } else {
+                    alert("Failed to load file");
+                }
+            }
+
+            document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+        }
+    &lt;/script&gt;
+    &lt;body&gt;
+        &lt;input id="fileinput" type="file"/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>Run the browser and choose the tags.json file in the input field and, wait until you receive an alert message saying that the job is done. Now the modified tag block is copied into your clipboard. </p>
+</li>
+<li>Format the code block <a href="https://jsonformatter.curiousconcept.com">here</a> to the standard Json format.</li>
+<li>Replace the old tag block in the downloaded container file with your updated and formatted block (be mindful of the correct punctuation) and save the file;</li>
+<li>Import container into your workspace under Admin -&gt; Import Container -&gt; choose container file and workspace -&gt; Overwrite.</li>
+</ol>
+<p>You're done. All your tags have been updated!</p>
 
 
 

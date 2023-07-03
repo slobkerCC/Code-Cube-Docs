@@ -15,7 +15,7 @@
         <link rel="next" href="../tag-inactivity/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -472,6 +472,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../z-tag-bulk-edit/" class="md-nav__link">
+        Tag Bulk Edit
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -583,7 +597,7 @@ Expand Advanced Settings and scroll down to Additional Tag Metadata. Click it op
 <h4 id="3-add-a-trigger">3. <strong>Add a trigger</strong></h4>
 <p>Go to Triggers and click NEW to create a new trigger which will fire on all events. Add this trigger to your monitoring tag, and then save the tag. To limit the number of times Tag Monitor fires, click "Some events" and select Random Number in the first dropdown menu (if it's not in the list, create a built-in variable Random Number and repeat). For 10% of the events, choose Random number -&gt; ends with -&gt; 1. For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number -&gt; less than or equals to -&gt; 107,374,182 (2,147,483,647*0.05).        </p>
 <h4 id="4-update-all-your-tags-to-include-the-tag-name-metadata">4. <strong>Update all your tags to include the tag name metadata</strong></h4>
-<p>For each tag, expand the Advanced Settings and check the Include tag name checkbox under Additional Tag Metadata. Set the key name to <code>name</code>. If you're dealing with a large number of tags, please follow <a href="https://gitlab.com/code-cube-standards/tag-monitor/-/wikis/Tags-bulk-edit">these steps</a> to update them. If needed, you can add even more key-value pairs to the tag metadata – you just need to modify the monitoring template to add these to the BigQuery API call. And, of course, you need a BigQuery table schema that accepts the new values.                    </p>
+<p>For each tag, expand the Advanced Settings and check the Include tag name checkbox under Additional Tag Metadata. Set the key name to <code>name</code>. If you're dealing with a large number of tags, please follow <a href="../z-tag-bulk-edit/" target="_blank">these steps</a> to update them. If needed, you can add even more key-value pairs to the tag metadata – you just need to modify the monitoring template to add these to the BigQuery API call. And, of course, you need a BigQuery table schema that accepts the new values.                    </p>
 <h4 id="5-check-results">5. <strong>Check results</strong></h4>
 <p>Open Preview and validate that everything works as expected. Note that in the server container preview mode a webpage is not opened automatically, so you should manually open it to see the data streaming. Another way to validate that Tag Monitor is working is to check the results in the BigQuery table.   </p>
 <p><strong>Note:</strong> To check the results in preview, you need to open the preview on GTM client container simultaneously with the server-side preview. </p>
@@ -637,10 +651,10 @@ Expand Advanced Settings and scroll down to Additional Tag Metadata. Click it op
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
