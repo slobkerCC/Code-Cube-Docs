@@ -62,7 +62,7 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
    - For each tag, expand the Advanced Settings and check the ‘’Include tag name’ checkbox under Additional Tag Metadata. Set the key name to name as well.
     ![tag-name-add](../images/add-metadata.png)
 
-   - If you're dealing with a large number of tags, please follow [these steps](https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/wikis/Tags-bulk-edit){:target="_blank"} to update them.
+   - If you're dealing with a large number of tags, please follow [these steps](z-tag-bulk-edit.md){:target="_blank"} to update them.
 
 ## You are done. Let’s go live!
 
