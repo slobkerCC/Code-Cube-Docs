@@ -12,8 +12,6 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 
 
 
-#### 1. **Make sure the Code Cube infrastructure is ready**
-
 #### 2. **Update your Google Tag Manager container**
 
    -   Import the Tag Monitor template into your Tag Manager container
@@ -41,7 +39,7 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
 
    -   Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.
 
-   ![import-template](../images/temp-editor.png)                 
+   ![tag-configuration](../images/config_tag.png)                 
 
 
 #### 6. **Add a new Custom Event Trigger to the tag**
