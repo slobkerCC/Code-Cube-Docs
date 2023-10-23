@@ -2,7 +2,7 @@
 
 #### 1. **Build a custom GTM template**
 
-In Google Tag Manager, open up the Templates view, and create a new tag template. You can download template [here](https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Server_Container_Tag_Monitor.tpl) and [import](https://www.simoahava.com/analytics/custom-templates-guide-for-google-tag-manager/#importing-and-exporting) it directly into your container. If you require more fields set in the database, you need to update the template by adding additional rows, e.g. `+ tagPrefix + 'domain=' + 'NL';`
+In Google Tag Manager, open up the Templates view, and create a new tag template. You can download template [here](https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Server_Container_Tag_Monitor.tpl) and [import](https://www.simoahava.com/analytics/custom-templates-guide-for-google-tag-manager/#importing-and-exporting) it directly into your container.
 
 
 #### 2. **Create a monitoring tag** 
@@ -18,6 +18,7 @@ Expand Advanced Settings and scroll down to Additional Tag Metadata. Click it op
     Key: `exclude`
     Value: `true`
 
+!['configure-tag'](../images/config-tag-server.png)
 
 #### 3. **Add a trigger**          
 

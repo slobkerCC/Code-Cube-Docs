@@ -84,6 +84,6 @@ Steps to bulk edit your tags:
 5. Run the browser and choose the tags.json file in the input field and, wait until you receive an alert message saying that the job is done. Now the modified tag block is copied into your clipboard. 
 6. Format the code block [here](https://jsonformatter.curiousconcept.com) to the standard Json format.
 7. Replace the old tag block in the downloaded container file with your updated and formatted block (be mindful of the correct punctuation) and save the file;
-8. Import container into your workspace under Admin -> Import Container -> choose container file and workspace -> Overwrite.
+8. Import container into your workspace under Admin -> Import Container -> choose container file and workspace -> Merge.
 
 You're done. All your tags have been updated!
