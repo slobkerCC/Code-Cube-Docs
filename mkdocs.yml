@@ -5,6 +5,7 @@ theme:
   favicon: logo.png
   features:
     - navigation.top
+  custom_dir: custom_dir
 extra_css : [extra.css]
 
 markdown_extensions:

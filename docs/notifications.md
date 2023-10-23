@@ -14,7 +14,7 @@ Follow the steps below accoring to your desired method:
 1. Go to our portal and access the configuration page of the product for which you want to enable notifications.
 2. Activate the toggle switch to enable Slack updates.
 3. Open your Slack Workspace and copy the workspace ID by clicking on the workspace name. 
-![workspace ID](../images/workspace-id.png)
+![workspace ID](./images/workspace-id.png)
 4. Paste the workspace ID into the corresponding field in the configuration page and save the form.
 5. You will be prompted to log in to your workspace and authorize our app.
 6. After authorizing the app, add it to your workspace by clicking the **add apps** button and selecting the app.
