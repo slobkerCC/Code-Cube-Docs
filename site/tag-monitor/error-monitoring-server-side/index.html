@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../a-tag-monitor/">
+        <link rel="prev" href="../error-monitoring-client-side/">
       
       
-        <link rel="next" href="../error-monitoring-server-side/">
+        <link rel="next" href="../tag-inactivity/">
       
       <link rel="icon" href="../../logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
-        <title>client-side Tag Monitor Implementation - Code Cube Docs</title>
+        <title>server-side Tag Monitor Implementation - Code Cube Docs</title>
       
     
     
@@ -46,9 +46,15 @@
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
-      
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K6VCS5W');</script>
+  <!-- End Google Tag Manager -->
 
-    
+
     
     
   </head>
@@ -69,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#client-side-tag-monitor-implementation" class="md-skip">
+        <a href="#server-side-tag-monitor-implementation" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              client-side Tag Monitor Implementation
+              server-side Tag Monitor Implementation
             
           </span>
         </div>
@@ -189,7 +195,22 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Welcome to Code Cube Documentation
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notifications/" class="md-nav__link">
+        Enable Notifications
       </a>
     </li>
   
@@ -208,17 +229,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Datalayer guard
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Datalayer guard
         </label>
@@ -231,7 +252,7 @@
   
     <li class="md-nav__item">
       <a href="../../datalayer-guard/datalayer_guard/" class="md-nav__link">
-        Datalayer guard
+        Product Description
       </a>
     </li>
   
@@ -257,17 +278,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Site speed monitoring
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Site speed monitoring
         </label>
@@ -280,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../site-speed-monitoring/site_speed/" class="md-nav__link">
-        Site speed
+        Product Description
       </a>
     </li>
   
@@ -308,17 +329,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Tag monitor
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Tag monitor
         </label>
@@ -342,6 +363,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../error-monitoring-client-side/" class="md-nav__link">
+        client-side Tag Monitor Implementation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -354,12 +389,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          client-side Tag Monitor Implementation
+          server-side Tag Monitor Implementation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        client-side Tag Monitor Implementation
+        server-side Tag Monitor Implementation
       </a>
       
         
@@ -378,70 +413,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-set-up-the-tag-monitor" class="md-nav__link">
-    How to set up the tag monitor
+  <a href="#1-build-a-custom-gtm-template" class="md-nav__link">
+    1. Build a custom GTM template
   </a>
-  
-    <nav class="md-nav" aria-label="How to set up the tag monitor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-make-sure-the-code-cube-infrastructure-is-ready" class="md-nav__link">
-    1. Make sure the Code Cube infrastructure is ready
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-update-your-google-tag-manager-container" class="md-nav__link">
-    2. Update your Google Tag Manager container
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-import-the-template-into-your-workspace" class="md-nav__link">
-    3. Import the template into your workspace
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-create-a-new-tag-based-on-this-template" class="md-nav__link">
-    4. Create a new tag based on this template
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-configure-the-tag" class="md-nav__link">
-    5. Configure the tag
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-add-a-new-custom-event-trigger-to-the-tag" class="md-nav__link">
-    6. Add a new Custom Event Trigger to the tag
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-update-all-your-tags-to-include-the-tag-name-in-the-meta-data" class="md-nav__link">
-    7. Update all your tags to include the tag name in the meta data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#you-are-done-lets-go-live" class="md-nav__link">
-    You are done. Let’s go live!
+  <a href="#2-create-a-monitoring-tag" class="md-nav__link">
+    2. Create a monitoring tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-add-a-trigger" class="md-nav__link">
+    3. Add a trigger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
+    4. Update all your tags to include the tag name metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-check-results" class="md-nav__link">
+    5. Check results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-grant-permission" class="md-nav__link">
+    6. Grant Permission
   </a>
   
 </li>
@@ -450,33 +458,6 @@
   <a href="#configuring-error-monitoring-notifications" class="md-nav__link">
     Configuring Error Monitoring Notifications
   </a>
-  
-    <nav class="md-nav" aria-label="Configuring Error Monitoring Notifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#email-notifications" class="md-nav__link">
-    Email Notifications
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#slack-notifications" class="md-nav__link">
-    Slack Notifications
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#teams-notifications" class="md-nav__link">
-    Teams Notifications
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -495,8 +476,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../error-monitoring-server-side/" class="md-nav__link">
-        server-side Tag Monitor Implementation
+      <a href="../tag-inactivity/" class="md-nav__link">
+        Tag Inactivity Monitoring
       </a>
     </li>
   
@@ -509,8 +490,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../tag-inactivity/" class="md-nav__link">
-        Tag Inactivity Monitoring
+      <a href="../z-tag-bulk-edit/" class="md-nav__link">
+        Tag Bulk Edit
       </a>
     </li>
   
@@ -550,70 +531,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-set-up-the-tag-monitor" class="md-nav__link">
-    How to set up the tag monitor
+  <a href="#1-build-a-custom-gtm-template" class="md-nav__link">
+    1. Build a custom GTM template
   </a>
-  
-    <nav class="md-nav" aria-label="How to set up the tag monitor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-make-sure-the-code-cube-infrastructure-is-ready" class="md-nav__link">
-    1. Make sure the Code Cube infrastructure is ready
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-update-your-google-tag-manager-container" class="md-nav__link">
-    2. Update your Google Tag Manager container
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-import-the-template-into-your-workspace" class="md-nav__link">
-    3. Import the template into your workspace
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-create-a-new-tag-based-on-this-template" class="md-nav__link">
-    4. Create a new tag based on this template
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-configure-the-tag" class="md-nav__link">
-    5. Configure the tag
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-add-a-new-custom-event-trigger-to-the-tag" class="md-nav__link">
-    6. Add a new Custom Event Trigger to the tag
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-update-all-your-tags-to-include-the-tag-name-in-the-meta-data" class="md-nav__link">
-    7. Update all your tags to include the tag name in the meta data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#you-are-done-lets-go-live" class="md-nav__link">
-    You are done. Let’s go live!
+  <a href="#2-create-a-monitoring-tag" class="md-nav__link">
+    2. Create a monitoring tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-add-a-trigger" class="md-nav__link">
+    3. Add a trigger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
+    4. Update all your tags to include the tag name metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-check-results" class="md-nav__link">
+    5. Check results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-grant-permission" class="md-nav__link">
+    6. Grant Permission
   </a>
   
 </li>
@@ -622,33 +576,6 @@
   <a href="#configuring-error-monitoring-notifications" class="md-nav__link">
     Configuring Error Monitoring Notifications
   </a>
-  
-    <nav class="md-nav" aria-label="Configuring Error Monitoring Notifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#email-notifications" class="md-nav__link">
-    Email Notifications
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#slack-notifications" class="md-nav__link">
-    Slack Notifications
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#teams-notifications" class="md-nav__link">
-    Teams Notifications
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -667,91 +594,34 @@
                   
 
 
-<h1 id="client-side-tag-monitor-implementation">client-side Tag Monitor Implementation</h1>
-<h2 id="how-to-set-up-the-tag-monitor">How to set up the tag monitor</h2>
-<p>To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly.             </p>
-<h4 id="1-make-sure-the-code-cube-infrastructure-is-ready">1. <strong>Make sure the Code Cube infrastructure is ready</strong></h4>
+<h1 id="server-side-tag-monitor-implementation">server-side Tag Monitor Implementation</h1>
+<h4 id="1-build-a-custom-gtm-template">1. <strong>Build a custom GTM template</strong></h4>
+<p>In Google Tag Manager, open up the Templates view, and create a new tag template. You can download template <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Server_Container_Tag_Monitor.tpl">here</a> and <a href="https://www.simoahava.com/analytics/custom-templates-guide-for-google-tag-manager/#importing-and-exporting">import</a> it directly into your container.</p>
+<h4 id="2-create-a-monitoring-tag">2. <strong>Create a monitoring tag</strong></h4>
+<p>In GTM, go to Tags and create a new tag. Select the template you just created from the tag type selector. Now you need to configure the tag. There are three fields you need to set:
+- Project ID – set to the GCP project ID of the project where the BigQuery table is. If it’s the same project as the one running your Server container, you can leave this field blank.
+- Dataset ID – set to the Dataset ID of the BigQuery table.
+- Table ID – set to the Table ID of the BigQuery table.</p>
+<p><strong>Note:</strong> You will be given the value for the above-mentioned field from us.      <br />
+Expand Advanced Settings and scroll down to Additional Tag Metadata. Click it open, then click the + Add Metadata button, and set these values:
+    Key: <code>exclude</code>
+    Value: <code>true</code></p>
+<p><img alt="'configure-tag'" src="../../images/config-tag-server.png" /></p>
+<h4 id="3-add-a-trigger">3. <strong>Add a trigger</strong></h4>
+<p>Go to Triggers and click NEW to create a new trigger which will fire on all events. Add this trigger to your monitoring tag, and then save the tag. To limit the number of times Tag Monitor fires, click "Some events" and select Random Number in the first dropdown menu (if it's not in the list, create a built-in variable Random Number and repeat). For 10% of the events, choose Random number -&gt; ends with -&gt; 1. For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number -&gt; less than or equals to -&gt; 107,374,182 (2,147,483,647*0.05).        </p>
+<h4 id="4-update-all-your-tags-to-include-the-tag-name-metadata">4. <strong>Update all your tags to include the tag name metadata</strong></h4>
+<p>For each tag, expand the Advanced Settings and check the Include tag name checkbox under Additional Tag Metadata. Set the key name to <code>name</code>. If you're dealing with a large number of tags, please follow <a href="../z-tag-bulk-edit/" target="_blank">these steps</a> to update them. If needed, you can add even more key-value pairs to the tag metadata – you just need to modify the monitoring template to add these to the BigQuery API call. And, of course, you need a BigQuery table schema that accepts the new values.                    </p>
+<h4 id="5-check-results">5. <strong>Check results</strong></h4>
+<p>Open Preview and validate that everything works as expected. Note that in the server container preview mode a webpage is not opened automatically, so you should manually open it to see the data streaming. Another way to validate that Tag Monitor is working is to check the results in the BigQuery table.   </p>
+<p><strong>Note:</strong> To check the results in preview, you need to open the preview on GTM client container simultaneously with the server-side preview. </p>
+<h4 id="6-grant-permission">6. <strong>Grant Permission</strong></h4>
+<p>This can be done in IAM &amp; Admin &gt; Service Accounts in Google Cloud Platform. Copy the email of associated services below and send it to us in order to be granted access to our BigQuery.</p>
 <ul>
-<li>
-<p>Let us know that you would like to implement the Tag Monitor for a new client and we will prepare this implementation in our cloud environment.</p>
-</li>
-<li>
-<p>As a result you will receive a request endpoint, which you need in a later step. Example: https://europe-west1-code-cube.cloudfunctions.net/tag-monitor-{{client_name}}                </p>
-</li>
+<li>The service account under which the server-side tracking is added.</li>
+<li>The <strong>compute engine</strong> service.</li>
 </ul>
-<h4 id="2-update-your-google-tag-manager-container">2. <strong>Update your Google Tag Manager container</strong></h4>
-<ul>
-<li>Import the Tag Monitor template into your Tag Manager container
-      You can find the template <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/   gtm-templates/Code_Cube_Client_Tag_Monitor_Template.tpl" target="_blank">here</a> in this repository.</li>
-<li>Go to templates in your Tag Manager container and click on ‘New’.</li>
-</ul>
-<p><img alt="add-template" src="../../images/import-temp.png" /></p>
-<h4 id="3-import-the-template-into-your-workspace">3. <strong>Import the template into your workspace</strong></h4>
-<ul>
-<li>Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.</li>
-</ul>
-<p><img alt="import-template" src="../../images/temp-editor.png" /></p>
-<h4 id="4-create-a-new-tag-based-on-this-template">4. <strong>Create a new tag based on this template</strong></h4>
-<ul>
-<li>Create a new tag under ‘Tags’ in the menu.</li>
-<li>Select the Tag Monitor Template as tag type, this is the template you have just added to the container.</li>
-</ul>
-<p><img alt="add-tag" src="../../images/create-tag.png" /></p>
-<h4 id="5-configure-the-tag">5. <strong>Configure the tag</strong></h4>
-<ul>
-<li>Add the request endpoint in the field ‘GET request endpoint’. Give the tag a descriptive name. <img alt="config-tag" src="../../images/add-request.png" /></li>
-</ul>
-<h4 id="6-add-a-new-custom-event-trigger-to-the-tag">6. <strong>Add a new Custom Event Trigger to the tag</strong></h4>
-<ul>
-<li>Create a trigger for a custom event where event name equals .* (use regex matching). With that regular expression for the event name, the monitor tag will fire for every single dataLayer event.
-   <img alt="add-trigger" src="../../images/add-trigger.png" /></li>
-<li>To limit the number of times Tag Monitor fires, click "Some custom events" and select Random Number in the first dropdown menu.\
-   If it's not in the list, create a built-in variable Random Number and repeat.</li>
-<li>For 10% of the events choose: Random number ends with 1.</li>
-<li>For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647*0.05).</li>
-</ul>
-<h4 id="7-update-all-your-tags-to-include-the-tag-name-in-the-meta-data">7. <strong>Update all your tags to include the tag name in the meta data</strong></h4>
-<ul>
-<li>
-<p>For each tag, expand the Advanced Settings and check the ‘’Include tag name’ checkbox under Additional Tag Metadata. Set the key name to name as well.
-    <img alt="tag-name-add" src="../../images/add-metadata.png" /></p>
-</li>
-<li>
-<p>If you're dealing with a large number of tags, please follow <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/wikis/Tags-bulk-edit" target="_blank">these steps</a> to update them.</p>
-</li>
-</ul>
-<h2 id="you-are-done-lets-go-live">You are done. Let’s go live!</h2>
-<ol>
-<li>Publish your Tag Manager container to your production environment.</li>
-<li>You’ve received access to the Portal from us. In the Portal you can find your Tag Monitor dashboard. Data should now automatically come in!</li>
-</ol>
 <h2 id="configuring-error-monitoring-notifications">Configuring Error Monitoring Notifications</h2>
-<p>To enable error monitoring notifications, you can access our portal and navigate to the tag monitor configuration page. From there, select your desired method of receiving notifications based on your subscription model, such as Email, Slack, or Teams. Fill in the required fields accordingly for each method.
-To configure error monitoring notifications, follow the steps below:</p>
-<h4 id="email-notifications"><strong>Email Notifications</strong></h4>
-<ol>
-<li>Go to our portal and access the tag monitor configuration page.</li>
-<li>Activate the toggle switch to enable email updates.</li>
-<li>Provide the email addresses where you wish to receive the notifications.</li>
-</ol>
-<h4 id="slack-notifications"><strong>Slack Notifications</strong></h4>
-<ol>
-<li>Go to our portal and access the tag monitor configuration page.</li>
-<li>Activate the toggle switch to enable Slack updates.</li>
-<li>Open your Slack Workspace and copy the workspace ID by clicking on the workspace name. 
-<img alt="workspace ID" src="../images/workspace-id.png" /></li>
-<li>Paste the workspace ID into the corresponding field in the configuration page and save the form.</li>
-<li>You will be prompted to log in to your workspace and authorize our Tag Monitor Alerts app.</li>
-<li>After authorizing the app, add it to your workspace by clicking the <strong>add apps</strong> button and selecting the app.</li>
-<li>Invite the app to the desired channel where you want to receive the notifications by clicking on the channel name, going to the integrations tab and, adding the app.</li>
-</ol>
-<h4 id="teams-notifications"><strong>Teams Notifications</strong></h4>
-<ol>
-<li>Go to our portal and access the tag monitor configuration page.</li>
-<li>Activate the toggle switch to enable Teams updates.</li>
-<li>Follow <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=dotnet" target="_blank">these steps</a> to create an incoming webhook for the channel where you want to receive the notifications.</li>
-<li>Copy the generated Webhook URL and paste it into the corresoinding field and save the form.</li>
-</ol>
+<p>Follow the steps <a href="../../notifications/" target="_blank">here</a> to enable notifications for Tag Monitor.</p>
 
 
 
@@ -797,8 +667,30 @@ To configure error monitoring notifications, follow the steps below:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
+<!-- Google Tag Manager (noscript) -->
+  <script>
+    var gtm = document.createElement('noscript');
+    var iframe = document.createElement('iframe');
+
+    iframe.setAttribute('src', "https://www.googletagmanager.com/ns.html?id=GTM-K6VCS5W");
+    iframe.setAttribute('height' , 0);
+    iframe.setAttribute('width', 0);
+    iframe.style.display = "none";
+    iframe.style.visibility = "hidden";
+    
+    gtm.appendChild(iframe);
+    
+    
+    var s = document.getElementsByTagName('body')[0];
+    s.insertBefore(gtm, s.firstElementChild);
+    </script>
+
+
+<!-- End Google Tag Manager (noscript) -->
+  
       <script src="../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
     
+  
   </body>
 </html>
