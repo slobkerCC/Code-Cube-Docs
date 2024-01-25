@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+  
 # Google Tag Manager client-side
 This guide explains how to configure the Tag Monitor in your **Google Tag Manager client-side container**.
 
