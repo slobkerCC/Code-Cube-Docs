@@ -1,4 +1,4 @@
-site_name: Code Cube Docs
+site_name: Documentation
 theme:
   name: material 
   logo: code cube logo white.png
@@ -8,6 +8,9 @@ theme:
   custom_dir: custom_dir
 extra_css : [extra.css]
 
+plugins:
+  - search
+  
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
