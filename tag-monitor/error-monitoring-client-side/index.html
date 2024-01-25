@@ -20,7 +20,7 @@
     
     
       
-        <title>client-side Tag Monitor Implementation - Code Cube Docs</title>
+        <title>Google Tag Manager client-side - Code Cube Docs</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#client-side-tag-monitor-implementation" class="md-skip">
+        <a href="#google-tag-manager-client-side" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              client-side Tag Monitor Implementation
+              Google Tag Manager client-side
             
           </span>
         </div>
@@ -440,7 +440,7 @@
           
   
   <span class="md-ellipsis">
-    client-side Tag Monitor Implementation
+    Google Tag Manager client-side
   </span>
   
 
@@ -451,7 +451,7 @@
         
   
   <span class="md-ellipsis">
-    client-side Tag Monitor Implementation
+    Google Tag Manager client-side
   </span>
   
 
@@ -473,37 +473,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-set-up-the-tag-monitor" class="md-nav__link">
+  <a href="#1-configuration-in-the-google-tag-manager-container" class="md-nav__link">
     <span class="md-ellipsis">
-      How to set up the tag monitor
+      1. Configuration in the Google Tag Manager container
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to set up the tag monitor">
+    <nav class="md-nav" aria-label="1. Configuration in the Google Tag Manager container">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-make-sure-the-code-cube-infrastructure-is-ready" class="md-nav__link">
+  <a href="#import-custom-template" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Make sure the Code Cube infrastructure is ready
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-update-your-google-tag-manager-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Update your Google Tag Manager container
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-import-the-template-into-your-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Import the template into your workspace
+      Import custom template
     </span>
   </a>
   
@@ -674,37 +656,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-set-up-the-tag-monitor" class="md-nav__link">
+  <a href="#1-configuration-in-the-google-tag-manager-container" class="md-nav__link">
     <span class="md-ellipsis">
-      How to set up the tag monitor
+      1. Configuration in the Google Tag Manager container
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to set up the tag monitor">
+    <nav class="md-nav" aria-label="1. Configuration in the Google Tag Manager container">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-make-sure-the-code-cube-infrastructure-is-ready" class="md-nav__link">
+  <a href="#import-custom-template" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Make sure the Code Cube infrastructure is ready
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-update-your-google-tag-manager-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Update your Google Tag Manager container
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-import-the-template-into-your-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Import the template into your workspace
+      Import custom template
     </span>
   </a>
   
@@ -784,28 +748,17 @@
                   
 
 
-<h1 id="client-side-tag-monitor-implementation">client-side Tag Monitor Implementation</h1>
-<h2 id="how-to-set-up-the-tag-monitor">How to set up the tag monitor</h2>
-<p>To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly.             </p>
-<h4 id="1-make-sure-the-code-cube-infrastructure-is-ready">1. <strong>Make sure the Code Cube infrastructure is ready</strong></h4>
+<h1 id="google-tag-manager-client-side">Google Tag Manager client-side</h1>
+<p>This guide explains how to configure the Tag Monitor in your <strong>Google Tag Manager client-side container</strong>.</p>
+<h2 id="1-configuration-in-the-google-tag-manager-container">1. Configuration in the Google Tag Manager container</h2>
+<h4 id="import-custom-template">Import custom template</h4>
 <ul>
-<li>
-<p>Let us know that you would like to implement the Tag Monitor for a new client and we will prepare this implementation in our cloud environment.</p>
-</li>
-<li>
-<p>As a result you will receive a request endpoint, which you need in a later step. Example: https://europe-west1-code-cube.cloudfunctions.net/tag-monitor-{{client_name}}                </p>
-</li>
-</ul>
-<h4 id="2-update-your-google-tag-manager-container">2. <strong>Update your Google Tag Manager container</strong></h4>
-<ul>
-<li>Import the Tag Monitor template into your Tag Manager container
-      You can find the template <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/   gtm-templates/Code_Cube_Client_Tag_Monitor_Template.tpl" target="_blank">here</a> in this repository.</li>
-<li>Go to templates in your Tag Manager container and click on ‘New’.</li>
+<li>Downlaod the Google Tag Manager template from the Tag Monitor configuration page <a href="https://portal.code-cube.io/tag_monitor_config">link</a>, under the option 'client side error monitoring'.</li>
+<li>Go to your Google Tag Manager container, go to templates and create a new template.</li>
 </ul>
 <p><img alt="add-template" src="../../images/import-temp.png" /></p>
-<h4 id="3-import-the-template-into-your-workspace">3. <strong>Import the template into your workspace</strong></h4>
 <ul>
-<li>Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.</li>
+<li>Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.  </li>
 </ul>
 <p><img alt="import-template" src="../../images/temp-editor.png" /></p>
 <h4 id="4-create-a-new-tag-based-on-this-template">4. <strong>Create a new tag based on this template</strong></h4>
