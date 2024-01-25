@@ -1,29 +1,17 @@
-# client-side Tag Monitor Implementation
-
-## How to set up the tag monitor
-
-To implement the Tag Monitor for a client in Google Cloud Platform, please follow these steps accordingly.             
-
-#### 1. **Make sure the Code Cube infrastructure is ready**
-
-   -  Let us know that you would like to implement the Tag Monitor for a new client and we will prepare this implementation in our cloud environment.
-
-   -   As a result you will receive a request endpoint, which you need in a later step. Example: https://europe-west1-code-cube.cloudfunctions.net/tag-monitor-{{client_name}}                
+# Google Tag Manager client-side
+This guide explains how to configure the Tag Monitor in your **Google Tag Manager client-side container**.
 
 
+## 1. Configuration in the Google Tag Manager container
 
-#### 2. **Update your Google Tag Manager container**
+#### Import custom template
 
-   -   Import the Tag Monitor template into your Tag Manager container
-      You can find the template [here](https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/   gtm-templates/Code_Cube_Client_Tag_Monitor_Template.tpl){:target="_blank"} in this repository.
-   -   Go to templates in your Tag Manager container and click on ‘New’.
+- Downlaod the Google Tag Manager template from the Tag Monitor configuration page [link](https://portal.code-cube.io/tag_monitor_config), under the option 'client side error monitoring'.
+- Go to your Google Tag Manager container, go to templates and create a new template.
 
-   ![add-template](../images/import-temp.png)
+![add-template](../images/import-temp.png)
 
-#### 3. **Import the template into your workspace**      
-
-
-   -   Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.
+ -   Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.  
 
    ![import-template](../images/temp-editor.png)
 
@@ -51,7 +39,6 @@ To implement the Tag Monitor for a client in Google Cloud Platform, please follo
    If it's not in the list, create a built-in variable Random Number and repeat.
    - For 10% of the events choose: Random number ends with 1.
    - For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647\*0.05).           
-
 
    
 #### 7. **Update all your tags to include the tag name in the meta data**
