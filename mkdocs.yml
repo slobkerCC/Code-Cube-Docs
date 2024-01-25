@@ -1,7 +1,7 @@
 site_name: Code Cube Docs
 theme:
   name: material 
-  logo: logo.png
+  logo: code cube logo white.png
   favicon: logo.png
   features:
     - navigation.top
