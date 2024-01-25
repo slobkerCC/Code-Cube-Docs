@@ -21,11 +21,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - sections:
-    - Overview:
-      - Introduction: docs/overview/introduction.md
-      - Getting Started: docs/overview/getting-started.md
-    - Product implementations:
-      - Tag Monitor implementation:
-        - Page 1: /tag-monitor/error-monitoring-client-side.md
-        - Page 2: docs/tag-monitor/error-monitoring-client-side.md
+  - Tag Monitor:
+    - Product configuration:
+      - Page 1: /error-monitoring-client-side.md
