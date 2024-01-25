@@ -22,4 +22,4 @@ nav:
   - Home: index.md
   - Product implementations:
     - Tag Monitor:
-      - Google Tag Manager client-side: docs/tag-monitor/error-monitoring-client-side.md
+      - Google Tag Manager client-side: /tag-monitor/error-monitoring-client-side.md
