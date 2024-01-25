@@ -27,5 +27,5 @@ nav:
       - Getting Started: docs/overview/getting-started.md
     - Product implementations:
       - Tag Monitor implementation:
-        - Page 1: /tag-monitor/error-monitoring-client-side.md.md
+        - Page 1: /tag-monitor/error-monitoring-client-side.md
         - Page 2: docs/tag-monitor/error-monitoring-client-side.md
