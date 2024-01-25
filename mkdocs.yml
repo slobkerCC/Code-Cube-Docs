@@ -18,3 +18,8 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+nav:
+  - Home: index.md
+  - Product implementations:
+    - Tag Monitor implementation:
+    - Page 1: docs/tag-monitor/error-monitoring-client-side.md
