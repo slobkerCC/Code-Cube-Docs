@@ -22,4 +22,4 @@ nav:
   - Home: index.md
   - Product implementations:
     - Tag Monitor implementation:
-    - Page 1: docs/tag-monitor/error-monitoring-client-side.md
+      - Page 1: docs/tag-monitor/error-monitoring-client-side.md
