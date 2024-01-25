@@ -6,7 +6,6 @@ theme:
   features:
     - navigation.top
     - navigation.path
-    - toc.integrate 
   custom_dir: custom_dir
 extra_css : [extra.css]
 
