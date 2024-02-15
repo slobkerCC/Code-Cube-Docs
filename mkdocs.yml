@@ -12,6 +12,10 @@ extra_css : [extra.css]
 
 plugins:
   - search
+
+nav:
+- nav:
+  - Sitespeed Monitor: site-speed-monitoring/site_speed.md
   
 markdown_extensions:
   - attr_list
