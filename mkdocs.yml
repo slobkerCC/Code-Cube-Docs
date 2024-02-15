@@ -1,4 +1,4 @@
-site_name: Documentation
+site_name: Code Cube documentation library 
 theme:
   name: material 
   logo: code cube logo white.png
