@@ -46,6 +46,7 @@ xhr.send(data);
     3. **dataLayer**: Create a new custom javaScript variabele in your tag container
         1. Give the variabele the name 'JS - dataLayer'
         2. Add the script below in the custom javaScript variabele
+       
          ```javaScript
          function(){
          var dataLayer = JSON.stringify(window.dataLayer)
