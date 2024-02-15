@@ -25,9 +25,16 @@ nav:
           - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
  # - Alerting & Notifications
 
-
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+  extra_fonts:
+  - name: Mulish
+    files:
+      - Mulish-Regular.ttf
+      - Mulish-SemiBold.ttf
+      - Mulish-Bold.ttf
+      - Mulish-Italic.ttf
