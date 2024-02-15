@@ -11,6 +11,7 @@
 }
 
 
+
 @media screen and (min-width: 60em){
 .md-search__input+.md-search__icon {
     color: #000;
@@ -22,9 +23,29 @@
     background-color: #fff;
 }
 
-
-
 div.md-sidebar.md-sidebar--primary > div {
     border-right: 1.8px solid #2b2bb551;
 }
 
+.md-nav__title {
+  display:none;  
+}
+
+.md-nav__link {
+    font-size: 16px;
+    color: #09003D;
+}
+
+.md-ellipsis {
+font-size: 16px;
+color: #09003D;
+}
+
+..md-nav__icon {
+    color: black;
+}
+
+.md-nav {
+    color: black;
+    padding-left: 10px;
+}
