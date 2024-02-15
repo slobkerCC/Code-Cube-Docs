@@ -17,9 +17,9 @@ nav:
   #- Sitespeed Monitor: site-speed-monitoring/site_speed.md
   #- DataLayer Guard: datalayer-guard/datalayer_guard.md
   - Configuration Tag Monitor:
-      - ⚒️ How to implement?:
-          - Client-side Google Tag Manager: tag-monitor/error-monitoring-client-side.md
-          - Server-side Google Tag Manager: tag-monitor/error-monitoring-server-side.md
+      - ⚒️ How to set-up for Google Tag Manager?:
+          - Client-side: tag-monitor/error-monitoring-client-side.md
+          - Server-side: tag-monitor/error-monitoring-server-side.md
       - 💡Tips & Tricks:
           - Bulk editing your tags in GTM: tag-monitor/tag-bulk0edit.md
           - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
