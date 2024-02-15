@@ -37,7 +37,7 @@ div.md-sidebar.md-sidebar--primary > div {
 }
 
 .md-ellipsis {
-font-size: 16px;
+font-size: 14px;
 color: #09003D;
 }
 
@@ -48,4 +48,8 @@ color: #09003D;
 .md-nav {
     color: black;
     padding-left: 10px;
+}
+
+.md-nav--primary .md-nav__list {
+    padding-left:0px!important;
 }
