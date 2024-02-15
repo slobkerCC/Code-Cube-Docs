@@ -1,3 +1,7 @@
+body {
+font-family: Mulish;
+}
+
 .md-header {
     background-color: #09003d;
 }
@@ -10,14 +14,11 @@
     color: #000;
 }
 
-
-
 @media screen and (min-width: 60em){
 .md-search__input+.md-search__icon {
     color: #000;
 }
 }
-
 
 .md-search__input{
     background-color: #fff;
