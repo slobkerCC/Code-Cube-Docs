@@ -734,22 +734,20 @@ xhr.send(data);
 <li>There are a couple of variables that you do need to add configure.<ol>
 <li><strong>"client_name"</strong>: Can be found in the <a href="https://portal.code-cube.io/datalayer_guard_config">configuration page</a></li>
 <li><strong>url</strong>: Make sure that you have the built-in variabele "Page URL" enabled in your container</li>
-<li>
-<p><strong>dataLayer</strong>: Create a new custom javaScript variabele in your tag container</p>
-<ol>
+<li><strong>dataLayer</strong>: Create a new custom javaScript variabele in your tag container<ol>
 <li>Give the variabele the name 'JS - dataLayer'</li>
 <li>Add the script below in the custom javaScript variabele</li>
 </ol>
+</li>
+</ol>
+</li>
+</ol>
 <p>```html
- function(){
- var dataLayer = JSON.stringify(window.dataLayer)
+function(){
+var dataLayer = JSON.stringify(window.dataLayer)
 return dataLayer;
-}</p>
+ }</p>
 <p>```</p>
-</li>
-</ol>
-</li>
-</ol>
 <h3 id="2-add-the-trigger-to-the-tag">2. Add the trigger to the tag</h3>
 <ol>
 <li>Add the custom event trigger to the tag based on the dataLayer event name.</li>
