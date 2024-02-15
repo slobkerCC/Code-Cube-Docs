@@ -14,12 +14,20 @@ plugins:
   - search
 
 nav:
-- Sitespeed Monitor: site-speed-monitoring/site_speed.md
-  
+#- Sitespeed Monitor: site-speed-monitoring/site_speed.md
+#- DataLayer Guard: datalayer-guard/datalayer_guard.md
+- Tag Monitor
+  - How to set-up?
+    - Client-side: tag-monitor/error-monitoring-client-side.md
+    - Server-side: tag-monitor/error-monitoring-server-side.md
+  - Tips & Tricks
+    - Bulk editing your tags in GTM: tag-monitor/tag-bulk0edit.md
+    - Enabling Tag Inactivity:  tag-monitor/tag-inactivity.md
+- Alerting & Notifications
+
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
-
