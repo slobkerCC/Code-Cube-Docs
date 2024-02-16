@@ -742,12 +742,14 @@ xhr.send(data);
 </ol>
 </li>
 </ol>
-<p>```html
+<pre><code class="language-javascript">
 function(){
 var dataLayer = JSON.stringify(window.dataLayer)
 return dataLayer;
- }</p>
-<p>```</p>
+ }
+
+ </code></pre>
+
 <h3 id="2-add-the-trigger-to-the-tag">2. Add the trigger to the tag</h3>
 <ol>
 <li>Add the custom event trigger to the tag based on the dataLayer event name.</li>
