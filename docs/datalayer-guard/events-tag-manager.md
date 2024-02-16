@@ -47,13 +47,13 @@ xhr.send(data);
         1. Give the variabele the name 'JS - dataLayer'
         2. Add the script below in the custom javaScript variabele
        
- ```html
+<pre><code class="language-javascript">
 function(){
 var dataLayer = JSON.stringify(window.dataLayer)
 return dataLayer;
  }
 
- ```
+ </code></pre>
 
 ### 2. Add the trigger to the tag
 1. Add the custom event trigger to the tag based on the dataLayer event name.
