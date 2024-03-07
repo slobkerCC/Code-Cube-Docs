@@ -1,0 +1,1022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Manage access to raw Tag Manager data - Code Cube documentation library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K6VCS5W');</script>
+  <!-- End Google Tag Manager -->
+
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manage-access-to-raw-tag-manager-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Code Cube documentation library" class="md-header__button md-logo" aria-label="Code Cube documentation library" data-md-component="logo">
+      
+  <img src="../../code cube logo white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Code Cube documentation library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manage access to raw Tag Manager data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Code Cube documentation library" class="md-nav__button md-logo" aria-label="Code Cube documentation library" data-md-component="logo">
+      
+  <img src="../../code cube logo white.png" alt="logo">
+
+    </a>
+    Code Cube documentation library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Configuration Tag Monitor
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration Tag Monitor
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ⚒️ How to configure?
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            ⚒️ How to configure?
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error-monitoring-client-side/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client-side
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error-monitoring-server-side/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-side
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    💡 Tips & Tricks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            💡 Tips & Tricks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tag-bulk0edit.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bulk editing your tags in GTM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tag-inactivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enabling Tag Inactivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Configuration DataLayer Guard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration DataLayer Guard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ⚒️ How to configure?
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            ⚒️ How to configure?
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datalayer-guard/events-tag-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring events via Tag Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manage-access-rights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage access rights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-dataset-and-table-in-bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create new dataset and table in BigQuery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create new dataset and table in BigQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the dataset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-table-for-the-client-side-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the table for the client-side monitor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-table-for-the-server-side-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the table for the server-side monitor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-scheduled-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the scheduled query
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="manage-access-to-raw-tag-manager-data">Manage access to raw Tag Manager data</h1>
+<h3 id="manage-access-rights">Manage access rights</h3>
+<p>We need to create a service account in your Google Cloud Platform project.</p>
+<ol>
+<li>
+<p>In the Google Cloud console, go to the Create <a href="https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts/create?walkthrough_id=iam--create-service-account&amp;_ga=2.256991880.228167773.1709798988-298617199.1684135176#step_index=1">service account page</a>.</p>
+</li>
+<li>
+<p>Select a Google Cloud Project.</p>
+</li>
+<li>
+<p>Enter a service account name to display in the Google Cloud console.
+<em>The Google Cloud console generates a service account ID based on this name. Edit the ID if necessary. You cannot change the ID later</em>.</p>
+</li>
+<li>
+<p>Add the IAM role <strong>BigQuery User</strong></p>
+</li>
+<li>
+<p>Click Done to finish creating the service account.</p>
+</li>
+</ol>
+<h3 id="create-new-dataset-and-table-in-bigquery">Create new dataset and table in BigQuery</h3>
+<p>In your BigQuery environment, prepare the new dataset and table.</p>
+<h4 id="create-the-dataset">Create the dataset</h4>
+<ol>
+<li>
+<p>Open the BigQuery page in the Google Cloud console.</p>
+</li>
+<li>
+<p>In the Explorer panel, select the project where you want to create the dataset.</p>
+</li>
+<li>
+<p>Expand the more_vert Actions option and click Create dataset.</p>
+</li>
+<li>
+<p>On the 'Create dataset' page:</p>
+<ul>
+<li>For Dataset ID, enter a unique dataset name. For example 'codecube-tagmonitor'.</li>
+<li>Location type: Select <strong>multi-region</strong> and <strong>EU</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Click Create dataset.</p>
+</li>
+</ol>
+<h3 id="create-the-table-for-the-client-side-monitor">Create the table for the client-side monitor</h3>
+<ol>
+<li>
+<p>Select the new dataset and click on <strong>'Create table'</strong></p>
+</li>
+<li>
+<p>On the 'Create table' page:</p>
+<ul>
+<li>Create table from: Select 'Empty table'</li>
+<li>
+<p>Destination</p>
+<ul>
+<li>Project: select your GCP project ID</li>
+<li>Dataset: select your newly created dataset, for example 'codecube-tagmonitor'</li>
+<li>Give the table a new, for example 'raw_data_client'</li>
+<li>Add the following schema:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field name</th>
+<th>Type</th>
+<th>Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">timestamp</td>
+<td>Title</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">initial_url</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">url</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">event_name</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">event_timestamp</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">container_version</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">container_id</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">tag</td>
+<td>RECORD</td>
+<td>REPEATED</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">channel</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">execution_time</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">parameters</td>
+<td>STRING</td>
+<td>REPEATED</td>
+</tr>
+<tr>
+<td style="text-align: left;">key</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">value</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Partitioning: Select 'No partitioning'</p>
+</li>
+<li>
+<p>Click on <strong>Create table</strong></p>
+</li>
+</ol>
+<h3 id="create-the-table-for-the-server-side-monitor">Create the table for the server-side monitor</h3>
+<ol>
+<li>
+<p>Select the new dataset and click on <strong>'Create table'</strong></p>
+</li>
+<li>
+<p>On the 'Create table' page:</p>
+<ul>
+<li>Create table from: Select 'Empty table'</li>
+<li>
+<p>Destination</p>
+<ul>
+<li>Project: select your GCP project ID</li>
+<li>Dataset: select your newly created dataset, for example 'codecube-tagmonitor'</li>
+<li>Give the table a new, for example 'raw_data_server'</li>
+<li>Add the following schema:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field name</th>
+<th>Type</th>
+<th>Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">timestamp</td>
+<td>Title</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">url</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">event_name</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">event_timestamp</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">client_name</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">container_version</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">container_id</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">env_name</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">tag</td>
+<td>RECORD</td>
+<td>REPEATED</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">execution_time</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">parameters</td>
+<td>STRING</td>
+<td>REPEATED</td>
+</tr>
+<tr>
+<td style="text-align: left;">key</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+<tr>
+<td style="text-align: left;">value</td>
+<td>STRING</td>
+<td>NULLABLE</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Partitioning: Select 'No partitioning'</p>
+</li>
+<li>
+<p>Click on <strong>Create table</strong></p>
+</li>
+</ol>
+<h3 id="create-the-scheduled-query">Create the scheduled query</h3>
+<ol>
+<li>
+<p>Details and schedule: Give the scheduled query a name, for example 'codecube-tagmonitor-client'.</p>
+</li>
+<li>
+<p>Add the schedule options:</p>
+<ul>
+<li>Repeat frequency: Days</li>
+<li>At: 6:00AM</li>
+<li>Start and end dates can be added when relevant</li>
+</ul>
+</li>
+<li>
+<p>Add destination details for query results:</p>
+<ul>
+<li>Enable 'Set a destination table for query results'</li>
+<li>Add the name of the dataset you just created</li>
+<li>Add the table ID of the table you just created</li>
+<li>Destination table write preference: Append to table</li>
+<li>Location type: Multi-region, select EU</li>
+</ul>
+</li>
+<li>
+<p>Add the service account</p>
+<ul>
+<li>Select the service account that has been created.</li>
+</ul>
+</li>
+<li>
+<p>Optional: Enable email notifications</p>
+</li>
+<li>
+<p>Save the settings</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.path", "navigation.sections"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+  <script>
+    var gtm = document.createElement('noscript');
+    var iframe = document.createElement('iframe');
+
+    iframe.setAttribute('src', "https://www.googletagmanager.com/ns.html?id=GTM-K6VCS5W");
+    iframe.setAttribute('height' , 0);
+    iframe.setAttribute('width', 0);
+    iframe.style.display = "none";
+    iframe.style.visibility = "hidden";
+    
+    gtm.appendChild(iframe);
+    
+    
+    var s = document.getElementsByTagName('body')[0];
+    s.insertBefore(gtm, s.firstElementChild);
+    </script>
+
+
+<!-- End Google Tag Manager (noscript) -->
+  
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  
+  </body>
+</html>
