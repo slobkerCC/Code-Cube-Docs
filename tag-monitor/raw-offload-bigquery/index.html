@@ -504,6 +504,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-the-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the query
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-side-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-side data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-side-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server-side data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-the-scheduled-query" class="md-nav__link">
     <span class="md-ellipsis">
       Create the scheduled query
@@ -723,6 +756,39 @@
       Create the table for the server-side monitor
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the query
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-side-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-side data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-side-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server-side data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1031,6 +1097,11 @@
 <p>Click on <strong>Create table</strong></p>
 </li>
 </ol>
+<h3 id="create-the-query">Create the query</h3>
+<h4 id="client-side-data">Client-side data</h4>
+<p>SELECT  FROM <code>code-cube.randstad_313_tag_monitor.raw_data_client</code> WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))</p>
+<h4 id="server-side-data">Server-side data</h4>
+<p>SELECT  FROM <code>code-cube.randstad_313_tag_monitor.raw_data_server</code> WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))</p>
 <h3 id="create-the-scheduled-query">Create the scheduled query</h3>
 <ol>
 <li>
