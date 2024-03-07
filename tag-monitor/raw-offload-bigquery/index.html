@@ -1099,9 +1099,9 @@
 </ol>
 <h3 id="create-the-query">Create the query</h3>
 <h4 id="client-side-data">Client-side data</h4>
-<p>SELECT  FROM <code>code-cube.randstad_313_tag_monitor.raw_data_client</code> WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))</p>
+<p>SELECT  FROM <code>code-cube.clientname_313_tag_monitor.raw_data_client</code> WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))</p>
 <h4 id="server-side-data">Server-side data</h4>
-<p>SELECT  FROM <code>code-cube.randstad_313_tag_monitor.raw_data_server</code> WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))</p>
+<p>SELECT  FROM <code>code-cube.clientname_313_tag_monitor.raw_data_server</code> WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))</p>
 <h3 id="create-the-scheduled-query">Create the scheduled query</h3>
 <ol>
 <li>
