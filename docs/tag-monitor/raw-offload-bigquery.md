@@ -110,10 +110,10 @@ In your BigQuery environment, prepare the new dataset and table.
 ### Create the query
 
 #### Client-side data
-SELECT  FROM `code-cube.randstad_313_tag_monitor.raw_data_client` WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
+SELECT  FROM `code-cube.clientname_313_tag_monitor.raw_data_client` WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 
 #### Server-side data
-SELECT  FROM `code-cube.randstad_313_tag_monitor.raw_data_server` WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
+SELECT  FROM `code-cube.clientname_313_tag_monitor.raw_data_server` WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 
 ### Create the scheduled query
 
