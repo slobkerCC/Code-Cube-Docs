@@ -21,7 +21,7 @@ nav:
           - Client-side: tag-monitor/error-monitoring-client-side.md
           - Server-side: tag-monitor/error-monitoring-server-side.md
       - 💡 Tips & Tricks:
-          - Bulk editing your tags in GTM: tag-monitor/tag-bulk0edit.md
+          - Bulk editing your tags in GTM: tag-monitor/tag-bulk-edit.md
           - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
           - Offload to own BigQuery environment: tag-monitor/raw-offload-bigquery.md
   - Configuration DataLayer Guard:
