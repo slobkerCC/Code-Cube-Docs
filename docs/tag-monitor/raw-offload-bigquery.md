@@ -32,7 +32,7 @@ In your BigQuery environment, prepare the new dataset and table.
 
 5. Click Create dataset.
 
-### Create the table for the client-side monitor
+#### Create the table for the client-side monitor
 
 1. Select the new dataset and click on **'Create table'**
 
@@ -70,7 +70,7 @@ In your BigQuery environment, prepare the new dataset and table.
 5. Click on **Create table**
 
 
-### Create the table for the server-side monitor
+#### Create the table for the server-side monitor
 
 1. Select the new dataset and click on **'Create table'**
 
