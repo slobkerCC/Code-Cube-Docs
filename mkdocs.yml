@@ -23,6 +23,7 @@ nav:
       - 💡 Tips & Tricks:
           - Bulk editing your tags in GTM: tag-monitor/tag-bulk0edit.md
           - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
+          - Offload to own BigQuery environment: tag-monitor/raw-offload-bigquery.md
   - Configuration DataLayer Guard:
     - ⚒️ How to configure?:
         - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
