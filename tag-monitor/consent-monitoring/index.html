@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#enable-consent-monitoring" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -429,6 +434,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Consent Monitoring
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -439,6 +457,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changes-in-google-tag-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes in Google Tag Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changes in Google Tag Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-variables-to-retrieve-the-consent-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve variables to retrieve the consent status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-parameters-to-the-tags-where-consent-should-be-monitored" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add parameters to the tags where consent should be monitored.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-the-tags-and-parameters-to-the-code-cube-tag-monitor-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link the tags and parameters to the Code Cube Tag Monitor template.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -590,6 +669,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changes-in-google-tag-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes in Google Tag Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changes in Google Tag Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-variables-to-retrieve-the-consent-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve variables to retrieve the consent status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-parameters-to-the-tags-where-consent-should-be-monitored" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add parameters to the tags where consent should be monitored.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-the-tags-and-parameters-to-the-code-cube-tag-monitor-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link the tags and parameters to the Code Cube Tag Monitor template.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -604,9 +735,58 @@
                   
 
 
-  <h1>Consent Monitoring</h1>
-
-
+<h1 id="enable-consent-monitoring">Enable Consent Monitoring</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>This feauture is only available for the Tag Monitor Premium, Enterprise or Agency licenses.</p>
+<h2 id="changes-in-google-tag-manager">Changes in Google Tag Manager</h2>
+<h3 id="retrieve-variables-to-retrieve-the-consent-status">Retrieve variables to retrieve the consent status</h3>
+<ol>
+<li>
+<p>Install the variable template <a href="https://tagmanager.google.com/gallery/#/owners/Ayudante/templates/gtm-consent-state">'GTM Consent State'</a> in your GTM container.</p>
+</li>
+<li>
+<p>Create new variables, one for each consent status to monitor. Often two variables for 'analytics_storage' and 'ad_storage' are enough.</p>
+</li>
+</ol>
+<h3 id="add-parameters-to-the-tags-where-consent-should-be-monitored">Add parameters to the tags where consent should be monitored.</h3>
+<ol>
+<li>
+<p><strong>Google Analytics</strong>: Add a parameter value and key to every GA4 event (tip: add these parameters via a standard 'Event settings variable'). </p>
+</li>
+<li>
+<p>The parameter name should be 'consent_ad_storage' or 'consent_analytics_storage'.</p>
+</li>
+<li>
+<p>The parameter value should be the matching variables that you've just added to the container.</p>
+</li>
+<li>
+<p><strong>Google Ads</strong>: In the Remarketing tag custom parameters can be added via the option 'Manually Specify'</p>
+</li>
+<li>
+<p>The parameter key should be 'consent_ad_storage' or 'consent_analytics_storage'.</p>
+</li>
+<li>
+<p>The parameter value should be the matching variables that you've just added to the container.</p>
+</li>
+<li>
+<p><strong>Microsoft Ads</strong>: All event tracking tags give the opportunity to add extra event data via the table option. </p>
+</li>
+<li>
+<p>The name should be 'consent_ad_storage' or 'consent_analytics_storage'.</p>
+</li>
+<li>The value should be the matching variables that you've just added to the container.</li>
+</ol>
+<h3 id="link-the-tags-and-parameters-to-the-code-cube-tag-monitor-template">Link the tags and parameters to the Code Cube Tag Monitor template.</h3>
+<ol>
+<li>When you open a tag in a new tab, the <strong>Tag ID</strong> will be available in the url, after /tags/.
+For example, <strong>4175</strong> is the tag ID in the example URL below.</li>
+</ol>
+<p>https://tagmanager.google.com/#/container/accounts/112031/containers/126673/workspaces/1000716/tags/4175</p>
+<ol>
+<li>In the Code Cube Tag Monitor tag (premium template) add the list of tag ID's with the consent variable and the given label (consent_analytics_storaga) for example.</li>
+</ol>
 
 
 
