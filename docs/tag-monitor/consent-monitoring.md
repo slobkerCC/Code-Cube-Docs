@@ -1,6 +1,6 @@
 # Enable Consent Monitoring
 
-!!! warning This feauture is only available for the Tag Monitor Premium, Enterprise or Agency licenses.
+⚠️ This feauture is only available for the Tag Monitor Premium, Enterprise or Agency licenses.
 
 
 ## Changes in Google Tag Manager
