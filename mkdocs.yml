@@ -20,11 +20,10 @@ nav:
       - ⚒️ How to configure?:
           - Client-side: tag-monitor/error-monitoring-client-side.md
           - Server-side: tag-monitor/error-monitoring-server-side.md
-      - 💡 Tips & Tricks:
-          - Bulk editing your tags in GTM: tag-monitor/tag-bulk-edit.md
-          - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
-          - Offload to own BigQuery environment: tag-monitor/raw-offload-bigquery.md
-          - Consent Monitoring: tag-monitor/consent-monitoring.md
+      - Bulk editing your tags in GTM: tag-monitor/tag-bulk-edit.md
+      - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
+      - Offload to own BigQuery environment: tag-monitor/raw-offload-bigquery.md
+      - Consent Monitoring: tag-monitor/consent-monitoring.md
   - Configuration DataLayer Guard:
     - ⚒️ How to configure?:
         - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
