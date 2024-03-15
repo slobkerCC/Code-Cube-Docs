@@ -13,18 +13,18 @@
 ### Add parameters to the tags where consent should be monitored.
 1. **Google Analytics**: Add a parameter value and key to every GA4 event (tip: add these parameters via a standard 'Event settings variable'). 
 
-- The parameter name should be 'consent_ad_storage' or 'consent_analytics_storage'.
-- The parameter value should be the matching variables that you've just added to the container.
+  - The parameter name should be 'consent_ad_storage' or 'consent_analytics_storage'.
+  - The parameter value should be the matching variables that you've just added to the container.
 
 2. **Google Ads**: In the Remarketing tag custom parameters can be added via the option 'Manually Specify'
 
-- The parameter key should be 'consent_ad_storage' or 'consent_analytics_storage'.
-- The parameter value should be the matching variables that you've just added to the container.
+  - The parameter key should be 'consent_ad_storage' or 'consent_analytics_storage'.
+  - The parameter value should be the matching variables that you've just added to the container.
 
 3. **Microsoft Ads**: All event tracking tags give the opportunity to add extra event data via the table option. 
 
-- The name should be 'consent_ad_storage' or 'consent_analytics_storage'.
-- The value should be the matching variables that you've just added to the container.
+  - The name should be 'consent_ad_storage' or 'consent_analytics_storage'.
+  - The value should be the matching variables that you've just added to the container.
 
 ### Link the tags and parameters to the Code Cube Tag Monitor template.
 1. When you open a tag in a new tab, the **Tag ID** will be available in the url, after /tags/.
