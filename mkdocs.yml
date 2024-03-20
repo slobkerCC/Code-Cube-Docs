@@ -46,4 +46,4 @@ extra_fonts:
       - Mulish-Italic.ttf
 
 extra_css:
-  - fonts/mycustomfont.css
+  - extra.css
