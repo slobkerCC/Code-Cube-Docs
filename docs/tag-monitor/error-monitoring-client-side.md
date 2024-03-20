@@ -7,18 +7,13 @@ hide:
 
 This guide will walk you through the steps to set up the Tag Monitor within your Google Tag Manager client-side container.
 
-## 1. Configuration in the Google Tag Manager Container
+## Configuration in the Google Tag Manager Container
 
 ### Importing Custom Template
 
-**1. Download Template**
+**1. Download Template:** Visit the [Tag Monitor configuration page](https://portal.code-cube.io/tag_monitor_config) and download the Tag Monitor template. (Ensure you're logged into our portal.)
 
-- Visit the [Tag Monitor configuration page](https://portal.code-cube.io/tag_monitor_config) and download the Tag Monitor template. (Ensure you're logged into our portal.)
-
-**2. Add Template to Google Tag Manager**
-
-- Open your Google Tag Manager container.
-- Navigate to "Templates" and click on "New" in the "Tag Templates" section.
+**2. Add Template to Google Tag Manager:** Open your Google Tag Manager container. Navigate to "Templates" and click on "New" in the "Tag Templates" section.
 
 ![Add Template](../images/import-temp.png)
 
@@ -31,13 +26,9 @@ This guide will walk you through the steps to set up the Tag Monitor within your
 
 ### Configuring the Code Cube Tag Monitor Tag
 
-**4. Create New Tag**:  
+**4. Create New Tag**: Under "Tags" in the menu, create a new tag.
 
-- Under "Tags" in the menu, create a new tag.
-
-**5. Select Tag Monitor Template**:  
-
-- Choose the Tag Monitor Template as the tag type.  
+**5. Select Tag Monitor Template**: Choose the Tag Monitor Template as the tag type.  
 
 ![Add Tag](../images/create-tag.png)
 
@@ -53,9 +44,7 @@ This guide will walk you through the steps to set up the Tag Monitor within your
 
 ### Adding Trigger to the Tag
 
-**7. Create Trigger**:
-
-- Create a trigger for a custom event where the event name equals `.*` (using regex matching). This ensures the monitor tag fires for every single dataLayer event.  
+**7. Create Trigger**: Create a trigger for a custom event where the event name equals `.*` (using regex matching). This ensures the monitor tag fires for every single dataLayer event.  
 
 ![Add Trigger](../images/add-trigger.png)
 
