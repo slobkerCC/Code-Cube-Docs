@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#server-side-tag-monitor-implementation" class="md-skip">
+        <a href="#google-tag-manager-server-side-configuring-tag-monitor" class="md-skip">
           Skip to content
         </a>
       
@@ -423,56 +423,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-build-a-custom-gtm-template" class="md-nav__link">
+  <a href="#configuration-in-the-google-tag-manager-container" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Build a custom GTM template
+      Configuration in the Google Tag Manager Container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration in the Google Tag Manager Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-custom-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing Custom Template
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-create-a-monitoring-tag" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-code-cube-tag-monitor-tag" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Create a monitoring tag
+      Configuring the Code Cube Tag Monitor Tag
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-add-a-trigger" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#adding-trigger-to-the-tag" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Add a trigger
+      Adding Trigger to the Tag
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#update-all-your-tags-to-include-tag-name" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Update all your tags to include the tag name metadata
+      Update all your tags to include Tag Name
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-check-results" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#final-steps-going-live" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Check results
+      Final Steps: Going Live
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6-grant-permission" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Grant Permission
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -738,56 +744,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-build-a-custom-gtm-template" class="md-nav__link">
+  <a href="#configuration-in-the-google-tag-manager-container" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Build a custom GTM template
+      Configuration in the Google Tag Manager Container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration in the Google Tag Manager Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-custom-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing Custom Template
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-create-a-monitoring-tag" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-code-cube-tag-monitor-tag" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Create a monitoring tag
+      Configuring the Code Cube Tag Monitor Tag
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-add-a-trigger" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#adding-trigger-to-the-tag" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Add a trigger
+      Adding Trigger to the Tag
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-update-all-your-tags-to-include-the-tag-name-metadata" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#update-all-your-tags-to-include-tag-name" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Update all your tags to include the tag name metadata
+      Update all your tags to include Tag Name
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-check-results" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#final-steps-going-live" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Check results
+      Final Steps: Going Live
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6-grant-permission" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Grant Permission
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -815,32 +827,56 @@
                   
 
 
-<h1 id="server-side-tag-monitor-implementation">server-side Tag Monitor Implementation</h1>
-<h4 id="1-build-a-custom-gtm-template">1. <strong>Build a custom GTM template</strong></h4>
-<p>In Google Tag Manager, open up the Templates view, and create a new tag template. You can download template <a href="https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Server_Container_Tag_Monitor.tpl">here</a> and <a href="https://www.simoahava.com/analytics/custom-templates-guide-for-google-tag-manager/#importing-and-exporting">import</a> it directly into your container.</p>
-<h4 id="2-create-a-monitoring-tag">2. <strong>Create a monitoring tag</strong></h4>
-<p>In GTM, go to Tags and create a new tag. Select the template you just created from the tag type selector. Now you need to configure the tag. There are three fields you need to set:
-- Project ID – set to the GCP project ID of the project where the BigQuery table is. If it’s the same project as the one running your Server container, you can leave this field blank.
-- Dataset ID – set to the Dataset ID of the BigQuery table.
-- Table ID – set to the Table ID of the BigQuery table.</p>
-<p><strong>Note:</strong> You will be given the value for the above-mentioned field from us.      <br />
-Expand Advanced Settings and scroll down to Additional Tag Metadata. Click it open, then click the + Add Metadata button, and set these values:
-    Key: <code>exclude</code>
-    Value: <code>true</code></p>
-<p><img alt="'configure-tag'" src="../../images/config-tag-server.png" /></p>
-<h4 id="3-add-a-trigger">3. <strong>Add a trigger</strong></h4>
-<p>Go to Triggers and click NEW to create a new trigger which will fire on all events. Add this trigger to your monitoring tag, and then save the tag. To limit the number of times Tag Monitor fires, click "Some events" and select Random Number in the first dropdown menu (if it's not in the list, create a built-in variable Random Number and repeat). For 10% of the events, choose Random number -&gt; ends with -&gt; 1. For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number -&gt; less than or equals to -&gt; 107,374,182 (2,147,483,647*0.05).        </p>
-<h4 id="4-update-all-your-tags-to-include-the-tag-name-metadata">4. <strong>Update all your tags to include the tag name metadata</strong></h4>
-<p>For each tag, expand the Advanced Settings and check the Include tag name checkbox under Additional Tag Metadata. Set the key name to <code>name</code>. If you're dealing with a large number of tags, please follow <a href="z-tag-bulk-edit.md" target="_blank">these steps</a> to update them. If needed, you can add even more key-value pairs to the tag metadata – you just need to modify the monitoring template to add these to the BigQuery API call. And, of course, you need a BigQuery table schema that accepts the new values.                    </p>
-<h4 id="5-check-results">5. <strong>Check results</strong></h4>
-<p>Open Preview and validate that everything works as expected. Note that in the server container preview mode a webpage is not opened automatically, so you should manually open it to see the data streaming. Another way to validate that Tag Monitor is working is to check the results in the BigQuery table.   </p>
-<p><strong>Note:</strong> To check the results in preview, you need to open the preview on GTM client container simultaneously with the server-side preview. </p>
-<h4 id="6-grant-permission">6. <strong>Grant Permission</strong></h4>
-<p>This can be done in IAM &amp; Admin &gt; Service Accounts in Google Cloud Platform. Copy the email of associated services below and send it to us in order to be granted access to our BigQuery.</p>
+<h1 id="google-tag-manager-server-side-configuring-tag-monitor">Google Tag Manager server-side: Configuring Tag Monitor</h1>
+<p>This guide will walk you through the steps to set up the Tag Monitor within your Google Tag Manager server-side container.</p>
+<h2 id="configuration-in-the-google-tag-manager-container">Configuration in the Google Tag Manager Container</h2>
+<h3 id="importing-custom-template">Importing Custom Template</h3>
+<p><strong>1. Download Template:</strong> Visit the [Tag Monitor configuration page]([https://portal.code-cube.io/tag_monitor_config]and download the Tag Monitor template. (Ensure you're logged into our portal.)</p>
+<p><strong>2. Add Template to Google Tag Manager:</strong> Open your Google Tag Manager container. Navigate to "Templates" and click on "New" in the "Tag Templates" section.</p>
+<p><img alt="Add Template" src="../../images/import-temp.png" /></p>
+<p><strong>3. Import Template</strong></p>
 <ul>
-<li>The service account under which the server-side tracking is added.</li>
-<li>The <strong>compute engine</strong> service.</li>
+<li>Click on the three dots in the top-right corner and select "Import".</li>
+<li>Choose the Tag Monitor template you've downloaded and click "Save". No adjustments to the template are necessary.</li>
 </ul>
+<p><img alt="Import Template" src="../../images/temp-editor.png" /></p>
+<h3 id="configuring-the-code-cube-tag-monitor-tag">Configuring the Code Cube Tag Monitor Tag</h3>
+<p><strong>4. Create New Tag</strong>: Under "Tags" in the menu, create a new tag.</p>
+<p><strong>5. Select Tag Monitor Template</strong>: Choose the Tag Monitor Template as the tag type.  </p>
+<p><strong>6. Configure Settings</strong>: </p>
+<ul>
+<li><strong>Database Name</strong>: Retrieve from the configuration page in the portal under 'client-side error monitoring'.</li>
+<li>** Table Name**: Retrieve from the configuration page in the portal under 'client-side error monitoring'.</li>
+<li><strong>Add Metadata</strong>: Set the following key/parameter pair via "Additional Tag Meta":<ul>
+<li>Key: <code>exclude</code></li>
+<li>Parameter: <code>true</code></li>
+</ul>
+</li>
+<li><strong>Consent</strong>: Set to 'No additional consent required'.  </li>
+</ul>
+<h3 id="adding-trigger-to-the-tag">Adding Trigger to the Tag</h3>
+<p><strong>7. Create Trigger</strong>: Create a trigger for a custom event where the event name equals <code>.*</code> (using regex matching). This ensures the monitor tag fires for every single dataLayer event.  </p>
+<p><img alt="Add Trigger" src="../../images/add-trigger.png" /></p>
+<p><strong>8. Limit Tag Monitor Fires</strong>:  </p>
+<ul>
+<li>Choose "Some custom events" and select "Random Number" from the first dropdown menu.</li>
+<li>For 10% of events, select: "Random number ends with 1".</li>
+<li>For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag accordingly.</li>
+</ul>
+<h3 id="update-all-your-tags-to-include-tag-name">Update all your tags to include Tag Name</h3>
+<p><strong>9. Update meta data in all tags</strong></p>
+<ul>
+<li>For each tag, expand "Advanced Settings" and check the "Include tag name" checkbox under "Additional Tag Metadata". Set the key name to "name" as well.</li>
+<li>If dealing with a large number of tags, follow <a href="z-tag-bulk-edit.md" target="_blank">these steps</a> to update them.</li>
+</ul>
+<p><img alt="Add Metadata" src="../../images/add-metadata.png" /></p>
+<h3 id="final-steps-going-live">Final Steps: Going Live</h3>
+<p><strong>10. Publish Container</strong>:  </p>
+<ul>
+<li>Publish your Tag Manager container to your production environment.</li>
+</ul>
+<p><strong>11. Access Tag Monitor Dashboard</strong>:  </p>
+<p>Access your Tag Monitor dashboard in the Portal provided by us. Data should now automatically populate.</p>
 <h2 id="configuring-error-monitoring-notifications">Configuring Error Monitoring Notifications</h2>
 <p>Follow the steps <a href="../../notifications/" target="_blank">here</a> to enable notifications for Tag Monitor.</p>
 
