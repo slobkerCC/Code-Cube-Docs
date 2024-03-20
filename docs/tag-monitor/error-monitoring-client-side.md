@@ -4,61 +4,73 @@ hide:
 ---
   
 # Google Tag Manager client-side
-This guide explains how to configure the Tag Monitor in your **Google Tag Manager client-side container**.
-
+This guide will walk you through the steps to set up the Tag Monitor within your Google Tag Manager client-side container.
 
 ## 1. Configuration in the Google Tag Manager container
 
-#### Import custom template
+### Importing Custom Template
 
-- Downlaod the Google Tag Manager template from the Tag Monitor configuration page [link](https://portal.code-cube.io/tag_monitor_config), under the option 'client side error monitoring'.
-- Go to your Google Tag Manager container, go to templates and create a new template.
+1. **Download Template**
+
+  - Visit the Tag Monitor configuration page [here] (https://portal.code-cube.io/tag_monitor_config) and download the Tag       Monitor template. (Ensure you're logged into our portal.)
+
+2. ** Add Template to Google Tag Manager**
+  - Open your Google Tag Manager container.
+  - Navigate to "Templates" and click on "New" in the "Tag Templates" section.
 
 ![add-template](../images/import-temp.png)
 
- -   Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.  
+3. ** Import Template **
+  - Click on the three dots in the top-right corner and select "Import".
+  - Choose the Tag Monitor template you've downloaded and click "Save". No adjustments to the template are necessary.
 
    ![import-template](../images/temp-editor.png)
 
-#### 4. **Create a new tag based on this template**
+### Configuring the Code Cube Tag Monitor Tag
 
-   -   Create a new tag under ‘Tags’ in the menu.
-   -   Select the Tag Monitor Template as tag type, this is the template you have just added to the container.
-   
-   ![add-tag](../images/create-tag.png)
+1. **Create new tag**
+  - Under "Tags" in the menu, create a new tag.
 
-#### 5. **Configure the tag**
+2. **Select Tag Monitor Template** 
+  - Choose the Tag Monitor Template as the tag type.
 
-
-   -   Click on the three dots in the right corner and select ‘Import’. Select the Tag Monitor template you’ve just       downloaded and click on ‘Save’. You don’t need to make any adjustments to the template.
+3. **Configure settings**
+   - Database Name: Retrieve from the configuration page in the portal under 'client-side error monitoring'.
+   - Add the following key/parameter pair via "Additional Tag Meta":
+      - Key: exclude
+      - Parameter: true
+   - Consent: Set to 'No additional consent required'.
 
    ![tag-configuration](../images/config_tag.png)                 
 
 
-#### 6. **Add a new Custom Event Trigger to the tag**
+### Adding Trigger to the Tag
 
-
-   - Create a trigger for a custom event where event name equals .\* (use regex matching). With that regular expression for the event name, the monitor tag will fire for every single dataLayer event.
+   1. **Create new trigger** 
+    - Create a trigger for a custom event where the event name equals .* (using regex matching). This ensures the monitor     	  tag fires for every single type of  event.
+     
    ![add-trigger](../images/add-trigger.png)
-   - To limit the number of times Tag Monitor fires, click "Some custom events" and select Random Number in the first dropdown menu.\
-   If it's not in the list, create a built-in variable Random Number and repeat.
-   - For 10% of the events choose: Random number ends with 1.
-   - For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number is less than or equals to 107,374,182 (2,147,483,647\*0.05).           
-
    
-#### 7. **Update all your tags to include the tag name in the meta data**
+   2. ** Limit Tag Monitor Fires**
+      - Choose "Some custom events" and select "Random Number" from the first dropdown menu.
+        - If it's not available, create a built-in variable "Random Number".
+      - For 10% of events, select: "Random number ends with 1".
+      - For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag                accordingly.
+  
+### Update Tags to include Tag Name in Metadata
+- For each tag, expand "Advanced Settings" and check the "Include tag name" checkbox under "Additional Tag Metadata". Set the key name to "name" as well.
 
-
-   - For each tag, expand the Advanced Settings and check the ‘’Include tag name’ checkbox under Additional Tag Metadata. Set the key name to name as well.
     ![tag-name-add](../images/add-metadata.png)
 
-   - If you're dealing with a large number of tags, please follow [these steps](z-tag-bulk-edit.md){:target="_blank"} to update them.
+   - When dealing with a large number of tags follow [these steps](z-tag-bulk-edit.md){:target="_blank"} to update them.
 
-## You are done. Let’s go live!
+### Final Steps: Going Live
 
-   1. Publish your Tag Manager container to your production environment.
-   2. You’ve received access to the Portal from us. In the Portal you can find your Tag Monitor dashboard. Data should now automatically come in!
-
+   1. **Publish Container**
+      - Publish your Tag Manager container to your production environment.
+    
+   2. **Access Tag Monitor dashboard**
+      - Access your Tag Monitor dashboard in the Portal provided by us. Data should now automatically populate.
 
 ## Configuring Error Monitoring Notifications
 Follow the steps [here](../notifications.md){:target="_blank"} to enable notifications for Tag Monitor.
