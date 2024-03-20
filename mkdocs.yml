@@ -44,3 +44,6 @@ extra_fonts:
       - Mulish-SemiBold.ttf
       - Mulish-Bold.ttf
       - Mulish-Italic.ttf
+
+extra_css:
+  - fonts/mycustomfont.css
