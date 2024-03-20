@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Enable Consent Monitoring
 
 ⚠️ This feauture is only available for the Tag Monitor Premium, Enterprise or Agency licenses.
