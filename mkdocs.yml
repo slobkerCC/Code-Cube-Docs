@@ -17,7 +17,7 @@ plugins:
 nav:
   #- Sitespeed Monitor: site-speed-monitoring/site_speed.md
   #- DataLayer Guard: datalayer-guard/datalayer_guard.md
-  - Configuration Tag Monitor:
+  - Tag Monitor:
       - ⚒️ How to configure?:
           - Client-side: tag-monitor/error-monitoring-client-side.md
           - Server-side: tag-monitor/error-monitoring-server-side.md
@@ -25,7 +25,7 @@ nav:
       - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
       - Offload to own BigQuery environment: tag-monitor/raw-offload-bigquery.md
       - Consent Monitoring: tag-monitor/consent-monitoring.md
-  - Configuration DataLayer Guard:
+  - DataLayer Guard:
     - ⚒️ How to configure?:
         - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
  # - Alerting & Notifications
