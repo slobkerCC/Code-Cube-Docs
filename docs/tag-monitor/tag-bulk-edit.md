@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Tag Bulk Edit
 
 ## Update all your tags to include the tag name in the meta data
