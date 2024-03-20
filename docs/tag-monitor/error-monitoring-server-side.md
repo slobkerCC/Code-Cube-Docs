@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # server-side Tag Monitor Implementation
 
 #### 1. **Build a custom GTM template**
