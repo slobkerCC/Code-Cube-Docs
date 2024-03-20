@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Manage access to raw Tag Manager data
 
 ### Manage access rights
