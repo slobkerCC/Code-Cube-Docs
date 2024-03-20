@@ -3,58 +3,72 @@ hide:
   - toc
 ---
 
-# server-side Tag Monitor Implementation
+# Google Tag Manager server-side: Configuring Tag Monitor
 
-#### 1. **Build a custom GTM template**
+This guide will walk you through the steps to set up the Tag Monitor within your Google Tag Manager server-side container.
 
-In Google Tag Manager, open up the Templates view, and create a new tag template. You can download template [here](https://gitlab.com/code-cube-standards/tag-monitor-implementation/-/blob/main/gtm-templates/Server_Container_Tag_Monitor.tpl) and [import](https://www.simoahava.com/analytics/custom-templates-guide-for-google-tag-manager/#importing-and-exporting) it directly into your container.
+## Configuration in the Google Tag Manager Container
 
+### Importing Custom Template
 
-#### 2. **Create a monitoring tag** 
+**1. Download Template:** Visit the [Tag Monitor configuration page]([https://portal.code-cube.io/tag_monitor_config]and download the Tag Monitor template. (Ensure you're logged into our portal.)
 
+**2. Add Template to Google Tag Manager:** Open your Google Tag Manager container. Navigate to "Templates" and click on "New" in the "Tag Templates" section.
 
-In GTM, go to Tags and create a new tag. Select the template you just created from the tag type selector. Now you need to configure the tag. There are three fields you need to set:
-- Project ID – set to the GCP project ID of the project where the BigQuery table is. If it’s the same project as the one running your Server container, you can leave this field blank.
-- Dataset ID – set to the Dataset ID of the BigQuery table.
-- Table ID – set to the Table ID of the BigQuery table.
+![Add Template](../images/import-temp.png)
 
-**Note:** You will be given the value for the above-mentioned field from us.        
-Expand Advanced Settings and scroll down to Additional Tag Metadata. Click it open, then click the + Add Metadata button, and set these values:
-    Key: `exclude`
-    Value: `true`
+**3. Import Template**
 
-!['configure-tag'](../images/config-tag-server.png)
+- Click on the three dots in the top-right corner and select "Import".
+- Choose the Tag Monitor template you've downloaded and click "Save". No adjustments to the template are necessary.
+  
+![Import Template](../images/temp-editor.png)
 
-#### 3. **Add a trigger**          
+### Configuring the Code Cube Tag Monitor Tag
 
+**4. Create New Tag**: Under "Tags" in the menu, create a new tag.
 
-Go to Triggers and click NEW to create a new trigger which will fire on all events. Add this trigger to your monitoring tag, and then save the tag. To limit the number of times Tag Monitor fires, click "Some events" and select Random Number in the first dropdown menu (if it's not in the list, create a built-in variable Random Number and repeat). For 10% of the events, choose Random number -> ends with -> 1. For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag in that number of cases. For example, if you need to limit Tag Monitor firing to 5% of events, use: Random number -> less than or equals to -> 107,374,182 (2,147,483,647*0.05).        
+**5. Select Tag Monitor Template**: Choose the Tag Monitor Template as the tag type.  
 
+**6. Configure Settings**: 
 
+- **Database Name**: Retrieve from the configuration page in the portal under 'client-side error monitoring'.
+- ** Table Name**: Retrieve from the configuration page in the portal under 'client-side error monitoring'.
+- **Add Metadata**: Set the following key/parameter pair via "Additional Tag Meta":
+     - Key: `exclude`
+     - Parameter: `true`
+- **Consent**: Set to 'No additional consent required'.  
 
-#### 4. **Update all your tags to include the tag name metadata**
+### Adding Trigger to the Tag
 
+**7. Create Trigger**: Create a trigger for a custom event where the event name equals `.*` (using regex matching). This ensures the monitor tag fires for every single dataLayer event.  
 
-For each tag, expand the Advanced Settings and check the Include tag name checkbox under Additional Tag Metadata. Set the key name to `name`. If you're dealing with a large number of tags, please follow [these steps](z-tag-bulk-edit.md){:target="_blank"} to update them. If needed, you can add even more key-value pairs to the tag metadata – you just need to modify the monitoring template to add these to the BigQuery API call. And, of course, you need a BigQuery table schema that accepts the new values.                    
+![Add Trigger](../images/add-trigger.png)
 
+**8. Limit Tag Monitor Fires**:  
 
- 
-#### 5. **Check results**
+- Choose "Some custom events" and select "Random Number" from the first dropdown menu.
+- For 10% of events, select: "Random number ends with 1".
+- For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag accordingly.
 
+### Update all your tags to include Tag Name
 
-Open Preview and validate that everything works as expected. Note that in the server container preview mode a webpage is not opened automatically, so you should manually open it to see the data streaming. Another way to validate that Tag Monitor is working is to check the results in the BigQuery table.   
+**9. Update meta data in all tags**
 
-**Note:** To check the results in preview, you need to open the preview on GTM client container simultaneously with the server-side preview. 
-    
+- For each tag, expand "Advanced Settings" and check the "Include tag name" checkbox under "Additional Tag Metadata". Set the key name to "name" as well.
+- If dealing with a large number of tags, follow [these steps](z-tag-bulk-edit.md){:target="_blank"} to update them.
 
-#### 6. **Grant Permission**
+![Add Metadata](../images/add-metadata.png)
 
+### Final Steps: Going Live
 
-This can be done in IAM & Admin > Service Accounts in Google Cloud Platform. Copy the email of associated services below and send it to us in order to be granted access to our BigQuery.
+**10. Publish Container**:  
 
-- The service account under which the server-side tracking is added.
-- The **compute engine** service.
+- Publish your Tag Manager container to your production environment.
 
+**11. Access Tag Monitor Dashboard**:  
+
+Access your Tag Monitor dashboard in the Portal provided by us. Data should now automatically populate.
 
 ## Configuring Error Monitoring Notifications
 Follow the steps [here](../notifications.md){:target="_blank"} to enable notifications for Tag Monitor.
