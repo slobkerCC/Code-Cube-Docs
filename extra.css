@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Mulish';
+  src: url('Mulish-Regular.ttf') format('ttf'),
+       url('Mulish-Bold.ttf') format('ttf');
+  /* Add additional font formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+}
+
 p {
     font-size: 16px;
 }
