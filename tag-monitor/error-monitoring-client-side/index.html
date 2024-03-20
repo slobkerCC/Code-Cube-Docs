@@ -437,9 +437,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-tags-to-include-tag-name-in-metadata" class="md-nav__link">
+  <a href="#update-all-your-tags-to-include-tag-name" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Tags to Include Tag Name in Metadata
+      Update all your tags to include Tag Name
     </span>
   </a>
   
@@ -779,9 +779,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-tags-to-include-tag-name-in-metadata" class="md-nav__link">
+  <a href="#update-all-your-tags-to-include-tag-name" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Tags to Include Tag Name in Metadata
+      Update all your tags to include Tag Name
     </span>
   </a>
   
@@ -829,92 +829,49 @@
 <p>This guide will walk you through the steps to set up the Tag Monitor within your Google Tag Manager client-side container.</p>
 <h2 id="1-configuration-in-the-google-tag-manager-container">1. Configuration in the Google Tag Manager Container</h2>
 <h3 id="importing-custom-template">Importing Custom Template</h3>
-<ol>
-<li>
-<p><strong>Download Template</strong>:</p>
-</li>
-<li>
-<p>Visit the <a href="https://portal.code-cube.io/tag_monitor_config">Tag Monitor configuration page</a> and download the Tag Monitor template. (Ensure you're logged into our portal.)</p>
-</li>
-<li>
-<p><strong>Add Template to Google Tag Manager</strong>:</p>
-</li>
-<li>
-<p>Open your Google Tag Manager container.</p>
-</li>
-<li>
-<p>Navigate to "Templates" and click on "New" in the "Tag Templates" section.<br />
-<img alt="Add Template" src="../../images/import-temp.png" /></p>
-</li>
-<li>
-<p><strong>Import Template</strong>:</p>
-</li>
-<li>
-<p>Click on the three dots in the top-right corner and select "Import".</p>
-</li>
-<li>Choose the Tag Monitor template you've downloaded and click "Save". No adjustments to the template are necessary.<br />
-<img alt="Import Template" src="../../images/temp-editor.png" /></li>
-</ol>
-<h3 id="configuring-the-code-cube-tag-monitor-tag">Configuring the Code Cube Tag Monitor Tag</h3>
-<ol>
-<li><strong>Create New Tag</strong>:  </li>
-<li>
-<p>Under "Tags" in the menu, create a new tag.</p>
-</li>
-<li>
-<p><strong>Select Tag Monitor Template</strong>:  </p>
-</li>
-<li>
-<p>Choose the Tag Monitor Template as the tag type.<br />
-<img alt="Add Tag" src="../../images/create-tag.png" /></p>
-</li>
-<li>
-<p><strong>Configure Settings</strong>:  </p>
-</li>
-<li><strong>Database Name</strong>: Retrieve from the configuration page in the portal under 'client-side error monitoring'.</li>
-<li><strong>Add Metadata</strong>: Set the following key/parameter pair via "Additional Tag Meta":<ul>
-<li>Key: <code>exclude</code></li>
-<li>Parameter: <code>true</code></li>
-</ul>
-</li>
-<li><strong>Consent</strong>: Set to 'No additional consent required'.<br />
-<img alt="Tag Configuration" src="../../images/config_tag.png" /></li>
-</ol>
-<h3 id="adding-trigger-to-the-tag">Adding Trigger to the Tag</h3>
-<ol>
-<li><strong>Create Trigger</strong>:  </li>
-<li>
-<p>Create a trigger for a custom event where the event name equals <code>.*</code> (using regex matching). This ensures the monitor tag fires for every single dataLayer event.<br />
-<img alt="Add Trigger" src="../../images/add-trigger.png" /></p>
-</li>
-<li>
-<p><strong>Limit Tag Monitor Fires</strong>:  </p>
-</li>
-<li>Choose "Some custom events" and select "Random Number" from the first dropdown menu.</li>
-<li>For 10% of events, select: "Random number ends with 1".</li>
-<li>For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag accordingly.</li>
-</ol>
-<h3 id="update-tags-to-include-tag-name-in-metadata">Update Tags to Include Tag Name in Metadata</h3>
+<p><strong>1. Download Template</strong>
+- Visit the <a href="https://portal.code-cube.io/tag_monitor_config">Tag Monitor configuration page</a> and download the Tag Monitor template. (Ensure you're logged into our portal.)</p>
+<p><strong>2. Add Template to Google Tag Manager</strong>
+- Open your Google Tag Manager container.
+- Navigate to "Templates" and click on "New" in the "Tag Templates" section.</p>
+<p><img alt="Add Template" src="../../images/import-temp.png" /></p>
+<p><strong>3. Import Template</strong></p>
 <ul>
-<li>
-<p>For each tag, expand "Advanced Settings" and check the "Include tag name" checkbox under "Additional Tag Metadata". Set the key name to "name" as well.<br />
-<img alt="Add Metadata" src="../../images/add-metadata.png" /></p>
-</li>
-<li>
-<p>If dealing with a large number of tags, follow <a href="z-tag-bulk-edit.md" target="_blank">these steps</a> to update them.</p>
-</li>
+<li>Click on the three dots in the top-right corner and select "Import".</li>
+<li>Choose the Tag Monitor template you've downloaded and click "Save". No adjustments to the template are necessary.</li>
 </ul>
+<p><img alt="Import Template" src="../../images/temp-editor.png" /></p>
+<h3 id="configuring-the-code-cube-tag-monitor-tag">Configuring the Code Cube Tag Monitor Tag</h3>
+<p><strong>4. Create New Tag</strong>:<br />
+- Under "Tags" in the menu, create a new tag.</p>
+<p><strong>5. Select Tag Monitor Template</strong>:<br />
+- Choose the Tag Monitor Template as the tag type.  </p>
+<p><img alt="Add Tag" src="../../images/create-tag.png" /></p>
+<p><strong>6. Configure Settings</strong>: 
+- <strong>Database Name</strong>: Retrieve from the configuration page in the portal under 'client-side error monitoring'.
+- <strong>Add Metadata</strong>: Set the following key/parameter pair via "Additional Tag Meta":
+     - Key: <code>exclude</code>
+     - Parameter: <code>true</code>
+- <strong>Consent</strong>: Set to 'No additional consent required'.  </p>
+<p><img alt="Tag Configuration" src="../../images/config_tag.png" /></p>
+<h3 id="adding-trigger-to-the-tag">Adding Trigger to the Tag</h3>
+<p><strong>7. Create Trigger</strong>:
+- Create a trigger for a custom event where the event name equals <code>.*</code> (using regex matching). This ensures the monitor tag fires for every single dataLayer event.  </p>
+<p><img alt="Add Trigger" src="../../images/add-trigger.png" /></p>
+<p><strong>8. Limit Tag Monitor Fires</strong>:<br />
+- Choose "Some custom events" and select "Random Number" from the first dropdown menu.
+- For 10% of events, select: "Random number ends with 1".
+- For other cases, calculate the expected percentage from 2,147,483,647 (Random Number value) and fire the tag accordingly.</p>
+<h3 id="update-all-your-tags-to-include-tag-name">Update all your tags to include Tag Name</h3>
+<p><strong>9. Update meta data in all tags</strong>
+- For each tag, expand "Advanced Settings" and check the "Include tag name" checkbox under "Additional Tag Metadata". Set the key name to "name" as well.
+- If dealing with a large number of tags, follow <a href="z-tag-bulk-edit.md" target="_blank">these steps</a> to update them.</p>
+<p><img alt="Add Metadata" src="../../images/add-metadata.png" /></p>
 <h3 id="final-steps-going-live">Final Steps: Going Live</h3>
-<ol>
-<li><strong>Publish Container</strong>:  </li>
-<li>
-<p>Publish your Tag Manager container to your production environment.</p>
-</li>
-<li>
-<p><strong>Access Tag Monitor Dashboard</strong>:  </p>
-</li>
-<li>Access your Tag Monitor dashboard in the Portal provided by us. Data should now automatically populate.</li>
-</ol>
+<p><strong>1. Publish Container</strong>:<br />
+- Publish your Tag Manager container to your production environment.</p>
+<p><strong>2. Access Tag Monitor Dashboard</strong>:<br />
+Access your Tag Monitor dashboard in the Portal provided by us. Data should now automatically populate.</p>
 <h2 id="configuring-error-monitoring-notifications">Configuring Error Monitoring Notifications</h2>
 <p>Follow the steps <a href="../../notifications/" target="_blank">here</a> to enable notifications for Tag Monitor.</p>
 
