@@ -3,53 +3,39 @@ hide:
   - toc
 ---
 
-# Manage access to raw Tag Manager data
+# Manage access to raw Tag Monitoring data in BigQuery
+To offload BigQuery data from one project to another, we'll create a scheduled query managed by a service account.
 
-### Manage access rights
-We need to create a service account in your Google Cloud Platform project.
+## Managing access to the data
 
+### Create a service account
 1. In the Google Cloud console, go to the Create [service account page](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts/create?walkthrough_id=iam--create-service-account&_ga=2.256991880.228167773.1709798988-298617199.1684135176#step_index=1).
-
-2. Select a Google Cloud Project.
-
-3. Enter a service account name to display in the Google Cloud console.
+2. Select your Google Cloud Project.
+3. Enter a name for the service account.
 _The Google Cloud console generates a service account ID based on this name. Edit the ID if necessary. You cannot change the ID later_.
-
-4. Add the IAM role **BigQuery User**
-
+4. Assign the **BigQuery User** IAM role.
 5. Click Done to finish creating the service account.
 
-### Create new dataset and table in BigQuery 
-In your BigQuery environment, prepare the new dataset and table.
+### Managing access rights
+Share the service account ID with your contact at Code Cube to confirm proper access rights management.
 
-#### Create the dataset
+## Setting Up BigQuery datasets and tables
+
+### Create the dataset
 
 1. Open the BigQuery page in the Google Cloud console.
-
 2. In the Explorer panel, select the project where you want to create the dataset.
+3. Expand the Actions option and select 'Create dataset'.
+4. Enter a unique dataset name (e.g., 'codecube-tagmonitor').
+5. Select **multi-region** and **EU** for the location type.
+6. Click **Create dataset**.
 
-3. Expand the more_vert Actions option and click Create dataset.
+#### Create the table for client-side monitoring
 
-4. On the 'Create dataset' page:
-
-    - For Dataset ID, enter a unique dataset name. For example 'codecube-tagmonitor'.
-    - Location type: Select **multi-region** and **EU**.
-
-5. Click Create dataset.
-
-#### Create the table for the client-side monitor
-
-1. Select the new dataset and click on **'Create table'**
-
-2. On the 'Create table' page:
-
-    - Create table from: Select 'Empty table'
-    - Destination
-        - Project: select your GCP project ID
-        - Dataset: select your newly created dataset, for example 'codecube-tagmonitor'
-        - Give the table a new, for example 'raw_data_client'
-        - Add the following schema:
-    
+1. Select the new dataset and click **'Create table'**
+2. Choose 'Empty table' as the table type.
+3. Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_client'.
+4. Define the table schema as follows:    
 
         | Field name        | Type      | Mode |
         | :---------------- | --------- | --------
@@ -71,22 +57,14 @@ In your BigQuery environment, prepare the new dataset and table.
         | value               | STRING    | NULLABLE
 
 4. Partitioning: Select 'No partitioning'
-
 5. Click on **Create table**
 
+#### Create the table for client-side monitoring
 
-#### Create the table for the server-side monitor
-
-1. Select the new dataset and click on **'Create table'**
-
-2. On the 'Create table' page:
-
-    - Create table from: Select 'Empty table'
-    - Destination
-        - Project: select your GCP project ID
-        - Dataset: select your newly created dataset, for example 'codecube-tagmonitor'
-        - Give the table a new, for example 'raw_data_server'
-        - Add the following schema:
+1. Select the new dataset and click **'Create table'**
+2. Choose 'Empty table' as the table type.
+3. Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_client'.
+4. Define the table schema as follows:    
     
 
         | Field name        | Type      | Mode |
@@ -109,38 +87,31 @@ In your BigQuery environment, prepare the new dataset and table.
         | value               | STRING    | NULLABLE
 
 4. Partitioning: Select 'No partitioning'
-
 5. Click on **Create table**
  
-### Create the query
+## Creating queries and scheduled jobs
+
+### Creating Queries
+Write queries to retrieve client-side and server-side data.
 
 #### Client-side data
-SELECT  FROM `code-cube.clientname_313_tag_monitor.raw_data_client` WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
+```sql
+SELECT * FROM `code-cube.clientname_313_tag_monitor.raw_data_client`
+WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
+```
 
 #### Server-side data
-SELECT  FROM `code-cube.clientname_313_tag_monitor.raw_data_server` WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
+
+```sql
+SELECT * FROM `code-cube.clientname_313_tag_monitor.raw_data_server`
+WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
+```
 
 ### Create the scheduled query
+Set up scheduled queries to automate data retrieval.
 
-1. Details and schedule: Give the scheduled query a name, for example 'codecube-tagmonitor-client'.
-
-2. Add the schedule options:
-
-    -  Repeat frequency: Days
-    -  At: 6:00AM
-    - Start and end dates can be added when relevant
-
-3. Add destination details for query results:
-
-    - Enable 'Set a destination table for query results'
-    - Add the name of the dataset you just created
-    - Add the table ID of the table you just created
-    - Destination table write preference: Append to table
-    - Location type: Multi-region, select EU
-
+1. Provide details and schedule for the query.
+2. Add destination details for query results.
+3. Add destination details for query results.
 4. Add the service account
-    - Select the service account that has been created.
-
-5. Optional: Enable email notifications
-
-6. Save the settings
+5. Save the settings
