@@ -30,7 +30,7 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 5. Select **multi-region** and **EU** for the location type.
 6. Click **Create dataset**.
 
-#### Create the table for client-side monitoring
+### Create the table for client-side monitoring
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
@@ -59,7 +59,7 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
 
-#### Create the table for client-side monitoring
+### Create the table for client-side monitoring
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
