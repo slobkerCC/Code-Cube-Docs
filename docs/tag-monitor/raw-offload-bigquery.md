@@ -59,11 +59,11 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
 
-### Create the table for client-side monitoring
+### Create the table for server-side monitoring
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
-3. Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_client'.
+3. Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_server'.
 4. Define the table schema as follows:    
     
 
@@ -96,22 +96,22 @@ Write queries to retrieve client-side and server-side data.
 
 #### Client-side data
 ```sql
-SELECT * FROM `code-cube.clientname_313_tag_monitor.raw_data_client`
+SELECT * FROM `code-cube.{{dataset_name}}.raw_data_client`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 ```
 
 #### Server-side data
 
 ```sql
-SELECT * FROM `code-cube.clientname_313_tag_monitor.raw_data_server`
+SELECT * FROM `code-cube.{{dataset_name}}.raw_data_server`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 ```
+The {{dataset}} name is equal to the dataset name shown on the Tag Monitor configuration page.
 
 ### Create the scheduled query
 Set up scheduled queries to automate data retrieval.
 
-1. Provide details and schedule for the query.
+1. Provide details and schedule for the query (once a day)
 2. Add destination details for query results.
-3. Add destination details for query results.
 4. Add the service account
 5. Save the settings
