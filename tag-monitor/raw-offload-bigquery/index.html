@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
       
 
@@ -553,9 +553,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-the-table-for-client-side-monitoring_1" class="md-nav__link">
+  <a href="#create-the-table-for-server-side-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
-      Create the table for client-side monitoring
+      Create the table for server-side monitoring
     </span>
   </a>
   
@@ -866,9 +866,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-the-table-for-client-side-monitoring_1" class="md-nav__link">
+  <a href="#create-the-table-for-server-side-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
-      Create the table for client-side monitoring
+      Create the table for server-side monitoring
     </span>
   </a>
   
@@ -1007,11 +1007,11 @@
 </li>
 <li>Click on <strong>Create table</strong></li>
 </ol>
-<h3 id="create-the-table-for-client-side-monitoring_1">Create the table for client-side monitoring</h3>
+<h3 id="create-the-table-for-server-side-monitoring">Create the table for server-side monitoring</h3>
 <ol>
 <li>Select the new dataset and click <strong>'Create table'</strong></li>
 <li>Choose 'Empty table' as the table type.</li>
-<li>Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_client'.</li>
+<li>Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_server'.</li>
 <li>
 <p>Define the table schema as follows:    </p>
 <pre><code>| Field name        | Type      | Mode |
@@ -1043,18 +1043,18 @@
 <h3 id="creating-queries">Creating Queries</h3>
 <p>Write queries to retrieve client-side and server-side data.</p>
 <h4 id="client-side-data">Client-side data</h4>
-<pre><code class="language-sql">SELECT * FROM `code-cube.clientname_313_tag_monitor.raw_data_client`
+<pre><code class="language-sql">SELECT * FROM `code-cube.{{dataset_name}}.raw_data_client`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 </code></pre>
 <h4 id="server-side-data">Server-side data</h4>
-<pre><code class="language-sql">SELECT * FROM `code-cube.clientname_313_tag_monitor.raw_data_server`
+<pre><code class="language-sql">SELECT * FROM `code-cube.{{dataset_name}}.raw_data_server`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 </code></pre>
+<p>The {{dataset}} name is equal to the dataset name shown on the Tag Monitor configuration page.</p>
 <h3 id="create-the-scheduled-query">Create the scheduled query</h3>
 <p>Set up scheduled queries to automate data retrieval.</p>
 <ol>
-<li>Provide details and schedule for the query.</li>
-<li>Add destination details for query results.</li>
+<li>Provide details and schedule for the query (once a day)</li>
 <li>Add destination details for query results.</li>
 <li>Add the service account</li>
 <li>Save the settings</li>
