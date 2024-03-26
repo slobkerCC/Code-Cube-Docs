@@ -24,7 +24,7 @@ nav:
       - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
       - Offload to own BigQuery environment: tag-monitor/raw-offload-bigquery.md
       - Consent Monitoring: tag-monitor/consent-monitoring.md
-      - Server-side error logging: /tag-monitor/serverside-error-logging.md
+      - Server-side error logging: tag-monitor/serverside-error-logging.md
   - DataLayer Guard:
         - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
  # - Alerting & Notifications
