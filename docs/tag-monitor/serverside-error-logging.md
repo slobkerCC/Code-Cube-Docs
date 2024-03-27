@@ -2,11 +2,6 @@
 
 To provide additional information on error occurrences in the Tag Monitor, it is important to enable logging configurations to provision a table with available and relevant data. This document serves as a short implementation guide on setting up the necessary Logging Sink.
 
-## Table of Contents
-1. Requirements
-2. Log Router Setup [Personal Access]
-3. External Project Permissions
-
 ## Requirements
 - Utilisation of the `logToConsole()` API within the sGTM container, messages passed to this method are outputted in the stdout stacktrace. This is where the server logs will be recorded.
 - Access to the client’s cloud project.
@@ -15,7 +10,7 @@ To provide additional information on error occurrences in the Tag Monitor, it is
 ## Log Router Setup
 1. Navigate to the Log router page, found under Logging → Log router.
 
-![Log Router](../images/log-router.png)
+![Log Router](../images/log-router.jpg)
 
 2. Click on Create sink.
 
