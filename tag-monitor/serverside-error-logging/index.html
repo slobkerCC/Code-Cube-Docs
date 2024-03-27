@@ -479,9 +479,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#log-router-setup-personal-access" class="md-nav__link">
+  <a href="#log-router-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Log Router Setup [Personal Access]
+      Log Router Setup
     </span>
   </a>
   
@@ -625,9 +625,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#log-router-setup-personal-access" class="md-nav__link">
+  <a href="#log-router-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Log Router Setup [Personal Access]
+      Log Router Setup
     </span>
   </a>
   
@@ -671,35 +671,49 @@
 <li>Access to the client’s cloud project.</li>
 <li>Writing permissions to the relevant Code Cube dataset for the client’s <code>logging.iam.gserviceaccount.com</code> service account.</li>
 </ul>
-<h2 id="log-router-setup-personal-access">Log Router Setup [Personal Access]</h2>
+<h2 id="log-router-setup">Log Router Setup</h2>
 <ol>
 <li>Navigate to the Log router page, found under Logging → Log router.</li>
+</ol>
+<p><img alt="Log Router" src="../images/log-router.png" /></p>
+<ol>
 <li>Click on Create sink.</li>
-<li>This will open a new interface, where the relevant destinations, services, and logging filters are submitted.</li>
+</ol>
+<p><img alt="Create sink" src="../../images/create-sink.jpg" /></p>
+<p>This will open a new interface, where the relevant destinations, services, and logging filters are submitted.</p>
+<ol>
 <li>Give the router an appropriate name and description.</li>
 <li>Configure the destination as a BigQuery dataset, and subsequently select Use a BigQuery dataset in another project.</li>
-<li>The service and destination will be converted to the format as seen in the image below, make sure that <code>[PROJECT_ID]</code> and <code>[DATASET_ID]</code> are replaced with the relevant values.</li>
-<li>In the log filters, input the following query:
-    <code>logName=~"stdout"
-    AND textPayload!~"https://www.googletagmanager.com/sgtm/a"
-    AND textPayload!~"Listening"</code><ul>
+</ol>
+<p><img alt="Sink destination" src="../../images/sink-destination.jpg" /></p>
+<ol>
+<li>
+<p>The service and destination will be converted to the format as seen in the image below. Make sure to add <code>[PROJECT_ID]</code> as <strong>'code-cube'</strong> and <code>[DATASET_ID]</code> is equal to the dataset name shown on the Tag Monitor configuration page.</p>
+</li>
+<li>
+<p>In the log filters, input the following query:</p>
+<p><code>logName=~"stdout"
+AND textPayload!~"https://www.googletagmanager.com/sgtm/a"
+AND textPayload!~"Listening"</code></p>
+<ul>
 <li>Explanation:</li>
 <li><code>logName=~"stdout"</code>: Filter logs based on stdout.</li>
 <li><code>textPayload!~"https://www.googletagmanager.com/sgtm/a"</code>: Exclude GTM analytics pings.</li>
 <li><code>textPayload!~"Listening"</code>: Exclude instance initializations.</li>
 </ul>
 </li>
-<li>Keep in mind that further refinement is possible by adding more filters, however, be sure to test these in the logs explorer before applying. A faulty or unreturning filter will cause the sink to stop writing logs.</li>
+<li>
+<p><strong>Keep in mind that further refinement is possible by adding more filters, however, be sure to test these in the logs explorer before applying. A faulty or unreturning filter will cause the sink to stop writing logs.</strong></p>
+</li>
 </ol>
 <h2 id="external-project-permissions">External Project Permissions</h2>
-<ul>
-<li>The creation of a logging sink generates a new service account. It is necessary to grant the client’s service account writing permissions on the BigQuery dataset, where the logs will be stored.</li>
-<li>In the client’s project:</li>
-<li>This service account is found under IAM and admin → IAM.</li>
-<li>On the Top right of this page, enable the inclusion of Google-provided role grants.</li>
-<li>Look for the service account that ends with <code>-logging.iam.gserviceaccount.com</code>.</li>
-<li>Copy the name of this service account, this will be assigned writing permissions on the relevant dataset.</li>
-</ul>
+<p>The creation of a logging sink generates a new service account in your GCP project. It is necessary for Code Cube to hav writing permissions on the BigQuery dataset, where the logs will be stored.
+Please make sure to locate this service account and share the name with your contact at Code Cube.</p>
+<p>How to find the service account;
+- This service account is found under IAM and admin → IAM.
+- On the Top right of this page, enable the inclusion of Google-provided role grants.
+- Look for the service account that ends with <code>-logging.iam.gserviceaccount.com</code>.
+- Copy the name of this service account, this will be assigned writing permissions on the relevant dataset.</p>
 
 
 
