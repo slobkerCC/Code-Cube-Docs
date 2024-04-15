@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # Manage access to raw Tag Monitoring data in BigQuery
 To offload BigQuery data from one project to another, we'll create a scheduled query managed by a service account.
 
@@ -56,7 +51,7 @@ A BigQuery dataset is a container that organizes your tables. Here's how to crea
         | channel           | STRING        | NULLABLE
         | execution_time    | STRING        | NULLABLE
 
-4.**Select 'No partitioning' for this table**: Partitioning is not required at this moment.
+4. **Select 'No partitioning' for this table**: Partitioning is not required at this moment.
 6. **Click Create table**: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.
 
 ### Create the table for server-side monitoring</summary>
@@ -83,7 +78,7 @@ A BigQuery dataset is a container that organizes your tables. Here's how to crea
         | status            | STRING    | NULLABLE
         | execution_time    | STRING    | NULLABLE
 
-4.**Select 'No partitioning' for this table**: Partitioning is not required at this moment.
+4. **Select 'No partitioning' for this table**: Partitioning is not required at this moment.
 6. **Click Create table**: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.
 
 ### Creating the client- and server-side queries</summary>
