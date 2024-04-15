@@ -9,7 +9,7 @@ To offload BigQuery data from one project to another, we'll create a scheduled q
 ## Managing access to the data
 
 <details>
-<summary>1. Create a service account </summary>
+<summary>Create a service account </summary>
 1. In the Google Cloud console, go to the Create [service account page](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts/create?walkthrough_id=iam--create-service-account&_ga=2.256991880.228167773.1709798988-298617199.1684135176#step_index=1).
 2. Select your Google Cloud Project.
 3. Enter a name for the service account.
@@ -18,7 +18,7 @@ _The Google Cloud console generates a service account ID based on this name. Edi
 5. Click Done to finish creating the service account.
 </details>
 <details>
-<summary>2. Managing access rights</summary>summary>
+<summary>Managing access rights</summary>summary>
 Share the service account ID with your contact at Code Cube to confirm proper access rights management.
 </details>
 ## Setting Up BigQuery datasets and tables
@@ -33,7 +33,7 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 6. Click **Create dataset**.
 </details>
 <details>
-<summary>2. Create the table for client-side monitoring</summary>summary>
+<summary>Create the table for client-side monitoring</summary>summary>
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
