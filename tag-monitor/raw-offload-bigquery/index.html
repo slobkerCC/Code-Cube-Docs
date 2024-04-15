@@ -216,8 +216,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -662,9 +660,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -835,7 +831,9 @@
 <li><strong>Select the new dataset and click 'Create table'</strong>: In the BigQuery console, navigate to your newly created dataset and click the "Create table" button.</li>
 <li><strong>Choose 'Empty table' as the table type</strong>: Select "Empty table" to create a new table without referencing existing data.</li>
 <li><strong>Provide a descriptive table name</strong>: Enter a clear and descriptive name for the table, such as 'raw_data_client'. </li>
-<li><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store client-side monitoring data:    <pre><code>| Field name        | Type          | Mode |
+<li>
+<p><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store client-side monitoring data:    </p>
+<pre><code>| Field name        | Type          | Mode |
 | ----------------- | ------------- | --------
 | timestamp         | TIMESTAMP     |NULLABLE
 | initial_url       | STRING        | NULLABLE
@@ -853,15 +851,19 @@
 | execution_time    | STRING        | NULLABLE
 </code></pre>
 </li>
+<li>
+<p><strong>Select 'No partitioning' for this table</strong>: Partitioning is not required at this moment.</p>
+</li>
+<li><strong>Click Create table</strong>: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.</li>
 </ol>
-<p>4.<strong>Select 'No partitioning' for this table</strong>: Partitioning is not required at this moment.
-6. <strong>Click Create table</strong>: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.</p>
 <h3 id="create-the-table-for-server-side-monitoring">Create the table for server-side monitoring</summary></h3>
 <ol>
 <li><strong>Select the new dataset and click 'Create table'</strong>: In the BigQuery console, navigate to your newly created dataset and click the "Create table" button.2. Choose 'Empty table' as the table type.</li>
 <li><strong>Choose 'Empty table' as the table type</strong>: Select "Empty table" to create a new table without referencing existing data.</li>
 <li><strong>Provide a descriptive table name</strong>: Enter a clear and descriptive name for the table, such as 'raw_data_server'. </li>
-<li><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store server-side monitoring data:    <pre><code>| Field name        | Type      | Mode |
+<li>
+<p><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store server-side monitoring data:    </p>
+<pre><code>| Field name        | Type      | Mode |
 | ----------------- | --------- | --------
 | timestamp         | TIMESTAMP | NULLABLE
 | url               | STRING    | NULLABLE
@@ -878,9 +880,11 @@
 | execution_time    | STRING    | NULLABLE
 </code></pre>
 </li>
+<li>
+<p><strong>Select 'No partitioning' for this table</strong>: Partitioning is not required at this moment.</p>
+</li>
+<li><strong>Click Create table</strong>: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.</li>
 </ol>
-<p>4.<strong>Select 'No partitioning' for this table</strong>: Partitioning is not required at this moment.
-6. <strong>Click Create table</strong>: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.</p>
 <h3 id="creating-the-client-and-server-side-queries">Creating the client- and server-side queries</summary></h3>
 <p>This section explains how to write queries to extract client-side and server-side data from your BigQuery tables. These queries will be used later to set up scheduled data offloading to Code Cube.</p>
 <h4 id="client-side-data">Client-side data</h4>
@@ -938,13 +942,8 @@ In the "Destination" section, BigQuery offers various options for where to store
 
 
 
-  
-  
 
 
-
-
-  
 
 
 
