@@ -40,7 +40,7 @@ A BigQuery dataset is a container that organizes your tables. Here's how to crea
 4. **Define the table schema as follows**: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store client-side monitoring data:    
 
         | Field name        | Type          | Mode |
-        | :---------------- | ------------- | --------
+        | ----------------- | ------------- | --------
         | timestamp         | TIMESTAMP     |NULLABLE
         | initial_url       | STRING        | NULLABLE
         | url               | STRING        | NULLABLE
@@ -68,7 +68,7 @@ A BigQuery dataset is a container that organizes your tables. Here's how to crea
 
 
         | Field name        | Type      | Mode |
-        | :---------------- | --------- | --------
+        | ----------------- | --------- | --------
         | timestamp         | TIMESTAMP | NULLABLE
         | url               | STRING    | NULLABLE
         | event_name        | STRING    | NULLABLE
@@ -98,6 +98,7 @@ WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 ```
 
 ** Explanation:**
+
 - SELECT *: This selects all columns from the table.
 - FROM: This clause specifies the source table, which is code-cube.{{dataset_name}}.raw_data_client.
   - Replace {{dataset_name}} with the actual name of the dataset. The dataset name can be found in the portal under **client-side error monitoring settings** on the Tag Monitor configuration page.
