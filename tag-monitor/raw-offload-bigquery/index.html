@@ -421,28 +421,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#managing-access-to-the-data" class="md-nav__link">
+  <a href="#granting-access-to-raw-tag-monitoring-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Managing access to the data
+      Granting access to raw Tag Monitoring data
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Managing access to the data">
+    <nav class="md-nav" aria-label="Granting access to raw Tag Monitoring data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-service-account" class="md-nav__link">
+  <a href="#creating-a-service-account-for-code-cube" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a service account
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#managing-access-rights" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing access rights
+      Creating a Service Account for Code Cube
     </span>
   </a>
   
@@ -692,28 +683,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#managing-access-to-the-data" class="md-nav__link">
+  <a href="#granting-access-to-raw-tag-monitoring-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Managing access to the data
+      Granting access to raw Tag Monitoring data
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Managing access to the data">
+    <nav class="md-nav" aria-label="Granting access to raw Tag Monitoring data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-service-account" class="md-nav__link">
+  <a href="#creating-a-service-account-for-code-cube" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a service account
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#managing-access-rights" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing access rights
+      Creating a Service Account for Code Cube
     </span>
   </a>
   
@@ -825,70 +807,63 @@
 
 <h1 id="manage-access-to-raw-tag-monitoring-data-in-bigquery">Manage access to raw Tag Monitoring data in BigQuery</h1>
 <p>To offload BigQuery data from one project to another, we'll create a scheduled query managed by a service account.</p>
-<h2 id="managing-access-to-the-data">Managing access to the data</h2>
-<h3 id="create-a-service-account">Create a service account</h3>
+<h2 id="granting-access-to-raw-tag-monitoring-data">Granting access to raw Tag Monitoring data</h2>
+<p>This section explains how to set up access control for offloading BigQuery data using a service account. A service account is a special Google Cloud identity used by applications or services to access Google Cloud resources.</p>
+<h3 id="creating-a-service-account-for-code-cube">Creating a Service Account for Code Cube</h3>
 <ol>
-<li>In the Google Cloud console, go to the Create <a href="https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts/create?walkthrough_id=iam--create-service-account&amp;_ga=2.256991880.228167773.1709798988-298617199.1684135176#step_index=1">service account page</a>.</li>
-<li>Select your Google Cloud Project.</li>
-<li>Enter a name for the service account.
-<em>The Google Cloud console generates a service account ID based on this name. Edit the ID if necessary. You cannot change the ID later</em>.</li>
-<li>Assign the <strong>BigQuery User</strong> IAM role.</li>
-<li>Click Done to finish creating the service account.</li>
+<li><strong>Navigate to the Service Account Creation Page</strong>: In the Google Cloud Console, locate the "IAM &amp; Admin" section and navigate to the "Service Accounts" page. Alternatively, you can directly access the service account creation page using [this link] (https://cloud.google.com/iam/docs/service-account-overview).</li>
+<li><strong>Select your Google Cloud Project</strong>: From the dropdown menu, ensure you've selected the project containing the BigQuery dataset you want to share with Code Cube.</li>
+<li><strong>Create a Service Account with a Descriptive Name</strong>:  Enter a clear and descriptive name for the service account. This name helps identify the purpose of the account (e.g., "codecube-tagmonitor-access"). The Google Cloud Console will generate a unique service account ID based on this name. You can edit the ID if needed, but keep in mind that it cannot be changed later.</li>
+<li><strong>Assign the </strong>BigQuery User<strong> IAM role</strong>: Grant the service account the "BigQuery User" role. This role provides the necessary permissions to access and query BigQuery data.</li>
+<li><strong>Finalize Service Account Creation</strong>: Click the "Done" button to create the service account.</li>
 </ol>
-<h3 id="managing-access-rights">Managing access rights</h3>
-<p>Share the service account ID with your contact at Code Cube to confirm proper access rights management.</p>
+<p><strong>Important Note</strong>: After creating the service account, you'll need to share the service account ID securely with your contact at Code Cube. This ID will be used by Code Cube to establish access to your BigQuery data through the scheduled query. Remember to restrict access to the service account after granting access to Code Cube. You can manage access controls later by following the instructions in the Google Cloud documentation https://cloud.google.com/iam/docs/understanding-roles.</p>
 <h2 id="preparing-the-bigquery-datasets-and-tables">Preparing the BigQuery datasets and tables</h2>
+<p>This section guides you through creating the BigQuery datasets and tables that will store your offloaded Tag Monitoring data.</p>
 <h3 id="create-the-bigquery-dataset">Create the BigQuery dataset</summary></h3>
+<p>A BigQuery dataset is a container that organizes your tables. Here's how to create a new dataset for Code Cube's Tag Monitoring data:</p>
 <ol>
-<li>Open the BigQuery page in the Google Cloud console.</li>
-<li>In the Explorer panel, select the project where you want to create the dataset.</li>
-<li>Expand the Actions option and select 'Create dataset'.</li>
-<li>Enter a unique dataset name (e.g., 'codecube-tagmonitor').</li>
-<li>Select <strong>multi-region</strong> and <strong>EU</strong> for the location type.</li>
-<li>Click <strong>Create dataset</strong>.</li>
+<li><strong>Open the BigQuery console</strong>: In the Google Cloud Console, navigate to the BigQuery service.2. In the Explorer panel, select the project where you want to create the dataset.</li>
+<li><strong>Select your project</strong>: In the BigQuery console's left-hand navigation panel, locate the "Explorer" section.  Ensure you have selected the GCP project where you want to store the Tag Monitoring data.</li>
+<li><strong>Create a new dataset</strong>:  Within the "Explorer" panel, click the "Actions" dropdown menu and choose "Create dataset".</li>
+<li><strong>Name your dataset</strong>: Enter a unique and descriptive name for the dataset. A good example might be "codecube-tagmonitor". This name helps identify the purpose of the dataset.</li>
+<li><strong>Set the location</strong>:  BigQuery allows you to choose where your data is geographically stored. For this case, select "multi-region" and "EU" as the location type.</li>
+<li><strong>Create the dataset</strong>: Once you've filled in the details, click the "Create dataset" button to create the new dataset in BigQuery.</li>
 </ol>
 <h3 id="create-the-bigquery-table-for-client-side-monitoring">Create the BigQuery table for client-side monitoring</h3>
 <ol>
-<li>Select the new dataset and click <strong>'Create table'</strong></li>
-<li>Choose 'Empty table' as the table type.</li>
-<li>Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_client'.</li>
-<li>
-<p>Define the table schema as follows:    </p>
-<pre><code>| Field name        | Type      | Mode |
-| :---------------- | --------- | --------
-| timestamp         | Title     |
-| initial_url       | STRING    | NULLABLE
-| url               | STRING    | NULLABLE
-| event_name        | STRING    | NULLABLE
-| event_timestamp   | STRING    | NULLABLE
-| container_version | STRING    | NULLABLE
-| container_id      | STRING    | NULLABLE
-| tag               | RECORD    | REPEATED
-| id                | STRING    | NULLABLE
-| name              | STRING    | NULLABLE
-| status            | STRING    | NULLABLE
-| channel           | STRING    | NULLABLE
-| execution_time    | STRING    | NULLABLE
-| parameters        | STRING    | REPEATED
-| key               | STRING    | NULLABLE
-| value               | STRING    | NULLABLE
+<li><strong>Select the new dataset and click 'Create table'</strong>: In the BigQuery console, navigate to your newly created dataset and click the "Create table" button.</li>
+<li><strong>Choose 'Empty table' as the table type</strong>: Select "Empty table" to create a new table without referencing existing data.</li>
+<li><strong>Provide a descriptive table name</strong>: Enter a clear and descriptive name for the table, such as 'raw_data_client'. </li>
+<li><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store client-side monitoring data:    <pre><code>| Field name        | Type          | Mode |
+| :---------------- | ------------- | --------
+| timestamp         | TIMESTAMP     |NULLABLE
+| initial_url       | STRING        | NULLABLE
+| url               | STRING        | NULLABLE
+| event_name        | STRING        | NULLABLE
+| event_timestamp   | STRING        | NULLABLE
+| container_version | STRING        | NULLABLE
+| container_id      | STRING        | NULLABLE
+| env_name          | STRING        | NULLABLE
+| tag               | RECORD        | REPEATED
+| id                | STRING        | NULLABLE
+| name              | STRING        | NULLABLE
+| status            | STRING        | NULLABLE
+| channel           | STRING        | NULLABLE
+| execution_time    | STRING        | NULLABLE
 </code></pre>
 </li>
-<li>
-<p>Partitioning: Select 'No partitioning'</p>
-</li>
-<li>Click on <strong>Create table</strong></li>
 </ol>
+<p>4.<strong>Select 'No partitioning' for this table</strong>: Partitioning is not required at this moment.
+6. <strong>Click Create table</strong>: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.</p>
 <h3 id="create-the-table-for-server-side-monitoring">Create the table for server-side monitoring</summary></h3>
 <ol>
-<li>Select the new dataset and click <strong>'Create table'</strong></li>
-<li>Choose 'Empty table' as the table type.</li>
-<li>Select your GCP project and newly created dataset, gave it an descriptive name like 'raw_data_server'.</li>
-<li>
-<p>Define the table schema as follows:    </p>
-<pre><code>| Field name        | Type      | Mode |
+<li><strong>Select the new dataset and click 'Create table'</strong>: In the BigQuery console, navigate to your newly created dataset and click the "Create table" button.2. Choose 'Empty table' as the table type.</li>
+<li><strong>Choose 'Empty table' as the table type</strong>: Select "Empty table" to create a new table without referencing existing data.</li>
+<li><strong>Provide a descriptive table name</strong>: Enter a clear and descriptive name for the table, such as 'raw_data_server'. </li>
+<li><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store server-side monitoring data:    <pre><code>| Field name        | Type      | Mode |
 | :---------------- | --------- | --------
-| timestamp         | Title     |
+| timestamp         | TIMESTAMP | NULLABLE
 | url               | STRING    | NULLABLE
 | event_name        | STRING    | NULLABLE
 | event_timestamp   | STRING    | NULLABLE
@@ -901,35 +876,59 @@
 | name              | STRING    | NULLABLE
 | status            | STRING    | NULLABLE
 | execution_time    | STRING    | NULLABLE
-| parameters        | STRING    | REPEATED
-| key               | STRING    | NULLABLE
-| value               | STRING    | NULLABLE
 </code></pre>
 </li>
-<li>
-<p>Partitioning: Select 'No partitioning'</p>
-</li>
-<li>Click on <strong>Create table</strong></li>
 </ol>
+<p>4.<strong>Select 'No partitioning' for this table</strong>: Partitioning is not required at this moment.
+6. <strong>Click Create table</strong>: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.</p>
 <h3 id="creating-the-client-and-server-side-queries">Creating the client- and server-side queries</summary></h3>
-<p>Write queries to retrieve client-side and server-side data.</p>
+<p>This section explains how to write queries to extract client-side and server-side data from your BigQuery tables. These queries will be used later to set up scheduled data offloading to Code Cube.</p>
 <h4 id="client-side-data">Client-side data</h4>
+<p>The following SQL query retrieves all data from Code Cube's raw_data_client table for the previous day:</p>
 <pre><code class="language-sql">SELECT * FROM `code-cube.{{dataset_name}}.raw_data_client`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 </code></pre>
+<p>** Explanation:<strong>
+- SELECT *: This selects all columns from the table.
+- FROM: This clause specifies the source table, which is code-cube.{{dataset_name}}.raw_data_client.
+  - Replace {{dataset_name}} with the actual name of the dataset. The dataset name can be found in the portal under </strong>client-side error monitoring settings** on the Tag Monitor configuration page.
+- WHERE: This clause filters the results to include only data where the timestamp field falls on the previous day relative to the current time.
+  - DATE(timestamp): Extracts the date portion from the timestamp field.
+  - DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY)): Calculates the date for one day before the current timestamp.</p>
+<p>Note: You can modify this query to filter data for a specific date range or based on other criteria.</p>
 <h4 id="server-side-data">Server-side data</h4>
+<p>The query for server-side data retrieval is similar to the client-side query, but uses the raw_data_server table instead. Simply replace "client" with "server" throughout the query:</p>
 <pre><code class="language-sql">SELECT * FROM `code-cube.{{dataset_name}}.raw_data_server`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 </code></pre>
 <p>The {{dataset}} name is equal to the dataset name shown on the Tag Monitor configuration page.</p>
 <h3 id="create-the-scheduled-query-in-your-bigquery-environment">Create the scheduled query in your BigQuery environment</h3>
-<p>Set up scheduled queries to automate data retrieval.</p>
-<ol>
-<li>Provide details and schedule for the query (once a day)</li>
-<li>Add destination details for query results.</li>
-<li>Add the service account</li>
-<li>Save the settings</li>
-</ol>
+<p>The next step involves creating scheduled queries in your BigQuery environment to automate this data retrieval process. This will ensure regular data offloading to Code Cube.</p>
+<p><strong>1. Provide details and schedule for the query (once a day)</strong></p>
+<ul>
+<li>In the BigQuery console, navigate to the query editor.</li>
+<li>Paste your client-side or server-side query (refer to the previous section) into the editor window.</li>
+<li>Locate the "Schedule" section. This section allows you to define how often the query should run.</li>
+<li>Set the "Frequency" to "Daily".</li>
+<li>Optionally, you can define a specific time for the query to run each day.</li>
+</ul>
+<p><strong>2. Add destination details for query results.</strong>
+In the "Destination" section, BigQuery offers various options for where to store the query results. Select here the tables created in the previous steps.</p>
+<p><strong>3. Add the service account</strong></p>
+<ul>
+<li>In the "Job configuration" section, locate the "Service account" option.</li>
+<li>Select the service account you created and granted access to your BigQuery data.</li>
+</ul>
+<p><strong>4. Save the settings</strong></p>
+<ul>
+<li>Once you've filled in all the details, review your query and configurations.</li>
+<li>Click the "Save" button to create and schedule the query.</li>
+</ul>
+<p>Additional Notes:</p>
+<ul>
+<li>BigQuery allows you to preview the query results before saving the scheduled query. This can help ensure the query retrieves the expected data.</li>
+<li>Consider naming your scheduled queries descriptively to improve clarity and organization within your BigQuery environment.</li>
+</ul>
 
 
 
