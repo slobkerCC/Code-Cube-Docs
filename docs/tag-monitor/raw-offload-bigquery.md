@@ -10,20 +10,27 @@ To offload BigQuery data from one project to another, we'll create a scheduled q
 
 <details>
 <summary>Create a service account </summary>
+
 1. In the Google Cloud console, go to the Create [service account page](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts/create?walkthrough_id=iam--create-service-account&_ga=2.256991880.228167773.1709798988-298617199.1684135176#step_index=1).
+
 2. Select your Google Cloud Project.
+
 3. Enter a name for the service account.
 _The Google Cloud console generates a service account ID based on this name. Edit the ID if necessary. You cannot change the ID later_.
+
 4. Assign the **BigQuery User** IAM role.
+
 5. Click Done to finish creating the service account.
 </details>
+
 <details>
-<summary>Managing access rights</summary>summary>
+<summary>Managing access rights</summary>
+  
 Share the service account ID with your contact at Code Cube to confirm proper access rights management.
 </details>
-## Setting Up BigQuery datasets and tables
+
 <details>
-<summary>1. Create the dataset</summary>
+<summary>Create the BigQuery dataset</summary>
 
 1. Open the BigQuery page in the Google Cloud console.
 2. In the Explorer panel, select the project where you want to create the dataset.
@@ -33,7 +40,7 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 6. Click **Create dataset**.
 </details>
 <details>
-<summary>Create the table for client-side monitoring</summary>summary>
+<summary>Create the BigQuery table for client-side monitoring</summary>
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
@@ -62,8 +69,9 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
 </details>
+
 <details>
-<summary>3. Create the table for server-side monitoring<summary>
+<summary>Create the table for server-side monitoring</summary>
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
@@ -93,7 +101,6 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
 </details> 
-## Creating queries and scheduled jobs
 
 <details>
 <summary>1. Creating Queries</summary>
@@ -113,6 +120,7 @@ WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 ```
 The {{dataset}} name is equal to the dataset name shown on the Tag Monitor configuration page.
 </details>
+
 <details>
 <summary>2. Create the scheduled query </summary>
 Set up scheduled queries to automate data retrieval.
