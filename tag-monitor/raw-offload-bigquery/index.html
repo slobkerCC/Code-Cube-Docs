@@ -836,7 +836,7 @@
 <li><strong>Choose 'Empty table' as the table type</strong>: Select "Empty table" to create a new table without referencing existing data.</li>
 <li><strong>Provide a descriptive table name</strong>: Enter a clear and descriptive name for the table, such as 'raw_data_client'. </li>
 <li><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store client-side monitoring data:    <pre><code>| Field name        | Type          | Mode |
-| :---------------- | ------------- | --------
+| ----------------- | ------------- | --------
 | timestamp         | TIMESTAMP     |NULLABLE
 | initial_url       | STRING        | NULLABLE
 | url               | STRING        | NULLABLE
@@ -862,7 +862,7 @@
 <li><strong>Choose 'Empty table' as the table type</strong>: Select "Empty table" to create a new table without referencing existing data.</li>
 <li><strong>Provide a descriptive table name</strong>: Enter a clear and descriptive name for the table, such as 'raw_data_server'. </li>
 <li><strong>Define the table schema as follows</strong>: The table schema defines the structure and data types for each column. Here's a breakdown of the columns used to store server-side monitoring data:    <pre><code>| Field name        | Type      | Mode |
-| :---------------- | --------- | --------
+| ----------------- | --------- | --------
 | timestamp         | TIMESTAMP | NULLABLE
 | url               | STRING    | NULLABLE
 | event_name        | STRING    | NULLABLE
@@ -888,13 +888,15 @@
 <pre><code class="language-sql">SELECT * FROM `code-cube.{{dataset_name}}.raw_data_client`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 </code></pre>
-<p>** Explanation:<strong>
-- SELECT *: This selects all columns from the table.
-- FROM: This clause specifies the source table, which is code-cube.{{dataset_name}}.raw_data_client.
-  - Replace {{dataset_name}} with the actual name of the dataset. The dataset name can be found in the portal under </strong>client-side error monitoring settings** on the Tag Monitor configuration page.
-- WHERE: This clause filters the results to include only data where the timestamp field falls on the previous day relative to the current time.
-  - DATE(timestamp): Extracts the date portion from the timestamp field.
-  - DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY)): Calculates the date for one day before the current timestamp.</p>
+<p>** Explanation:**</p>
+<ul>
+<li>SELECT *: This selects all columns from the table.</li>
+<li>FROM: This clause specifies the source table, which is code-cube.{{dataset_name}}.raw_data_client.</li>
+<li>Replace {{dataset_name}} with the actual name of the dataset. The dataset name can be found in the portal under <strong>client-side error monitoring settings</strong> on the Tag Monitor configuration page.</li>
+<li>WHERE: This clause filters the results to include only data where the timestamp field falls on the previous day relative to the current time.</li>
+<li>DATE(timestamp): Extracts the date portion from the timestamp field.</li>
+<li>DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY)): Calculates the date for one day before the current timestamp.</li>
+</ul>
 <p>Note: You can modify this query to filter data for a specific date range or based on other criteria.</p>
 <h4 id="server-side-data">Server-side data</h4>
 <p>The query for server-side data retrieval is similar to the client-side query, but uses the raw_data_server table instead. Simply replace "client" with "server" throughout the query:</p>
