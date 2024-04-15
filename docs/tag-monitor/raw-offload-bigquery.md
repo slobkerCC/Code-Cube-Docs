@@ -8,7 +8,8 @@ To offload BigQuery data from one project to another, we'll create a scheduled q
 
 ## Managing access to the data
 
-### Create a service account
+<details>
+<summary>### Create a service account </summary>
 1. In the Google Cloud console, go to the Create [service account page](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts/create?walkthrough_id=iam--create-service-account&_ga=2.256991880.228167773.1709798988-298617199.1684135176#step_index=1).
 2. Select your Google Cloud Project.
 3. Enter a name for the service account.
@@ -115,3 +116,5 @@ Set up scheduled queries to automate data retrieval.
 2. Add destination details for query results.
 4. Add the service account
 5. Save the settings
+
+</details>
