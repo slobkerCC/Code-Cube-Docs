@@ -16,12 +16,13 @@ To offload BigQuery data from one project to another, we'll create a scheduled q
 _The Google Cloud console generates a service account ID based on this name. Edit the ID if necessary. You cannot change the ID later_.
 4. Assign the **BigQuery User** IAM role.
 5. Click Done to finish creating the service account.
-
+</details>
+<details>
 <summary>2. Managing access rights</summary>summary>
 Share the service account ID with your contact at Code Cube to confirm proper access rights management.
-
+</details>
 ## Setting Up BigQuery datasets and tables
-
+<details>
 <summary>1. Create the dataset</summary>
 
 1. Open the BigQuery page in the Google Cloud console.
@@ -30,7 +31,8 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 4. Enter a unique dataset name (e.g., 'codecube-tagmonitor').
 5. Select **multi-region** and **EU** for the location type.
 6. Click **Create dataset**.
-
+</details>
+<details>
 <summary>2. Create the table for client-side monitoring</summary>summary>
 
 1. Select the new dataset and click **'Create table'**
@@ -59,7 +61,8 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
-
+</details>
+<details>
 <summary>3. Create the table for server-side monitoring<summary>
 
 1. Select the new dataset and click **'Create table'**
@@ -89,9 +92,10 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
- 
+</details> 
 ## Creating queries and scheduled jobs
 
+<details>
 <summary>1. Creating Queries</summary>
 Write queries to retrieve client-side and server-side data.
 
@@ -108,7 +112,8 @@ SELECT * FROM `code-cube.{{dataset_name}}.raw_data_server`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 ```
 The {{dataset}} name is equal to the dataset name shown on the Tag Monitor configuration page.
-
+</details>
+<details>
 <summary>2. Create the scheduled query </summary>
 Set up scheduled queries to automate data retrieval.
 
@@ -116,5 +121,6 @@ Set up scheduled queries to automate data retrieval.
 2. Add destination details for query results.
 4. Add the service account
 5. Save the settings
+</details>
 
 </details>
