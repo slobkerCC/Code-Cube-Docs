@@ -103,7 +103,7 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 </details> 
 
 <details>
-<summary>1. Creating Queries</summary>
+<summary>Creating the client- and server-side queries</summary>
 Write queries to retrieve client-side and server-side data.
 
 #### Client-side data
@@ -122,7 +122,7 @@ The {{dataset}} name is equal to the dataset name shown on the Tag Monitor confi
 </details>
 
 <details>
-<summary>2. Create the scheduled query </summary>
+<summary>Create the scheduled query in your BigQuery environment</summary>
 Set up scheduled queries to automate data retrieval.
 
 1. Provide details and schedule for the query (once a day)
