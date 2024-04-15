@@ -8,29 +8,22 @@ To offload BigQuery data from one project to another, we'll create a scheduled q
 
 ## Managing access to the data
 
-<details>
-<summary>Create a service account </summary>
+### Create a service account 
 
 1. In the Google Cloud console, go to the Create [service account page](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts/create?walkthrough_id=iam--create-service-account&_ga=2.256991880.228167773.1709798988-298617199.1684135176#step_index=1).
-</br>
 2. Select your Google Cloud Project.
-</br>
 3. Enter a name for the service account.
 _The Google Cloud console generates a service account ID based on this name. Edit the ID if necessary. You cannot change the ID later_.
-</br>
 4. Assign the **BigQuery User** IAM role.
-
 5. Click Done to finish creating the service account.
-</details>
 
-<details>
-<summary>Managing access rights</summary>
+###Managing access rights
   
 Share the service account ID with your contact at Code Cube to confirm proper access rights management.
-</details>
 
-<details>
-<summary>Create the BigQuery dataset</summary>
+## Preparing the BigQuery datasets and tables
+
+### Create the BigQuery dataset</summary>
 
 1. Open the BigQuery page in the Google Cloud console.
 2. In the Explorer panel, select the project where you want to create the dataset.
@@ -38,9 +31,8 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 4. Enter a unique dataset name (e.g., 'codecube-tagmonitor').
 5. Select **multi-region** and **EU** for the location type.
 6. Click **Create dataset**.
-</details>
-<details>
-<summary>Create the BigQuery table for client-side monitoring</summary>
+
+### Create the BigQuery table for client-side monitoring
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
@@ -68,10 +60,8 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
-</details>
 
-<details>
-<summary>Create the table for server-side monitoring</summary>
+### Create the table for server-side monitoring</summary>
 
 1. Select the new dataset and click **'Create table'**
 2. Choose 'Empty table' as the table type.
@@ -100,10 +90,8 @@ Share the service account ID with your contact at Code Cube to confirm proper ac
 
 4. Partitioning: Select 'No partitioning'
 5. Click on **Create table**
-</details> 
 
-<details>
-<summary>Creating the client- and server-side queries</summary>
+### Creating the client- and server-side queries</summary>
 Write queries to retrieve client-side and server-side data.
 
 #### Client-side data
@@ -119,16 +107,11 @@ SELECT * FROM `code-cube.{{dataset_name}}.raw_data_server`
 WHERE DATE(timestamp) = DATE(DATE_ADD(CURRENT_TIMESTAMP(), INTERVAL -1 DAY))
 ```
 The {{dataset}} name is equal to the dataset name shown on the Tag Monitor configuration page.
-</details>
 
-<details>
-<summary>Create the scheduled query in your BigQuery environment</summary>
+###Create the scheduled query in your BigQuery environment
 Set up scheduled queries to automate data retrieval.
 
 1. Provide details and schedule for the query (once a day)
 2. Add destination details for query results.
 4. Add the service account
 5. Save the settings
-</details>
-
-</details>
