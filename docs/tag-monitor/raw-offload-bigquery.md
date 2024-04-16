@@ -67,7 +67,7 @@ A BigQuery dataset is a container that organizes your tables. Here's how to crea
         | timestamp         | TIMESTAMP | NULLABLE
         | url               | STRING    | NULLABLE
         | event_name        | STRING    | NULLABLE
-        | event_timestamp   | STRING    | NULLABLE
+        | event_timestamp   | INTEGER   | NULLABLE
         | client_name       | STRING    | NULLABLE
         | container_version | STRING    | NULLABLE
         | container_id      | STRING    | NULLABLE
