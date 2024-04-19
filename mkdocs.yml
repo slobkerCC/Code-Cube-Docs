@@ -37,12 +37,9 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_fonts:
-  - name: Mulish
+  - name: Mulish-Regular
     files:
       - Mulish-Regular.ttf
-      - Mulish-SemiBold.ttf
-      - Mulish-Bold.ttf
-      - Mulish-Italic.ttf
 
 extra_css:
   - extra.css
