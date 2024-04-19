@@ -1,3 +1,10 @@
+---
+hide:
+  - toc
+  - nav
+---
+
+
 # Welcome to Code Cube Documentation!
 
 Welcome to the official documentation hub for Code Cube. Here, you'll find comprehensive guides, tutorials, and reference materials to help you make the most out of our products and services.
