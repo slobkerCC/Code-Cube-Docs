@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block head %}
   {{ super() }}
   <!-- Add Bootstrap CSS -->
@@ -8,38 +7,12 @@
 {% endblock %}
 
 {% block analytics %}
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K6VCS5W');</script>
-  <!-- End Google Tag Manager -->
-
-{% endblock %}
-
-{% block scripts %}
-<!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager -->
   <script>
-    var gtm = document.createElement('noscript');
-    var iframe = document.createElement('iframe');
-
-    iframe.setAttribute('src', "https://www.googletagmanager.com/ns.html?id=GTM-K6VCS5W");
-    iframe.setAttribute('height' , 0);
-    iframe.setAttribute('width', 0);
-    iframe.style.display = "none";
-    iframe.style.visibility = "hidden";
-    
-    gtm.appendChild(iframe);
-    
-    
-    var s = document.getElementsByTagName('body')[0];
-    s.insertBefore(gtm, s.firstElementChild);
-    </script>
-
-<!-- End Google Tag Manager (noscript) -->
-  {{ super() }}
-  {% endblock %}
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K6VCS5W');
+  </script>
+  <!-- End Google Tag Manager -->
+{% endblock %}
 
 {% block body %}
   <!-- Your existing code here -->
@@ -51,7 +24,10 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-{% endblock %}
-
-
   
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6VCS5W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+{% endblock %}
