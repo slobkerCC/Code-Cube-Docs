@@ -47,6 +47,7 @@ The creation of a logging sink generates a new service account in your GCP proje
 Please make sure to locate this service account and share the name with your contact at Code Cube.
 
 How to find the service account;
+
 - This service account is found under IAM and admin → IAM.
 - On the Top right of this page, enable the inclusion of Google-provided role grants.
 - Look for the service account that ends with `-logging.iam.gserviceaccount.com`.
