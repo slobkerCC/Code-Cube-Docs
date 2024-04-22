@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+
+{% block head %}
+  {{ super() }}
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% endblock %}
+
 {% block analytics %}
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,7 +17,6 @@
   <!-- End Google Tag Manager -->
 
 {% endblock %}
-
 
 {% block scripts %}
 <!-- Google Tag Manager (noscript) -->
@@ -31,7 +37,21 @@
     s.insertBefore(gtm, s.firstElementChild);
     </script>
 
-
 <!-- End Google Tag Manager (noscript) -->
   {{ super() }}
   {% endblock %}
+
+{% block body %}
+  <!-- Your existing code here -->
+  {% block content %}
+    {{ super() }}
+  {% endblock %}
+  
+  <!-- Add Bootstrap JS before closing body tag -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
+
+
+  
