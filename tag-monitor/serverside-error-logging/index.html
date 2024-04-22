@@ -565,9 +565,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      Introduction
     </span>
   </a>
   
@@ -583,9 +583,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-project-permissions" class="md-nav__link">
+  <a href="#manage-access-to-the-sink" class="md-nav__link">
     <span class="md-ellipsis">
-      External Project Permissions
+      Manage access to the Sink
     </span>
   </a>
   
@@ -710,9 +710,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      Introduction
     </span>
   </a>
   
@@ -728,9 +728,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-project-permissions" class="md-nav__link">
+  <a href="#manage-access-to-the-sink" class="md-nav__link">
     <span class="md-ellipsis">
-      External Project Permissions
+      Manage access to the Sink
     </span>
   </a>
   
@@ -752,16 +752,21 @@
 
 
 <h1 id="server-side-gtm-logging">Server-side GTM Logging</h1>
-<p>To provide additional information on error occurrences in the Tag Monitor, it is important to enable logging configurations to provision a table with available and relevant data. This document serves as a short implementation guide on setting up the necessary Logging Sink.</p>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li>Utilisation of the <code>logToConsole()</code> API within the sGTM container, messages passed to this method are outputted in the stdout stacktrace. This is where the server logs will be recorded.</li>
-<li>Access to the client’s cloud project.</li>
-<li>Writing permissions to the relevant Code Cube dataset for the client’s <code>logging.iam.gserviceaccount.com</code> service account.</li>
-</ul>
+<h2 id="introduction">Introduction</h2>
+<p>To provide additional information on error occurrences of the Tag Monitor, it is important to enable logging configurations in your Cloud environment. This document serves as a short implementation guide on setting up the necessary Logging Sink and offload the data to Code Cube's project.</p>
+<p>The following steps have to be taken:</p>
+<ol>
+<li>Configure logging sink in the Google Cloud Platform project where <em>server-side Tag Management</em> is enabled.</li>
+<li>Make sure Code Cube's project receives access to this sink and the logs.</li>
+</ol>
 <h2 id="log-router-setup">Log Router Setup</h2>
 <ol>
-<li>Navigate to the Log router page, found under Logging → Log router.</li>
+<li>
+<p>Open the your Google Cloud Platform project where your Cloud Run service for Google Tag Manager server-side is enabled.</p>
+</li>
+<li>
+<p>Via the navigation, go to the Log router page, found under Logging → Log router.</p>
+</li>
 </ol>
 <p><img alt="Log Router" src="../../images/log-router.jpg" /></p>
 <ol>
@@ -770,14 +775,19 @@
 <p><img alt="Create sink" src="../../images/create-sink.jpg" /></p>
 <p>This will open a new interface, where the relevant destinations, services, and logging filters are submitted.</p>
 <ol>
-<li>Give the router an appropriate name and description.</li>
-<li>Configure the destination as a BigQuery dataset, and subsequently select Use a BigQuery dataset in another project.</li>
+<li>
+<p>Give the router an appropriate name and description: For example 'code-cube-error-logs'.</p>
+</li>
+<li>
+<p>Configure the destination as a BigQuery dataset and select 'Use a BigQuery dataset in another project'.</p>
+</li>
 </ol>
 <p><img alt="Sink destination" src="../../images/sink-destination.jpg" /></p>
 <ol>
-<li>
-<p>The service and destination will be converted to the format as seen in the image below. Make sure to add <code>[PROJECT_ID]</code> as <strong>'code-cube'</strong> and <code>[DATASET_ID]</code> is equal to the dataset name shown on the Tag Monitor configuration page.</p>
-</li>
+<li>Copy the Sink destination below and add it in the destinated field:</li>
+</ol>
+<p><code>bigquery.googleapis.com/projects/code-cube/datasets/code_cube_tag_monitor   . Make sure to add `[PROJECT_ID]` as **'code-cube'** and `[DATASET_ID]` is equal to the dataset name shown on the Tag Monitor configuration page.</code></p>
+<ol>
 <li>
 <p>In the log filters, input the following query:</p>
 <p><code>logName=~"stdout"
@@ -790,20 +800,20 @@ AND textPayload!~"Listening"</code></p>
 <li><code>textPayload!~"Listening"</code>: Exclude instance initializations.</li>
 </ul>
 </li>
-<li>
-<p><strong>Keep in mind that further refinement is possible by adding more filters, however, be sure to test these in the logs explorer before applying. A faulty or unreturning filter will cause the sink to stop writing logs.</strong></p>
-</li>
 </ol>
-<h2 id="external-project-permissions">External Project Permissions</h2>
-<p>The creation of a logging sink generates a new service account in your GCP project. It is necessary for Code Cube to hav writing permissions on the BigQuery dataset, where the logs will be stored.
-Please make sure to locate this service account and share the name with your contact at Code Cube.</p>
+<p><strong>Keep in mind that further refinement is possible by adding more filters, however, be sure to test these in the logs explorer before applying. A faulty or unreturning filter will cause the sink to stop writing logs.</strong></p>
+<h2 id="manage-access-to-the-sink">Manage access to the Sink</h2>
+<ol>
+<li>The creation of a logging sink automatically generates a new service account in your GCP project.</li>
+<li>Please make sure to locate this service account and share the name with your contact at Code Cube.</li>
+</ol>
 <p>How to find the service account;</p>
-<ul>
+<ol>
 <li>This service account is found under IAM and admin → IAM.</li>
 <li>On the Top right of this page, enable the inclusion of Google-provided role grants.</li>
 <li>Look for the service account that ends with <code>-logging.iam.gserviceaccount.com</code>.</li>
 <li>Copy the name of this service account, this will be assigned writing permissions on the relevant dataset.</li>
-</ul>
+</ol>
 
 
 
