@@ -57,6 +57,7 @@ li {font-size: 16px;}
 
 /* Navigation */
 .md-nav {padding-left: 10px;}
+.md-nav__list {padding-left: 0px;}
 .md-nav__link {font-size: 16px;color: #09003D;}
 .md-ellipsis {font-size: 14px;color: #09003D;}
 div.md-sidebar.md-sidebar--primary > div {border-right: 1.8px solid #2b2bb551;}
