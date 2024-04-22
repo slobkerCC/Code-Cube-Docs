@@ -685,11 +685,13 @@ AND textPayload!~"Listening"</code></p>
 <h2 id="external-project-permissions">External Project Permissions</h2>
 <p>The creation of a logging sink generates a new service account in your GCP project. It is necessary for Code Cube to hav writing permissions on the BigQuery dataset, where the logs will be stored.
 Please make sure to locate this service account and share the name with your contact at Code Cube.</p>
-<p>How to find the service account;
-- This service account is found under IAM and admin → IAM.
-- On the Top right of this page, enable the inclusion of Google-provided role grants.
-- Look for the service account that ends with <code>-logging.iam.gserviceaccount.com</code>.
-- Copy the name of this service account, this will be assigned writing permissions on the relevant dataset.</p>
+<p>How to find the service account;</p>
+<ul>
+<li>This service account is found under IAM and admin → IAM.</li>
+<li>On the Top right of this page, enable the inclusion of Google-provided role grants.</li>
+<li>Look for the service account that ends with <code>-logging.iam.gserviceaccount.com</code>.</li>
+<li>Copy the name of this service account, this will be assigned writing permissions on the relevant dataset.</li>
+</ul>
 
 
 
