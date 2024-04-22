@@ -1,7 +1,6 @@
-# Enable additional rver-side error logs
+# Enable additional server-side error logs
 
-<div class="alert alert-info" role="alert">❕This feature is only available as a feature for the Tag Monitor **premium** and *enterprise** licenses.
-</div>
+<div class="alert alert-info" role="alert">❕This feature is exclusively accessible with the Tag Monitor's premium and enterprise licenses.</div>
 
 ## Introduction
 
@@ -9,41 +8,43 @@ To enhance *error tracking* of your server-side Google Tag Manager, enabling log
 
 The logs will be received in Code Cube's cloud project and pipeline and from there matched with other error information and integrated in dashboarding and notifications.
 
+The following steps will be explained:
 
-
-The following steps should to be taken:
-
-1. Configure logging sink in the Google Cloud Platform project where *server-side Tag Management* is enabled.
-2. Make sure Code Cube's project receives access to this sink and the logs.
+1. Configure Logging Sink: Set up a logging sink in your Google Cloud Platform project where server-side Tag Management is enabled.
+2. Grant Access: Ensure Code Cube's project has access to this sink and its logs.
 
 ## Log Router Setup
-1. Open the your Google Cloud Platform project where your Cloud Run service for Google Tag Manager server-side is enabled.
-   
-2. Via the navigation, go to the Log router page, found under Logging → Log router.
+1. **Navigate to Log Router**
+
+- Open the Google Cloud Platform project where the server-side tagging Cloud Run service is enabled.
+- Via the navigation, go to the Log router page, found under Logging → Log router.
 
 ![Log Router](../images/log-router.jpg)
 
-3. Click on Create sink.
+2. **Create Sink** and fill in the required details:
 
 ![Create sink](../images/create-sink.jpg)
 
-This will open a new interface, where the relevant destinations, services, and logging filters are submitted.
+- Give the sink an appropriate name, for example 'code-cube-error-logs'.
+- Additionaly give the sink an explainatory description.
 
-4. Give the router an appropriate name and description: For example 'code-cube-error-logs'.
-
-5. Configure the destination as a BigQuery dataset and select 'Use a BigQuery dataset in another project'.
+3. Configure the destination as a BigQuery dataset and select **'Use a BigQuery dataset in another project'**.
 
 ![Sink destination](../images/sink-destination.jpg)
 
 
-6. Copy the Sink destination below and add it in the destinated field:
+4. **Enter Destination**: Paste the Sink destination provided below into the designated field:
 
 ```
-bigquery.googleapis.com/projects/code-cube/datasets/code_cube_tag_monitor	. Make sure to add `[PROJECT_ID]` as **'code-cube'** and `[DATASET_ID]` is equal to the dataset name shown on the Tag Monitor configuration page.
+bigquery.googleapis.com/projects/code-cube/datasets/{{dataset}}
  ```
 
+**{{dataset}}**: The name of your dataset can be found in the Portal, on the [Tag Monitor configuration page](https://portal.code-cube.io/tag_monitor_config).
 
-9. In the log filters, input the following query:
+![Find dataset](../images/find-dataset.jpg)
+
+
+5. **Set Log Filters**: Input the following query in the log filters section:
 
     ```
     logName=~"stdout"
@@ -55,17 +56,17 @@ bigquery.googleapis.com/projects/code-cube/datasets/code_cube_tag_monitor	. Make
       - `logName=~"stdout"`: Filter logs based on stdout.
       - `textPayload!~"https://www.googletagmanager.com/sgtm/a"`: Exclude GTM analytics pings.
       - `textPayload!~"Listening"`: Exclude instance initializations.
-    
-__Keep in mind that further refinement is possible by adding more filters, however, be sure to test these in the logs explorer before applying. A faulty or unreturning filter will cause the sink to stop writing logs.__
+         
+__Note: Additional filters can be added for refinement, but test them in the logs explorer before applying to avoid disruptions in log writing.__
 
 ## Manage access to the Sink
 
-1. The creation of a logging sink automatically generates a new service account in your GCP project.
-2. Please make sure to locate this service account and share the name with your contact at Code Cube.
+1. **Identify Service Account**: The creation of a logging sink automatically generates a new service account in your GCP project.
+2. **Share Service Account**: Locate this service account and share its name with your contact at Code Cube.
 
-How to find the service account;
+To find the service account:
 
-1. This service account is found under IAM and admin → IAM.
-2. On the Top right of this page, enable the inclusion of Google-provided role grants.
-3. Look for the service account that ends with `-logging.iam.gserviceaccount.com`.
-4. Copy the name of this service account, this will be assigned writing permissions on the relevant dataset.
+1. Navigate to IAM and admin → IAM.
+2. Enable Google-provided role grants on the top right of the page.
+3. Look for the service account ending with `-logging.iam.gserviceaccount.com`.
+4. Copy the name of this service account, which will be granted writing permissions on the relevant dataset and share the service account with your contact at Code Cube.
