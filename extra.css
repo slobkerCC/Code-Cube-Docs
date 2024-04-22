@@ -52,7 +52,7 @@ li {font-size: 16px;}
 .md-footer {display:none;}
 .md-header, .md-tabs {background-color: #09003d;}
 .md-header__button.md-logo img, .md-header__button.md-logo svg {height: 1.8rem;}
-
+.md-header__topic {display:none;}
 .md-tabs__link {font-size:16px;font-weight: 700;}
 
 /* Navigation */
