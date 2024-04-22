@@ -1,9 +1,17 @@
-# Server-side GTM Logging
+# Enable additional rver-side error logs
+
+<div class="alert alert-info" role="alert">❕This feature is only available as a feature for the Tag Monitor **premium** and *enterprise** licenses.
+</div>
 
 ## Introduction
-To provide additional information on error occurrences of the Tag Monitor, it is important to enable logging configurations in your Cloud environment. This document serves as a short implementation guide on setting up the necessary Logging Sink and offload the data to Code Cube's project.
 
-The following steps have to be taken:
+To enhance *error tracking* of your server-side Google Tag Manager, enabling logging configurations in your Cloud environment is crucial. This document provides a implementation guide for setting up the Logging Sink on how to transfer data to Code Cube's environment. 
+
+The logs will be received in Code Cube's cloud project and pipeline and from there matched with other error information and integrated in dashboarding and notifications.
+
+
+
+The following steps should to be taken:
 
 1. Configure logging sink in the Google Cloud Platform project where *server-side Tag Management* is enabled.
 2. Make sure Code Cube's project receives access to this sink and the logs.
