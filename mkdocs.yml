@@ -18,9 +18,11 @@ nav:
   #- Sitespeed Monitor: site-speed-monitoring/site_speed.md
   #- DataLayer Guard: datalayer-guard/datalayer_guard.md
   - Tag Monitor:
+    - Installing the Tag Monitor:
       - ⚒️ Configuration client-side: tag-monitor/error-monitoring-client-side.md
       - ⚒️ Configuration server-side: tag-monitor/error-monitoring-server-side.md
       - Bulk editing your tags in GTM: tag-monitor/tag-bulk-edit.md
+    - Using the Tag Monitor:
       - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
       - Offload to own BigQuery environment: tag-monitor/raw-offload-bigquery.md
       - Consent Monitoring: tag-monitor/consent-monitoring.md
@@ -36,10 +38,10 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
-extra_fonts:
-  - name: Mulish-Regular
-    files:
-      - Mulish-Regular.ttf
+#extra_fonts:
+#  - name: Mulish-Regular
+#    files:
+#      - Mulish-Regular.ttf
 
 extra_css:
   - extra.css
