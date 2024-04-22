@@ -56,7 +56,7 @@ li {font-size: 16px;}
 .md-tabs__link {font-size:16px;font-weight: 700;}
 
 /* Navigation */
-.md-nav__item {padding-left: 10px!important;}
+ul.md-nav__list {padding-left: 10px!important;}
 .md-nav__list {padding-left: 0px!important;}
 .md-nav__link {font-size: 16px;color: #09003D;}
 .md-ellipsis {font-size: 14px;color: #09003D;}
