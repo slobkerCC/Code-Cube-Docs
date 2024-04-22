@@ -2,7 +2,9 @@
 
 To offload BigQuery data from one project to another, we'll create a scheduled query managed by a service account.
 
-<span class="placeholder col-12 bg-info">This feature is only available in the <b> premium package </b></span>
+<div class="alert alert-info" role="alert">
+This feature is only available in the <b> premium package </b>
+</div>
 
 ## Granting access to raw Tag Monitoring data
 This section explains how to set up access control for offloading BigQuery data using a service account. A service account is a special Google Cloud identity used by applications or services to access Google Cloud resources.
