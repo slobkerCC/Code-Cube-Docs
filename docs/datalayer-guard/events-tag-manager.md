@@ -33,7 +33,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://purchase-event-receiver-6k3dd6vtka-ew.a.run.app/");
+xhr.open("POST", "endpoint-url");
 xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.send(data);
