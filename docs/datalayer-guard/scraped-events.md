@@ -30,3 +30,11 @@ To add events for monitoring, follow these steps:
 8. Specify the URL on which the event can be found.
 9. If the event is an interaction event, define the trigger element for the event.
 10. Hit the save button to save the event.
+
+
+### Watch the video below to learn how to add the events
+
+<video width="2000" controls>
+  <source src="https://storage.googleapis.com/portal_dev_bucket/docs-videos/add-dlg-events.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
