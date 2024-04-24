@@ -46,7 +46,7 @@ xhr.send(data);
     3. **dataLayer**: Create a new custom javaScript variabele in your tag container
         1. Give the variabele the name 'JS - dataLayer'
         2. Add the script below in the custom javaScript variabele
-       
+    4. **endpoint-url** : This is the URL of our service endpoint and will be shared with you privately.
 <pre><code class="language-javascript">
 function(){
 var dataLayer = JSON.stringify(window.dataLayer)

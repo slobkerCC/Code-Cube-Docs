@@ -30,7 +30,8 @@ nav:
   - DataLayer Guard:
         - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
         - Monitoring via scraped events: datalayer-guard/scraped-events.md
- # - Alerting & Notifications
+  - Alerting & Notifications:
+    - Enable Notifications: notifications
 
 markdown_extensions:
   - attr_list
