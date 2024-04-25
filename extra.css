@@ -29,7 +29,7 @@ li {font-size: 16px;}
 .md-typeset h2 {
     font-size: 1rem;
     color: #09003d;
-    line-height: 1.4;    
+    line-height: 1.4;
     font-weight:700;
 }
 
@@ -43,7 +43,7 @@ li {font-size: 16px;}
 }
 
 /* Images */
-.md-typeset img, .md-typeset svg, .md-typeset video {
+.md-typeset img, .md-typeset svg {
     height: auto;
     max-width: 50%;
 }
@@ -86,7 +86,7 @@ div.md-sidebar.md-sidebar--primary > div {border-right: 1.8px solid #2b2bb551;}
     color: #6535F5;
 }
 
-.md-typeset img, .md-typeset svg, .md-typeset video {
+.md-typeset img, .md-typeset svg {
     height: auto;
     max-width: 50%;
 }
