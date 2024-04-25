@@ -81,7 +81,7 @@ A BigQuery dataset is a container that organizes your tables. Here's how to crea
         | id                | STRING    | NULLABLE
         | name              | STRING    | NULLABLE
         | status            | STRING    | NULLABLE
-        | execution_time    | INTEGER   | NULLABLE
+        | execution_time    | INTEGER    | NULLABLE
 
 4. **Select 'No partitioning' for this table**: Partitioning is not required at this moment.
 6. **Click Create table**: Once you've filled in the details, click the "Create table" button to create the table in BigQuery.
