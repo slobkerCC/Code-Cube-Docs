@@ -27,8 +27,8 @@ nav:
           - Server-side error logging: tag-monitor/serverside-error-logging.md
   - DataLayer Guard:
       - Introduction: datalayer-guard/intro.md
-      - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
       - Monitoring via scraped events: datalayer-guard/scraped-events.md
+      - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
   - Alerting & Notifications:
       - Enable Notifications: notifications
 
@@ -38,7 +38,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
 
 #extra_fonts:
 #  - name: Mulish-Regular
