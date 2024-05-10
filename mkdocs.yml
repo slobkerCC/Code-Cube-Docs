@@ -27,7 +27,7 @@ nav:
       - Offload raw data to your own BigQuery environment: tag-monitor/raw-offload-bigquery.md
       - Consent Monitoring: tag-monitor/consent-monitoring.md
       - Server-side error logging: tag-monitor/serverside-error-logging.md
-  - DataLayer Guard:
+  - DataLayer Guard: /datalayer-guard/intro.md
       - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
       - Monitoring via scraped events: datalayer-guard/scraped-events.md
   - Alerting & Notifications:
