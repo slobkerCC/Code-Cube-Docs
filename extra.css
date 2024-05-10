@@ -16,7 +16,10 @@
 
 /* Font sizes */
 body {font-family: 'Mulish-Regular', sans-serif;}
-p {font-size: 16px;}
+  p {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
 li {font-size: 16px;}
 
 .md-typeset h1 {
@@ -48,6 +51,36 @@ li {font-size: 16px;}
     max-width: 50%;
 }
 
+/* Buttons */
+
+.md-typeset .md-button--primary {
+    background-color: #9191f2;
+    border-radius: 6px;
+    border-color: #9191f2;
+    color: var(--md-primary-bg-color);
+}
+.md-typeset .md-button {
+    border: none;
+    font-weight: 700;
+    padding: .5em 1em;
+}
+
+.md-button .md-typeset svg {
+    height: auto;
+    max-width: 100%;
+}
+
+.md-typeset .md-button:focus, .md-typeset .md-button:hover {
+    background-color: #9191f2;
+    border-color: #9191f2;
+    color: var(--md-accent-bg-color);
+}
+
+a.md-button.md-button--primary {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+  
 /* Header and footer */
 .md-footer {display:none;}
 .md-header, .md-tabs {background-color: #09003d;}
