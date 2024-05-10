@@ -54,9 +54,9 @@ li {font-size: 16px;}
 /* Buttons */
 
 .md-typeset .md-button--primary {
-    background-color: #9191f2;
+    background-color: #2b2bb5;
     border-radius: 6px;
-    border-color: #9191f2;
+    border-color: #2b2bb5;
     color: var(--md-primary-bg-color);
 }
 .md-typeset .md-button {
@@ -71,8 +71,8 @@ li {font-size: 16px;}
 }
 
 .md-typeset .md-button:focus, .md-typeset .md-button:hover {
-    background-color: #9191f2;
-    border-color: #9191f2;
+    background-color: #2b2bb5;
+    border-color: #2b2bb5;
     color: var(--md-accent-bg-color);
 }
 
