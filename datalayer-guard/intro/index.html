@@ -653,17 +653,17 @@
         <li class="md-nav__item">
   <a href="#how-does-it-work" class="md-nav__link">
     <span class="md-ellipsis">
-      How does it work? 🔎
+      🔎 How does it work?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How does it work? 🔎">
+    <nav class="md-nav" aria-label="🔎 How does it work?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#monitoring-via-custom-scraper" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring via custom scraper
+      ⚒️ Monitoring via custom scraper
     </span>
   </a>
   
@@ -672,7 +672,7 @@
           <li class="md-nav__item">
   <a href="#monitoring-via-google-tag-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring via (Google) Tag Manager
+      ⚒️ Monitoring via (Google) Tag Manager
     </span>
   </a>
   
@@ -840,17 +840,17 @@
         <li class="md-nav__item">
   <a href="#how-does-it-work" class="md-nav__link">
     <span class="md-ellipsis">
-      How does it work? 🔎
+      🔎 How does it work?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How does it work? 🔎">
+    <nav class="md-nav" aria-label="🔎 How does it work?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#monitoring-via-custom-scraper" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring via custom scraper
+      ⚒️ Monitoring via custom scraper
     </span>
   </a>
   
@@ -859,7 +859,7 @@
           <li class="md-nav__item">
   <a href="#monitoring-via-google-tag-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring via (Google) Tag Manager
+      ⚒️ Monitoring via (Google) Tag Manager
     </span>
   </a>
   
@@ -893,16 +893,16 @@
 <li><a href="https://docs.code-cube.io/datalayer-guard/scraped-events/">Configuration via scraper</a></li>
 <li><a href="https://docs.code-cube.io/datalayer-guard/scraped-events/">Configuration via Tag Manager</a>.</li>
 </ul>
-<h2 id="how-does-it-work">How does it work? 🔎</h2>
+<h2 id="how-does-it-work">🔎 How does it work?</h2>
 <p>At Code Cube, we use two methods for dataLayer monitoring: the DataLayer Guard Scraper and integration with (Google) Tag Manager.</p>
-<h3 id="monitoring-via-custom-scraper">Monitoring via custom scraper</h3>
+<h3 id="monitoring-via-custom-scraper">⚒️ Monitoring via custom scraper</h3>
 <p>The DataLayer Guard acts as a scraper, continuously visiting your website, navigating through it, and performing various interactions based on predefined templates set up via the configuration page in the portal.</p>
 <p>Most dataLayer events can be monitored with this setup, without the need for additional configurations via frontend or Tag Management systems. This autonomy from development and external scripts is one of the setup's significant advantages.</p>
 <p>Within the scraper, two types of events are defined. </p>
 <p><strong>Page load events</strong>: These events trigger directly upon page load, requiring no user interactions. Examples include pageview events. Once added to the configuration page, page load events are promptly inspected during the next DataLayer Guard run.</p>
 <p><strong>Interaction events</strong>: These events require performing actions on the page, such as clicking on elements, filling in input fields, selecting options from a list, adding a product to the cart. Interaction events may take up to a maximum of 24 hours to be fully inspected by the DataLayer Guard.</p>
 <p><a class="md-button md-button--primary" href="https://docs.code-cube.io/datalayer-guard/scraped-events/">How to configure <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a></p>
-<h3 id="monitoring-via-google-tag-manager">Monitoring via (Google) Tag Manager</h3>
+<h3 id="monitoring-via-google-tag-manager">⚒️ Monitoring via (Google) Tag Manager</h3>
 <p>Certain events, like those requiring user authentication, email subscriptions, or completing purchases on the website, cannot be captured through scraping. For such scenarios, we've devised a fallback method via Google Tag Manager.</p>
 <p><a class="md-button md-button--primary" href="https://docs.code-cube.io/datalayer-guard/events-tag-manager/">How to configure <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a></p>
 
