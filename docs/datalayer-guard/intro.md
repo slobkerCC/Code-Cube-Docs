@@ -3,24 +3,23 @@ hide:
   - toc
 ---
 
-
-# Code Cube's DataLayer Guard 
-The DataLayer Guard **continously monitors the dataLayer on your website**. Changes or errors in the dataLayer are signaled based on a preconfigured template within the Code Cube portal. The DataLayer Guard monitors the website every hour or every day (based on the license).
-
-The dataLayer contains all information used to pass data from your website to Tag Manager. A broken dataLayer causes the loss of valuable marketing- and analytics data and missing out on important insights.
-
 **Quick links**
 
 - [Configuration via scraper](https://docs.code-cube.io/datalayer-guard/scraped-events/)
 - [Configuration via Tag Manager](https://docs.code-cube.io/datalayer-guard/scraped-events/).
 
-## How does the monitoring work? 🔎
-At Code Cube, two methods are used for dataLayer monitoring: using the DataLayer Guard scraper or integrate monitoring via (Google) Tag Manager.
+# Code Cube's DataLayer Guard 
+Code Cube's DataLayer Guard keeps a constant eye on your website's dataLayer. Any changes or errors within the dataLayer triggeLayer Guard to send a notification, based on preconfigured templates within the Code Cube portal. The DataLayer Guard conducts website monitoring hourly or daily, depending on your license.
+
+The dataLayer contains all information used to pass data from your website to Tag Manager. A broken dataLayer causes the loss of valuable marketing- and analytics data and missing out on important insights.
+
+## How does it work? 🔎
+At Code Cube, we use two methods for dataLayer monitoring: the DataLayer Guard Scraper and integration with (Google) Tag Manager.
 
 ### Monitoring via custom scraper
 The DataLayer Guard acts as a scraper, continuously visiting your website, navigating through it, and performing various interactions based on predefined templates set up via the configuration page in the portal.
 
-Most dataLayer evnts can be montiored following this configuration. No additional configuration via front-end or Tag Management systems is required. Which is one of the biggest advantages of this set-up: there are no dependencies on development and on external scripts.
+Most dataLayer events can be monitored with this setup, without the need for additional configurations via frontend or Tag Management systems. This autonomy from development and external scripts is one of the setup's significant advantages.
 
 Within the scraper, two types of events are defined. 
 
@@ -31,6 +30,6 @@ Within the scraper, two types of events are defined.
 [How to configure :material-open-in-new:](https://docs.code-cube.io/datalayer-guard/scraped-events/){ .md-button .md-button--primary }
 
 ### Monitoring via (Google) Tag Manager
-Some events cannot be captured through scraping, such as those requiring user authentication, email subscriptions, or completing a purchase on the website. For such scenarios, we've developed a fallback method via Google Tag Manager.
+Certain events, like those requiring user authentication, email subscriptions, or completing purchases on the website, cannot be captured through scraping. For such scenarios, we've devised a fallback method via Google Tag Manager.
 
 [How to configure :material-open-in-new:](https://docs.code-cube.io/datalayer-guard/events-tag-manager/){ .md-button .md-button--primary }
