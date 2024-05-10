@@ -49,7 +49,16 @@ li {font-size: 16px;}
 .md-typeset img, .md-typeset svg {
     height: auto;
     max-width: 50%;
-}*/
+}
+
+.md-typeset .twemoji svg {
+    fill: currentcolor;
+    max-height: 100%;
+    width: 100%;
+}
+
+
+*/
 
 /* Buttons */
 
