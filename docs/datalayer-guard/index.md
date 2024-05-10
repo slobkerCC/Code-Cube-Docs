@@ -1,3 +1,10 @@
+---
+hide:
+  - toc
+  - navigation
+---
+
+
 # DataLayer Guard
 The DataLayer Guard monitors the dataLayer on your website. Changes or errors in the dataLayer are signaled based on a preconfigured template. The DataLayer Guard monitors the website every hour or every day (based on the license).
 
