@@ -28,8 +28,8 @@ nav:
       - Consent Monitoring: tag-monitor/consent-monitoring.md
       - Server-side error logging: tag-monitor/serverside-error-logging.md
   - DataLayer Guard: datalayer-guard/index.md
-        - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
-        - Monitoring via scraped events: datalayer-guard/scraped-events.md
+      - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
+      - Monitoring via scraped events: datalayer-guard/scraped-events.md
   - Alerting & Notifications:
     - Enable Notifications: notifications
 
