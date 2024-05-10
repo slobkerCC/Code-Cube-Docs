@@ -15,23 +15,22 @@ plugins:
   - search
 
 nav:
-  #- Sitespeed Monitor: site-speed-monitoring/site_speed.md
-  #- DataLayer Guard: datalayer-guard/datalayer_guard.md
   - Tag Monitor:
-    - Installing the Tag Monitor:
-      - Client-side set-up: tag-monitor/error-monitoring-client-side.md
-      - Server-side set-up: tag-monitor/error-monitoring-server-side.md
-      - Bulk editing your tags in GTM: tag-monitor/tag-bulk-edit.md
-    - Using the Tag Monitor:
-      - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
-      - Offload raw data to your own BigQuery environment: tag-monitor/raw-offload-bigquery.md
-      - Consent Monitoring: tag-monitor/consent-monitoring.md
-      - Server-side error logging: tag-monitor/serverside-error-logging.md
-  - DataLayer Guard: /datalayer-guard/intro.md
+      - Installing the Tag Monitor:
+          - Client-side set-up: tag-monitor/error-monitoring-client-side.md
+          - Server-side set-up: tag-monitor/error-monitoring-server-side.md
+          - Bulk editing your tags in GTM: tag-monitor/tag-bulk-edit.md
+      - Using the Tag Monitor:
+          - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
+          - Offload raw data to your own BigQuery environment: tag-monitor/raw-offload-bigquery.md
+          - Consent Monitoring: tag-monitor/consent-monitoring.md
+          - Server-side error logging: tag-monitor/serverside-error-logging.md
+  - DataLayer Guard:
+      - Introduction: datalayer-guard/intro.md
       - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
       - Monitoring via scraped events: datalayer-guard/scraped-events.md
   - Alerting & Notifications:
-    - Enable Notifications: notifications
+      - Enable Notifications: notifications
 
 markdown_extensions:
   - attr_list
