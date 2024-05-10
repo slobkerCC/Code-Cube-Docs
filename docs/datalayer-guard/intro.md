@@ -13,10 +13,10 @@ The dataLayer contains all information used to pass data from your website to Ta
 - [Configuration via scraper](https://docs.code-cube.io/datalayer-guard/scraped-events/)
 - [Configuration via Tag Manager](https://docs.code-cube.io/datalayer-guard/scraped-events/).
 
-## How does it work? 🔎
+## 🔎 How does it work?
 At Code Cube, we use two methods for dataLayer monitoring: the DataLayer Guard Scraper and integration with (Google) Tag Manager.
 
-### Monitoring via custom scraper
+### ⚒️ Monitoring via custom scraper
 The DataLayer Guard acts as a scraper, continuously visiting your website, navigating through it, and performing various interactions based on predefined templates set up via the configuration page in the portal.
 
 Most dataLayer events can be monitored with this setup, without the need for additional configurations via frontend or Tag Management systems. This autonomy from development and external scripts is one of the setup's significant advantages.
@@ -29,7 +29,7 @@ Within the scraper, two types of events are defined.
 
 [How to configure :material-open-in-new:](https://docs.code-cube.io/datalayer-guard/scraped-events/){ .md-button .md-button--primary }
 
-### Monitoring via (Google) Tag Manager
+### ⚒️ Monitoring via (Google) Tag Manager
 Certain events, like those requiring user authentication, email subscriptions, or completing purchases on the website, cannot be captured through scraping. For such scenarios, we've devised a fallback method via Google Tag Manager.
 
 [How to configure :material-open-in-new:](https://docs.code-cube.io/datalayer-guard/events-tag-manager/){ .md-button .md-button--primary }
