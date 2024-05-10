@@ -26,6 +26,7 @@ li {font-size: 16px;}
     color: #09003d;
     font-size: 1.2rem;
     line-height: 1.3;
+    letter-spacing: 0.5px;
     font-weight:700;
 }
 
@@ -33,13 +34,14 @@ li {font-size: 16px;}
     font-size: 1rem;
     color: #09003d;
     line-height: 1.4;
+    letter-spacing: 0.5px;
     font-weight:700;
 }
 
 .md-typeset h3 {
     font-size: 18px;
     font-weight: 700;
-    letter-spacing: -.01em;
+    letter-spacing: 0.5px;
     line-height: 1.5;
     margin: 1.6em 0 0.8em;
     color: #2b2bb5!important;
@@ -99,11 +101,6 @@ a.md-button.md-button--primary {
 .md-ellipsis {font-size: 14px;color: #09003D;}
 div.md-sidebar.md-sidebar--primary > div {border-right: 1.8px solid #2b2bb551;}
 .md-nav {padding-left: 10px;}
-
-.md-typeset img, .md-typeset svg {
-    height: auto;
-    max-width: 50%;
-}
 
 /* Search */
 .md-search__input::placeholder, .md-search__icon .md-icon{color: #000;}
