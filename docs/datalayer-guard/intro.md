@@ -29,7 +29,8 @@ Within the scraper, two types of events are defined.
 **Interaction events**: These events require performing actions on the page, such as clicking on elements, filling in input fields, selecting options from a list, adding a product to the cart. Interaction events may take up to a maximum of 24 hours to be fully inspected by the DataLayer Guard.
 
 #### How to configure ⚒️
-[How to configure :fontawesome-fa-arrow-up-right-from-square:](https://docs.code-cube.io/datalayer-guard/scraped-events/).{ .md-button .md-button--primary }
+[How to configure :fontawesome-fa-arrow-up-right-from-square:](https://docs.code-cube.io/datalayer-guard/scraped-events/){ .md-button .md-button--primary }
+[Subscribe to our newsletter](#){ .md-button }
 
 
 ### Monitoring via (Google) Tag Manager
