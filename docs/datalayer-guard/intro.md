@@ -10,9 +10,9 @@ The DataLayer Guard **continously monitors the dataLayer on your website**. Chan
 The dataLayer contains all information used to pass data from your website to Tag Manager. A broken dataLayer causes the loss of valuable marketing- and analytics data and missing out on important insights.
 
 **Quick links**
-- [Configuration via scraper](https://docs.code-cube.io/datalayer-guard/scraped-events/)
-- [Configuratiion via Tag Manager](https://docs.code-cube.io/datalayer-guard/scraped-events/).
 
+- [Configuration via scraper](https://docs.code-cube.io/datalayer-guard/scraped-events/)
+- [Configuration via Tag Manager](https://docs.code-cube.io/datalayer-guard/scraped-events/).
 
 ## How does the monitoring work? 🔎
 At Code Cube, two methods are used for dataLayer monitoring: using the DataLayer Guard scraper or integrate monitoring via (Google) Tag Manager.
@@ -30,9 +30,7 @@ Within the scraper, two types of events are defined.
 
 [How to configure :material-open-in-new:](https://docs.code-cube.io/datalayer-guard/scraped-events/){ .md-button .md-button--primary }
 
-
 ### Monitoring via (Google) Tag Manager
 Some events cannot be captured through scraping, such as those requiring user authentication, email subscriptions, or completing a purchase on the website. For such scenarios, we've developed a fallback method via Google Tag Manager.
 
-#### How to configure ⚒️
-For comprehensive implementation guidance, please visit [this link](https://docs.code-cube.io/datalayer-guard/events-tag-manager/).
+[How to configure :material-open-in-new:](https://docs.code-cube.io/datalayer-guard/events-tag-manager/){ .md-button .md-button--primary }
