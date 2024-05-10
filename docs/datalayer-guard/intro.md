@@ -8,6 +8,7 @@ hide:
 The DataLayer Guard monitors the dataLayer on your website. Changes or errors in the dataLayer are signaled based on a preconfigured template. The DataLayer Guard monitors the website every hour or every day (based on the license).
 
 **Why monitor the dataLayer?**
+
 The dataLayer contains all information used to pass data from your website to Tag Manager. A broken dataLayer causes the loss of valuable marketing- and analytics data and missing out on important insights.
 
 ## How do we set-up the monitoring?
