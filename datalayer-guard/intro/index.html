@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#datalayer-guard" class="md-skip">
+        <a href="#code-cubes-datalayer-guard" class="md-skip">
           Skip to content
         </a>
       
@@ -651,30 +651,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-do-we-set-up-the-monitoring" class="md-nav__link">
+  <a href="#how-does-the-monitoring-work" class="md-nav__link">
     <span class="md-ellipsis">
-      How do we set-up the monitoring?
+      How does the monitoring work? 🔎
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How do we set-up the monitoring?">
+    <nav class="md-nav" aria-label="How does the monitoring work? 🔎">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#monitoring-via-scraped-events" class="md-nav__link">
+  <a href="#monitoring-via-custom-scraper" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring via scraped events
+      Monitoring via custom scraper
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring via custom scraper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure ⚒️
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#how-to-configure" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to configure
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -684,6 +690,21 @@
       Monitoring via (Google) Tag Manager
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Monitoring via (Google) Tag Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-configure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure ⚒️
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -847,30 +868,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-do-we-set-up-the-monitoring" class="md-nav__link">
+  <a href="#how-does-the-monitoring-work" class="md-nav__link">
     <span class="md-ellipsis">
-      How do we set-up the monitoring?
+      How does the monitoring work? 🔎
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How do we set-up the monitoring?">
+    <nav class="md-nav" aria-label="How does the monitoring work? 🔎">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#monitoring-via-scraped-events" class="md-nav__link">
+  <a href="#monitoring-via-custom-scraper" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring via scraped events
+      Monitoring via custom scraper
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring via custom scraper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure ⚒️
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#how-to-configure" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to configure
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -880,6 +907,21 @@
       Monitoring via (Google) Tag Manager
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Monitoring via (Google) Tag Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-configure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure ⚒️
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -903,43 +945,25 @@
                   
 
 
-<h1 id="datalayer-guard">DataLayer Guard</h1>
-<p>The DataLayer Guard monitors the dataLayer on your website. Changes or errors in the dataLayer are signaled based on a preconfigured template. The DataLayer Guard monitors the website every hour or every day (based on the license).</p>
-<p><strong>Why monitor the dataLayer?</strong></p>
+<h1 id="code-cubes-datalayer-guard">Code Cube's DataLayer Guard</h1>
+<p>The DataLayer Guard <strong>continously monitors the dataLayer on your website</strong>. Changes or errors in the dataLayer are signaled based on a preconfigured template within the Code Cube portal. The DataLayer Guard monitors the website every hour or every day (based on the license).</p>
 <p>The dataLayer contains all information used to pass data from your website to Tag Manager. A broken dataLayer causes the loss of valuable marketing- and analytics data and missing out on important insights.</p>
-<h2 id="how-do-we-set-up-the-monitoring">How do we set-up the monitoring?</h2>
-<p>There are two methods available for dataLayer monitoring: using the DataLayer Guard scraper or integrating via (Google) Tag Manager.</p>
-<h3 id="monitoring-via-scraped-events">Monitoring via scraped events</h3>
-<p>Code Cube's DataLayer Guard can automatically monitor most dataLayer events without the need for additional functionality like adding scripts in Tag Manager or on the website's frontend.</p>
+<p><strong>Quick links</strong>
+- <a href="https://docs.code-cube.io/datalayer-guard/scraped-events/">Configuration via scraper</a>
+- <a href="https://docs.code-cube.io/datalayer-guard/scraped-events/">Configuratiion via Tag Manager</a>.</p>
+<h2 id="how-does-the-monitoring-work">How does the monitoring work? 🔎</h2>
+<p>At Code Cube, two methods are used for dataLayer monitoring: using the DataLayer Guard scraper or integrate monitoring via (Google) Tag Manager.</p>
+<h3 id="monitoring-via-custom-scraper">Monitoring via custom scraper</h3>
 <p>The DataLayer Guard acts as a scraper, continuously visiting your website, navigating through it, and performing various interactions based on predefined templates set up via the configuration page in the portal.</p>
-<p>Within the scraper, we classify events into two types:</p>
-<p><strong>Page load events</strong></p>
-<p>These events trigger directly upon page load, requiring no user interactions. Examples include page_view or item view events.</p>
-<p>Once added to the configuration page, page load events are promptly inspected during the next DataLayer Guard run.</p>
-<p><strong>Interaction events</strong></p>
-<p>These events require performing actions on the page, such as clicking on elements, filling in input fields, selecting options from a list, adding a product to the cart. Interaction events may take up to a maximum of 24 hours to be fully inspected by the DataLayer Guard.</p>
-<h3 id="how-to-configure">How to configure</h3>
-<p>More information on implementation can be found <a href="https://docs.code-cube.io/datalayer-guard/scraped-events/">here</a>.</p>
+<p>Most dataLayer evnts can be montiored following this configuration. No additional configuration via front-end or Tag Management systems is required. Which is one of the biggest advantages of this set-up: there are no dependencies on development and on external scripts.</p>
+<p>Within the scraper, two types of events are defined. </p>
+<p><strong>Page load events</strong>: These events trigger directly upon page load, requiring no user interactions. Examples include pageview events. Once added to the configuration page, page load events are promptly inspected during the next DataLayer Guard run.</p>
+<p><strong>Interaction events</strong>: These events require performing actions on the page, such as clicking on elements, filling in input fields, selecting options from a list, adding a product to the cart. Interaction events may take up to a maximum of 24 hours to be fully inspected by the DataLayer Guard.</p>
+<h4 id="how-to-configure">How to configure ⚒️</h4>
+<p><a href="https://docs.code-cube.io/datalayer-guard/scraped-events/">How to configure :fontawesome-fa-arrow-up-right-from-square:</a>.{ .md-button .md-button--primary }</p>
 <h3 id="monitoring-via-google-tag-manager">Monitoring via (Google) Tag Manager</h3>
 <p>Some events cannot be captured through scraping, such as those requiring user authentication, email subscriptions, or completing a purchase on the website. For such scenarios, we've developed a fallback method via Google Tag Manager.</p>
-<h1 id="datalayer-guard_1">DataLayer Guard</h1>
-<p>DataLayer Guard keeps a watchful eye on your website's dataLayer, alerting you to any changes or errors based on a predefined template. Depending on your license, it diligently monitors your website either hourly or daily.</p>
-<p><strong>Why Monitor the dataLayer?</strong></p>
-<p>The dataLayer holds all the crucial information for passing data from your website to Tag Manager. A malfunctioning dataLayer can lead to the loss of valuable marketing and analytics data, depriving you of essential insights.</p>
-<h2 id="how-to-set-up-monitoring">How to Set Up Monitoring?</h2>
-<p>There are two methods available for dataLayer monitoring: using the DataLayer Guard scraper or integrating with (Google) Tag Manager.</p>
-<h3 id="monitoring-via-scraped-events_1">Monitoring via Scraped Events</h3>
-<p>Code Cube's DataLayer Guard can automatically monitor most dataLayer events without the need for additional functionality like adding scripts in Tag Manager or on the website's frontend.</p>
-<p>The DataLayer Guard acts as a scraper, continuously visiting your website, navigating through it, and performing various interactions based on predefined templates set up via the configuration page in the portal.</p>
-<p>Within the scraper, we classify events into two types:</p>
-<p><strong>Page Load Events</strong></p>
-<p>These events trigger directly upon page load, requiring no user interactions. Examples include page_view or item view events.</p>
-<p>Once added to the configuration page, page load events are promptly inspected during the next DataLayer Guard run.</p>
-<p><strong>Interaction Events</strong></p>
-<p>These events necessitate actions on the page, such as clicking on elements, filling in input fields, selecting options from a list, or adding a product to the cart. Interaction events may take up to a maximum of 24 hours to be fully inspected by the DataLayer Guard.</p>
-<p>For detailed implementation instructions, refer to <a href="https://docs.code-cube.io/datalayer-guard/scraped-events/">this guide</a>.</p>
-<h3 id="monitoring-via-google-tag-manager_1">Monitoring via (Google) Tag Manager</h3>
-<p>Some events cannot be captured through scraping, such as those requiring user authentication, email subscriptions, or completing a purchase on the website. For such scenarios, we've developed a fallback method via Google Tag Manager.</p>
+<h4 id="how-to-configure_1">How to configure ⚒️</h4>
 <p>For comprehensive implementation guidance, please visit <a href="https://docs.code-cube.io/datalayer-guard/events-tag-manager/">this link</a>.</p>
 
 
