@@ -3,15 +3,15 @@ hide:
   - toc
 ---
 
+# The DataLayer Guard 
+Code Cube's DataLayer Guard keeps a constant eye on your website's dataLayer. Any changes or errors within the dataLayer triggeLayer Guard to send a notification, based on preconfigured templates within the Code Cube portal. The DataLayer Guard conducts website monitoring hourly or daily, depending on your license.
+
+The dataLayer contains all information used to pass data from your website to Tag Manager. A broken dataLayer causes the loss of valuable marketing- and analytics data and missing out on important insights.
+
 **Quick links**
 
 - [Configuration via scraper](https://docs.code-cube.io/datalayer-guard/scraped-events/)
 - [Configuration via Tag Manager](https://docs.code-cube.io/datalayer-guard/scraped-events/).
-
-# Code Cube's DataLayer Guard 
-Code Cube's DataLayer Guard keeps a constant eye on your website's dataLayer. Any changes or errors within the dataLayer triggeLayer Guard to send a notification, based on preconfigured templates within the Code Cube portal. The DataLayer Guard conducts website monitoring hourly or daily, depending on your license.
-
-The dataLayer contains all information used to pass data from your website to Tag Manager. A broken dataLayer causes the loss of valuable marketing- and analytics data and missing out on important insights.
 
 ## How does it work? 🔎
 At Code Cube, we use two methods for dataLayer monitoring: the DataLayer Guard Scraper and integration with (Google) Tag Manager.
