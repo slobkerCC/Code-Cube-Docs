@@ -16,11 +16,10 @@
 
 /* Font sizes */
 body {font-family: 'Mulish-Regular', sans-serif;}
-  p {
+  p, li {
     font-size: 14px;
     letter-spacing: 0.3px;
 }
-li {font-size: 16px;}
 
 .md-typeset h1 {
     color: #09003d;
