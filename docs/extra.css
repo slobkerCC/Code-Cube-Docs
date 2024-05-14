@@ -68,9 +68,10 @@ body {font-family: 'Mulish-Regular', sans-serif;}
 
 
 .md-typeset img.big-img{
-    max-width: 40rem;
-    width: 40rem;
+    max-width: 33rem;
+    width: 33rem;
     margin-top : 1rem;
+
 
 }
 /* Buttons */
