@@ -59,9 +59,20 @@ body {font-family: 'Mulish-Regular', sans-serif;}
 }
 */
 
+
+
 .md-typeset img {
     height: auto;
     max-width: 50%;
+}
+
+
+.md-typeset img.big-img{
+    max-width: 33rem;
+    width: 33rem;
+    margin-top : 1rem;
+
+
 }
 /* Buttons */
 
