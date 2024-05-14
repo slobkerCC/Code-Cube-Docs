@@ -676,17 +676,17 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Configuring dataLayer Events for Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#adding-events" class="md-nav__link">
     <span class="md-ellipsis">
       Adding Events
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Adding Events">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#watch-the-video-below-to-learn-how-to-add-the-events" class="md-nav__link">
@@ -840,17 +840,17 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Configuring dataLayer Events for Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#adding-events" class="md-nav__link">
     <span class="md-ellipsis">
       Adding Events
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Adding Events">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#watch-the-video-below-to-learn-how-to-add-the-events" class="md-nav__link">
@@ -884,7 +884,7 @@
 <h1 id="monitoring-via-scraped-events">Monitoring via scraped events</h1>
 <h2 id="configuring-datalayer-events-for-monitoring">Configuring dataLayer Events for Monitoring</h2>
 <p>This guide will walk you through configuring dataLayer events to be monitored by DataLayer Guard. Before you begin, ensure you have access to our portal and have a list of events you want to monitor.</p>
-<h2 id="adding-events">Adding Events</h2>
+<h3 id="adding-events">Adding Events</h3>
 <p>To add events for monitoring, follow these steps:</p>
 <ol>
 <li>Navigate to the <a href="https://portal.code-cube.io/datalayer_guard_config">DataLayer Guard configuration</a> page.</li>
@@ -894,21 +894,23 @@
 <li>Enter the event name in the corresponding field.</li>
 <li>
 <p>For adding the events you have two options:</p>
-<ul>
-<li>Add the entire event in valid JSON format:<ul>
-<li>Click on the <code>Add JSON</code> button and paste the entire event. The event will be displayed in the event table, enabling you to edit, add, and remove fields easily.</li>
-</ul>
 </li>
-<li>Add events field by field:<ul>
+<li>
+<p>Add the entire event in valid JSON format:</p>
+</li>
+<li>
+<p>Click on the <code>Add JSON</code> button and paste the entire event. The event will be displayed in the event table, enabling you to edit, add, and remove fields easily.</p>
+</li>
+<li>
+<p>Add events field by field:</p>
+</li>
 <li>Enter the parameter name in the "Parameter" field.</li>
 <li>Select the type of value. Note: for nested arrays or objects, select the array or object type accordingly.</li>
 <li>Specify if the value is required or not.</li>
 <li>Determine if the value should match a specific value or if it can be dynamic.</li>
 <li>Enter the value or an example of the value (if dynamic) in the "Value" field.</li>
-<li>Click the add icon at the end of the row to add more parameters and rows.</li>
-</ul>
-</li>
-</ul>
+<li>
+<p>Click the add icon at the end of the row to add more parameters and rows.</p>
 </li>
 <li>
 <p>Define how the event is triggered from the <code>How does this event fire</code> dropdown.</p>
