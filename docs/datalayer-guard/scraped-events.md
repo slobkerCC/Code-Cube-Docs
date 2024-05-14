@@ -1,12 +1,8 @@
 # Monitoring via scraped events
 
+This guide will walk you through configuring dataLayer events to be monitored by DataLayer Guard. 
 
-
-## Configuring dataLayer Events for Monitoring
-
-This guide will walk you through configuring dataLayer events to be monitored by DataLayer Guard. Before you begin, ensure you have access to our portal and have a list of events you want to monitor.
-
-### Adding Events
+### Adding events
 
 To add events for monitoring, follow these steps:
 
