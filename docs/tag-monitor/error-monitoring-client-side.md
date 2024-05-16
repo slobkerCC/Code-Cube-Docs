@@ -99,9 +99,9 @@ To monitor a segment, you can take a percentage of this total number and fire th
 
 ## Include metadata 'tag name' to all other tags in the container
 
-**9. Update meta data in all tags**
+**Update 'tag name' meta data in all tags**
 
-- For each tag, expand "Advanced Settings" and check the "Include tag name" checkbox under "Additional Tag Metadata". Set the key name to "name" as well.
+For each tag, expand "Advanced Settings" and check the "Include tag name" checkbox under "Additional Tag Metadata". Set the key name to "name" as well.
 
 _documentation to be added on bulk editting of tags_
 
