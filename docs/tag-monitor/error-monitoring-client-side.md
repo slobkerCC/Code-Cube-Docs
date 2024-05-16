@@ -56,6 +56,8 @@ It is important that we exclude the Tag Monitor tag from monitoring. Therefore w
 
 Set to 'No additional consent required'.  
 
+See example of tag including all settings in image below.
+
 ![Tag configuration](../images/tag-configuration.png) 
 
 ## Add trigger to monitor the right set of events
