@@ -56,7 +56,7 @@ It is important that we exclude the Tag Monitor tag from monitoring. Therefore w
 
 Set to 'No additional consent required'.  
 
-![Tag configuration](../images/tag_configuration.png)
+![Tag configuration](../images/tag-configuration.png) 
 
 ## Add trigger to monitor the right set of events
 
@@ -65,7 +65,6 @@ The Tag Monitor should fire on **all events**, therefore we create a Custom Even
     Event name: .*
 
     enable "use regex matching"
-
 
 _Ofcourse, you can customize the trigger following your own insights and requirements. This is our recommended set-up to monitor the all types of events in your container._
 
@@ -95,7 +94,6 @@ To monitor a segment, you can take a percentage of this total number and fire th
 | segment of 50% | random number    | less then or equal to  | 1.073.741.823
 
 *exception as there is a 1/10 change the number ends on a number between 0 and 9.
-
 
 ## Include metadata 'tag name' to all other tags in the container
 
