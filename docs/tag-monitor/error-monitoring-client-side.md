@@ -105,6 +105,12 @@ For each tag, expand "Advanced Settings" and check the "Include tag name" checkb
 
 _documentation to be added on bulk editting of tags_
 
+![Add Trigger](../images/add-metadata.png)
+
+## Enable build-in variables Container ID and Container version
+Make sure to have the built-in variables **Container ID** and **Container version** enabled in your container. If these are not yet available in your variable overview, you can enable them via "Configure" under Built-in Variables.
+
+![buildin-variables](../images/buildin-variables.png)
 
 ## Go live with monitoring in Google Tag Manager
 Publish the workspace in Google Tag Manager to your production environment. Verify if the implementation was succesfull by opening the [dashboard](https://portal.code-cube.io/tag_monitor_dashboard) in the Code Cube portal and see if data comes in.
