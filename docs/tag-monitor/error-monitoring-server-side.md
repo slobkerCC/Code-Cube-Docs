@@ -23,13 +23,13 @@ _A seperate template is available for premium, enterprise and agency clients. Pl
 
 Open your Google Tag Manager server-side container. Navigate to "Templates", click in the "Tag Templates" section on the button "New".
 
-![New template](../images/new-template.png)
+![New template](../images/tmss-new-template.png)
 
 **Import the Tag Monitor template**
 
 Import the template you've just downloaded from the portal via 'Import' to be found via the three dots in the top right corner. You can save the template directly, no adjustments to the template are required.
 
-![Import template](../images/tmss-import-template.png)
+![Import template](../images/import-template.png)
 
 _We did send in a request to have the template added to the [Community Template Gallery](https://tagmanager.google.com/gallery/#/?page=1), we will update the documentation as soon as the template is available here._
 
@@ -43,10 +43,11 @@ Within this tag, there are a couple settings to configure.
 
 **Database Name / Dataset ID**
 
-Every client data is stored in it's own personal dataset. The value for your configuration can be found on the [configuration page](https://portal.code-cube.io/tag_monitor_config), in the step 'Server-side monitoring' (field 'Database name')
+Every client data is stored in it's own personal dataset. The value for your configuration can be found on the [configuration page](https://portal.code-cube.io/tag_monitor_config), in the step 'Server-side monitoring' (field 'Database name'). 
 
 **Table Name / Table  ID**
-In this field the constant value that should be added is "raw_data_server". The value cna also be found on the [configuration page](https://portal.code-cube.io/tag_monitor_config), in the step 'Server-side monitoring' (field 'Table name')
+
+In this field the constant value that should be added is "raw_data_server". The value can also be found on the [configuration page](https://portal.code-cube.io/tag_monitor_config), in the step 'Server-side monitoring' (field 'Table name'). 
 
 
 **Add Metadata**
