@@ -949,19 +949,19 @@
 <p><img alt="Download template" src="../../images/tmss-download-template.png" /></p>
 <p><strong>Add template to Google Tag Manager container</strong> </p>
 <p>Open your Google Tag Manager server-side container. Navigate to "Templates", click in the "Tag Templates" section on the button "New".</p>
-<p><img alt="New template" src="../../images/new-template.png" /></p>
+<p><img alt="New template" src="../../images/tmss-new-template.png" /></p>
 <p><strong>Import the Tag Monitor template</strong></p>
 <p>Import the template you've just downloaded from the portal via 'Import' to be found via the three dots in the top right corner. You can save the template directly, no adjustments to the template are required.</p>
-<p><img alt="Import template" src="../images/tmss-import-template.png" /></p>
+<p><img alt="Import template" src="../../images/import-template.png" /></p>
 <p><em>We did send in a request to have the template added to the <a href="https://tagmanager.google.com/gallery/#/?page=1">Community Template Gallery</a>, we will update the documentation as soon as the template is available here.</em></p>
 <h2 id="configure-the-tag-monitor-tag">Configure the Tag Monitor tag</h2>
 <p>Create a new tag in your container. Choose as tag type the Tag Monitor, which you've just imported in the previous step.</p>
 <p><img alt="Add tag" src="../../images/add-tag.png" /></p>
 <p>Within this tag, there are a couple settings to configure.</p>
 <p><strong>Database Name / Dataset ID</strong></p>
-<p>Every client data is stored in it's own personal dataset. The value for your configuration can be found on the <a href="https://portal.code-cube.io/tag_monitor_config">configuration page</a>, in the step 'Server-side monitoring' (field 'Database name')</p>
-<p><strong>Table Name / Table  ID</strong>
-In this field the constant value that should be added is "raw_data_server". The value cna also be found on the <a href="https://portal.code-cube.io/tag_monitor_config">configuration page</a>, in the step 'Server-side monitoring' (field 'Table name')</p>
+<p>Every client data is stored in it's own personal dataset. The value for your configuration can be found on the <a href="https://portal.code-cube.io/tag_monitor_config">configuration page</a>, in the step 'Server-side monitoring' (field 'Database name'). </p>
+<p><strong>Table Name / Table  ID</strong></p>
+<p>In this field the constant value that should be added is "raw_data_server". The value can also be found on the <a href="https://portal.code-cube.io/tag_monitor_config">configuration page</a>, in the step 'Server-side monitoring' (field 'Table name'). </p>
 <p><strong>Add Metadata</strong></p>
 <p>It is important that we exclude the Tag Monitor tag from monitoring. Therefore we need to set the following key / parameter via "Additional Tag Meta":</p>
 <pre><code> Key: `exclude`
