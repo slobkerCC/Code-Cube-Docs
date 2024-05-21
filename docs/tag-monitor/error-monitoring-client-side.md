@@ -68,7 +68,7 @@ The Tag Monitor should fire on **all events**, therefore we create a Custom Even
 
     enable "use regex matching"
 
-_Ofcourse, you can customize the trigger following your own insights and requirements. This is our recommended set-up to monitor the all types of events in your container._
+_Of course, you can customize the trigger following your own insights and requirements. This is our recommended set-up to monitor the all types of events in your container._
 
 ![Add Trigger](../images/add-trigger.png)
 
@@ -108,7 +108,7 @@ _documentation to be added on bulk editting of tags_
 ![Add Trigger](../images/add-metadata.png)
 
 ## Enable build-in variables Container ID and Container version
-Make sure to have the built-in variables **Container ID** and **Container version** enabled in your container. If these are not yet available in your variable overview, you can enable them via "Configure" under Built-in Variables.
+Make sure to have the built-in variables **Container ID** and **Container version** enabled in your container. If these are not available yet in your variable overview, you can enable them via "Configure" under Built-in Variables.
 
 ![buildin-variables](../images/buildin-variables.png)
 
