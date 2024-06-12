@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Access to Tag Monitor dataset(s) in BigQuery
 
 ➡️ This feature is exclusively available in the **premium package.**
