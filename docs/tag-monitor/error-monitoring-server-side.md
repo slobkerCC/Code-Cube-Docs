@@ -11,7 +11,7 @@ This guide will walk you through the steps to set up the Tag Monitor within your
 
 ### Importing Custom Template
 
-**1. Download Template:** Visit the [Tag Monitor configuration page](https://portal.code-cube.io/tag_monitor_config) and download the Tag Monitor template. (Ensure you're logged into our portal.)
+**1. Download Template:** Visit the [Tag Monitor configuration page](https://portal.code-cube.io/tag_monitor_config){:target="_blank"} and download the Tag Monitor template. (Ensure you're logged into our portal.)
 
 **2. Add Template to Google Tag Manager:** Open your Google Tag Manager container. Navigate to "Templates" and click on "New" in the "Tag Templates" section.
 
