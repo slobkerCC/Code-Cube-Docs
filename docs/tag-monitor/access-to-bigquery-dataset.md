@@ -1,6 +1,7 @@
 # Access to Tag Monitor dataset(s) in BigQuery
 
 ➡️ This feature is exclusively available in the **premium package.**
+
 ➡️ This documentation presents the updated method of offloading BigQuery data to your own GCP environment. The old method involved using a scheduled query, with access managed via a service account. If you already have this setup and have questions about it, please contact [support@code-cube.io](mailto:support@code-cube.io).
 
 ## Introduction
@@ -9,25 +10,24 @@ To share the BigQuery datasets, we use the functionalities of the Analytics Hub 
 
 We can provide access to the following datasets:
 
-- **Tag Monitor**
-    - Access to raw client-side data
-    - Access to raw server-side data
+   - Access to raw Tag Monitor client-side data
+   - Access to raw Tag Monitor server-side data
 
 ## Steps to Follow
 
 To access datasets shared by Code Cube, please follow these steps:
 
-### **Set up a Google Cloud Platform (GCP) project**
+**Set up a Google Cloud Platform (GCP) project**
 
 Navigate to the Google Cloud Platform project where you wish to store the data. If you do not already have a Google Cloud Project, create a new one (see [link](https://developers.google.com/workspace/guides/create-project)).
 
-### **Provide a Google email address**
+**Provide a Google email address**
 
 Share the Google email address that should receive access to the shared dataset with your contact at Code Cube or via [support@code-cube.io](mailto:support@code-cube.io).
 
 *We will add this account as a subscriber to the dataset listing within the Analytics Hub.*
 
-### **Access the shared dataset**
+**Access the shared dataset**
 
 After granting the email address access to the dataset, you will receive a **data exchange link** from us. Open this link (via the specific Google account) to offload the data to your own environment. 
 
