@@ -6,7 +6,11 @@
 
 ## Introduction
 
-To share the BigQuery datasets, we use the functionalities of the Analytics Hub in BigQuery. The Analytics Hub is a powerful feature that allows users to access and analyse shared datasets. With this feature, users can gain valuable insights from the data collected and shared by Code Cube. This functionality is particularly useful for data analysts and businesses who want to leverage shared data to make informed decisions on there tag or dataLayer insights and errors.
+BigQuery's Analytics Hub is used to share BigQuery data. This robust feature allows users to access and analyze shared datasets. It enables users to extract valuable insights from the data collected and shared by Code Cube. This feature is especially beneficial for data analysts and businesses looking to use shared data to make informed decisions about their tag or dataLayer insights and errors.
+
+**Technical background**
+
+The Analytics Hub operates on a publish and subscribe model for BigQuery datasets. Your Google Cloud Project serves as the subscriber, meaning the costs for running queries are charged to your own Google Cloud Platform. The data will be shared in real-time. You'll have read-only access to the BigQuery dataset, allowing you to read the data but not make any additions or updates to it. 
 
 We can provide access to the following datasets:
 
