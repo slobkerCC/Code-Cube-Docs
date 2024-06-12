@@ -39,7 +39,6 @@ We will let you know as soon as your Google email address has been added as a su
 
 ![https://docs.code-cube.io/images/shared-dataset.png](https://docs.code-cube.io/images/shared-dataset.png)
 
-- **Create linked data set**
 You will be redirected to the configuration page ‘Create linked dataset’. On this page two fields are required to fill in. 
 
    - **Project:** Select the project where the Code Cube data should be stored.
