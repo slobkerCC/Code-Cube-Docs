@@ -865,7 +865,9 @@
 <p>➡️ This feature is exclusively available in the <strong>premium package.</strong></p>
 <p>➡️ This documentation presents the updated method of offloading BigQuery data to your own GCP environment. The old method involved using a scheduled query, with access managed via a service account. If you already have this setup and have questions about it, please contact <a href="mailto:support@code-cube.io">support@code-cube.io</a>.</p>
 <h2 id="introduction">Introduction</h2>
-<p>To share the BigQuery datasets, we use the functionalities of the Analytics Hub in BigQuery. The Analytics Hub is a powerful feature that allows users to access and analyse shared datasets. With this feature, users can gain valuable insights from the data collected and shared by Code Cube. This functionality is particularly useful for data analysts and businesses who want to leverage shared data to make informed decisions on there tag or dataLayer insights and errors.</p>
+<p>BigQuery's Analytics Hub is used to share BigQuery data. This robust feature allows users to access and analyze shared datasets. It enables users to extract valuable insights from the data collected and shared by Code Cube. This feature is especially beneficial for data analysts and businesses looking to use shared data to make informed decisions about their tag or dataLayer insights and errors.</p>
+<p><strong>Technical background</strong></p>
+<p>The Analytics Hub operates on a publish and subscribe model for BigQuery datasets. Your Google Cloud Project serves as the subscriber, meaning the costs for running queries are charged to your own Google Cloud Platform. The data will be shared in real-time. You'll have read-only access to the BigQuery dataset, allowing you to read the data but not make any additions or updates to it. </p>
 <p>We can provide access to the following datasets:</p>
 <ul>
 <li>Access to raw Tag Monitor client-side data</li>
