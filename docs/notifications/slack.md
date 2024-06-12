@@ -18,8 +18,10 @@ You can use the same steps to configure Slack notifications for both the **Tag M
         
     - Specify the name of the Slack channel where you want to receive notifications.
     *Note: Many users prefer to receive Slack notifications in a separate channel. If this is the case for you, make sure to create this channel in your Slack environment first.*
-5. Click the bar below to authenticate the Code Cube app within your workspace. You'll be prompted to log into your workspace and authorize the Code Cube app.
-6. After granting authorization, open your Slack. Now, invite the app to the desired channel where you want to receive notifications.
+
+4. Click the bar below to authenticate the Code Cube app within your workspace. You'll be prompted to log into your workspace and authorize the Code Cube app.
+
+5. After granting authorization, open your Slack. Now, invite the app to the desired channel where you want to receive notifications.
     - Open the specific channel in Slack and click on the channel name.
 
         ![workspace ID](../images/slack-integrate-app.jpg)
