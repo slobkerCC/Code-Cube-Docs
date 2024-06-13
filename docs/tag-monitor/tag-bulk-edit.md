@@ -8,87 +8,65 @@ hide:
 ## Update all your tags to include the tag name in the meta data
 
 
-In cases when many GTM tags need to be updated for proper functioning of the Tag Monitor and in order to avoid hours of manual and repetitive work, this guide might be useful. 
-Steps to bulk edit your tags:                     
+To enable monitoring, you need to configure your client-side Tag Manager container.             
+Follow these steps to complete the implementation:
 
-1. Export your GTM containerunder Admin -> Export Container -> YOUR WORKSPACE -> Export.                         
+1. Navigate to the [Tag Monitor configuration page](https://portal.code-cube.io/tag_monitor_config){:target="_blank"} on the portal.           
+2. Click on the "Client-side" or "Server-side error monitoring" tab.             
+<img 
+    src="/../images/tag-bulk-edit/select-tab.png"
+    alt="select the error monitoring tab"
+    height=800
+    width=800
+    class="big-img">            
 
-2. Open the downloaded container file in an advanced text editor (like notepad++) and locate the tags block.                      
+3. Locate the "Bulk editing tag names" section and click the "Start bulk editing" button.
+<img 
+    src="/../images/tag-bulk-edit/bulk-edit-section.png"
+    alt="Locate the 'Bulk editing tag names' section"
+    height=800
+    width=800
+    class="big-img">   
+    
+4. If you haven't previously authenticated with Google, click the "Start authentication" button to authorize the Code Cube app to access your Google Tag Manager account.                 
+<img 
+    src="/../images/tag-bulk-edit/google-auth.png"
+    alt="Google authentication"
+    height=800
+    width=800
+    class="big-img">   
 
+5. Select the Google Tag Manager account containing the container you wish to update from the list of accounts.           
+<img 
+    src="/../images/tag-bulk-edit/select-account.png"
+    alt="Select the Google Tag Manager account"
+    height=800
+    width=800
+    class="big-img">   
 
-3. Open a json file named 'tags.json' and paste the tag block into it (wrap the whole tag block in {}) and save it.                          
+6. Choose the container you want to update from the list of containers.                        
+<img 
+    src="/../images/tag-bulk-edit/select-container.png"
+    alt="Choose the container"
+    height=800
+    width=800
+    class="big-img"> 
 
+7. Click the "Run update" button.                    
+<img 
+    src="/../images/tag-bulk-edit/run-update.png"
+    alt="Run update button"
+    height=800
+    width=800
+    class="big-img"> 
 
-        
-        {
-        "tag": []
-        }
-                         
-                                              
-
-4. In VSCode, open an html file and paste the code below into the file.                  
-        
-
-
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <title></title>
-                <meta name="description" content="">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link rel="stylesheet" href="">
-            </head>
-            <script>
-                window.onload = (event) => {
-                    function readSingleFile(evt) {
-                        var f = evt.target.files[0];
-                        if (f) {
-                            const r = new FileReader();
-                            r.onload = function(e) {
-                                const contents = e.target.result;
-                                const json = JSON.parse(contents);
-                                let beforeCount = 0;
-
-                                json.tag.forEach(el =>
-                                    el.monitoringMetadataTagNameKey ? beforeCount++ : undefined);
-                                
-                                console.log(`We have ${beforeCount} properties in ${json.tag.length} tags`);
-
-                                json.tag.forEach(el =>
-                                    el.monitoringMetadataTagNameKey === undefined ? el.monitoringMetadataTagNameKey = "name" : undefined);
-                                
-                                let afterCount = 0;
-
-                                json.tag.forEach(el =>
-                                    el.monitoringMetadataTagNameKey ? afterCount++ : undefined);
-
-                                console.log(`Now we have ${afterCount} properties in ${json.tag.length} tags after the script work done!`);
-
-                                navigator.clipboard.writeText(JSON.stringify(json.tag));
-
-                                alert('Job done! Now you can do Ctrl+V and change the data anywhere you want!')
-                            }
-                            r.readAsText(f);
-                        } else {
-                            alert("Failed to load file");
-                        }
-                    }
-
-                    document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
-                }
-            </script>
-            <body>
-                <input id="fileinput" type="file"/>
-            </body>
-        </html>
+8. Once you see the confirmation message at the bottom of the page, navigate to the container, find the newly generated workspace called "Code Cube," and publish the changes.                     
+<img 
+    src="/../images/tag-bulk-edit/confirmation.png"
+    alt="confirmation message"
+    height=800
+    width=800
+    class="big-img"> 
 
 
-
-5. Run the browser and choose the tags.json file in the input field and, wait until you receive an alert message saying that the job is done. Now the modified tag block is copied into your clipboard. 
-6. Format the code block [here](https://jsonformatter.curiousconcept.com) to the standard Json format.
-7. Replace the old tag block in the downloaded container file with your updated and formatted block (be mindful of the correct punctuation) and save the file;
-8. Import container into your workspace under Admin -> Import Container -> choose container file and workspace -> Merge.
-
-You're done. All your tags have been updated!
+You're done. All your tags have been updated successfully in your container!
