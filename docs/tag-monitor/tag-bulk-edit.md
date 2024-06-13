@@ -87,4 +87,4 @@ After the update process completes, a confirmation message will appear at the bo
 
 ### Conclusion                          
 
-Congratulations! You have successfully updated all your tags to include the tag name in the metadata within your container. This update ensures better monitoring and management of your tags in Google Tag Manager. If you encounter any issues or need further assistance, refer to the troubleshooting section or contact support.
+Congratulations! You have successfully updated all your tags to include the tag name in the metadata within your container. This update ensures better monitoring and management of your tags in Google Tag Manager. If you encounter any issues or need further assistance,please contact support at <mailto:support@code-cube.io>.
