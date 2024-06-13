@@ -22,7 +22,7 @@ nav:
           - Bulk editing your tags in GTM: tag-monitor/tag-bulk-edit.md
       - Using the Tag Monitor:
           - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
-          - Offload raw data to your own BigQuery environment: tag-monitor/raw-offload-bigquery.md
+          - Access to Tag Monitor dataset(s) in BigQuery: tag-monitor/access-to-bigquery-dataset.md
           - Consent Monitoring: tag-monitor/consent-monitoring.md
           - Server-side error logging: tag-monitor/serverside-error-logging.md
   - DataLayer Guard:
@@ -30,7 +30,7 @@ nav:
       - Monitoring via scraped events: datalayer-guard/scraped-events.md
       - Monitoring events via Tag Management: datalayer-guard/events-tag-manager.md
   - Alerting & Notifications:
-      - Enable Notifications: notifications
+      - Slack Notifications: notifications/slack.md
 
 markdown_extensions:
   - attr_list
