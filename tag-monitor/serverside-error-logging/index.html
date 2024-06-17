@@ -925,11 +925,11 @@
 <li>Open the Google Cloud Platform project where the server-side tagging Cloud Run service is enabled.</li>
 <li>
 <p>Navigate to <a href="https://console.cloud.google.com/logs/router">Log Router</a> in the Google Cloud Platform, which is one of the options under Logging page.</p>
-<p><img alt="router-nav" src="../images/log-router-nav.png" /></p>
+<p><img alt="router-nav" src="../../images/log-router-nav.png" /></p>
 </li>
 <li>
 <p>On this page select the ‘Create sink’ option, on top of the page</p>
-<p><img alt="router-create-sink" src="../images/logging-creae-sink.png" /></p>
+<p><img alt="router-create-sink" src="../../images/logging-creae-sink.png" /></p>
 </li>
 </ol>
 <h3 id="create-logs-routing-sink">Create logs routing sink</h3>
@@ -940,7 +940,7 @@
 <li><strong>Sink name</strong>:  ‘codecube-serverside-logs’</li>
 <li>
 <p><strong>Sink description:</strong> Give extra description on the sink (optional)</p>
-<p><img alt="sink-details" src="../images/logging-sink-details.png" /></p>
+<p><img alt="sink-details" src="../../images/logging-sink-details.png" /></p>
 </li>
 </ul>
 </li>
@@ -953,7 +953,7 @@
 <ul>
 <li>Your {{dataset}} value can be found on the configuration page in the portal.</li>
 </ul>
-<p><img alt="sink-destination" src="../images/logging-sink-destination.png" /></p>
+<p><img alt="sink-destination" src="../../images/logging-sink-destination.png" /></p>
 </li>
 </ul>
 </li>
@@ -970,7 +970,7 @@
 <li><code>textPayload!~"Listening"</code>: Exclude instance initializations.</li>
 </ul>
 <p>Note: Additional filters can be added for refinement, but test them in the logs explorer before applying to avoid disruptions in log writing.</p>
-<p><img alt="create-filter" src="../images/logging-create-filter.png" /></p>
+<p><img alt="create-filter" src="../../images/logging-create-filter.png" /></p>
 </li>
 <li>
 <p>Choose logs to filter out of sink </p>
@@ -980,7 +980,7 @@
 </li>
 </ol>
 <p>After you click on the button ‘Create sink’ you should be redirected to the page where the message shows up on the top of the page.</p>
-<p><img alt="sink-succesfull" src="../images/logging-sink-succesfull.png" /></p>
+<p><img alt="sink-succesfull" src="../../images/logging-sink-succesfull.png" /></p>
 <h2 id="manage-access-to-the-sink"><strong>Manage Access to the sink</strong></h2>
 <p>When creating a logging sink in your Google Cloud Platform, a <strong>service account</strong> is automatically created. Please locate this service account via IAM and share the name with Code Cube via support@code-cube.io.</p>
 <p><strong>How to locate the service account:</strong></p>
@@ -988,7 +988,7 @@
 <li>Go to IAM and admin → <a href="https://console.cloud.google.com/iam-admin/iam">IAM</a>.</li>
 <li>
 <p>Activate Google-provided role grants at the top right of the page.</p>
-<p><img alt="google-accounts" src="../images/logging-include-google-accounts.png" /></p>
+<p><img alt="google-accounts" src="../../images/logging-include-google-accounts.png" /></p>
 </li>
 <li>
 <p>Search for the service account that ends with <code>logging.iam.gserviceaccount.com</code>.</p>
