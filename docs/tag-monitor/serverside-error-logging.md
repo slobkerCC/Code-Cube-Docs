@@ -4,7 +4,7 @@
 
 Logs play a essential role in monitoring your server-side tagging. They assist in troubleshooting request issues, identifying missing data, and understanding how a vendor processed a request.
 
-Logs are available for all tags that support the "logging to console" option in the server-side GTM container. However, it's important to note that you **cannot** retrieve log data for Google Analytics and Google Ads tags, as these default templates do not support the logging option.
+Logs are available for all tags that support the "logging to console" option in the server-side GTM container. However, it's important to note that you **can not** retrieve log data for Google Analytics and Google Ads tags, as these default templates do not support the logging option.
 
 The logging will be configured in the Google Cloud Project where your GTM server-side container operates in a Cloud Run instance. From this instance, you can connect the logs to the Code Cube environment. These logs will then be paired with other error information and integrated into dashboarding and notifications.
 
@@ -53,7 +53,7 @@ We'll cover the following steps:
     
 Note: You can refine with more filters. Test them in the logs explorer before applying to avoid disrupting log writing.
 
-    ![create-filter](../images/logging-create-filter.png)
+ ![create-filter](../images/logging-create-filter.png)
     
 5. Choose logs to filter out of sink 
     - This step is optional. Click 'Create sink' to skip.
