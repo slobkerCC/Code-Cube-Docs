@@ -912,7 +912,7 @@
 <h1 id="monitoring-server-side-gtm-logs">Monitoring server-side GTM logs</h1>
 <p>❕This feature is only available with the Tag Monitor's premium and enterprise licenses.</p>
 <p>Logs play a essential role in monitoring your server-side tagging. They assist in troubleshooting request issues, identifying missing data, and understanding how a vendor processed a request.</p>
-<p>Logs are available for all tags that support the "logging to console" option in the server-side GTM container. However, it's important to note that you <strong>cannot</strong> retrieve log data for Google Analytics and Google Ads tags, as these default templates do not support the logging option.</p>
+<p>Logs are available for all tags that support the "logging to console" option in the server-side GTM container. However, it's important to note that you <strong>can not</strong> retrieve log data for Google Analytics and Google Ads tags, as these default templates do not support the logging option.</p>
 <p>The logging will be configured in the Google Cloud Project where your GTM server-side container operates in a Cloud Run instance. From this instance, you can connect the logs to the Code Cube environment. These logs will then be paired with other error information and integrated into dashboarding and notifications.</p>
 <p>We'll cover the following steps:</p>
 <ol>
@@ -972,8 +972,7 @@
 </li>
 </ol>
 <p>Note: You can refine with more filters. Test them in the logs explorer before applying to avoid disrupting log writing.</p>
-<pre><code>![create-filter](../images/logging-create-filter.png)
-</code></pre>
+<p><img alt="create-filter" src="../../images/logging-create-filter.png" /></p>
 <ol>
 <li>Choose logs to filter out of sink <ul>
 <li>This step is optional. Click 'Create sink' to skip.</li>
