@@ -88,12 +88,12 @@ To monitor a segment, you can take a percentage of this total number and fire th
 
 |  |  |   |   |
 | -------------- | -------------- | --------- | -- | 
-| segment of 0.5% | random number    | ends on   | 10.737.418
-| segment of 5% | random number    | ends on   | 107.374.182
+| segment of 0.5% | random number    | ends on   | 10737418
+| segment of 5% | random number    | ends on   | 107374182
 | segment of 10% | random number    | ends on   | 1*  
-| segment of 20% | random number    | less then or equal to  | 429.496.729
-| segment of 25% | random number    | less then or equal to  | 536.870.911
-| segment of 50% | random number    | less then or equal to  | 1.073.741.823
+| segment of 20% | random number    | less then or equal to  | 429496729
+| segment of 25% | random number    | less then or equal to  | 536870911
+| segment of 50% | random number    | less then or equal to  | 1073741823
 
 *exception as there is a 1/10 change the number ends on a number between 0 and 9.
 
