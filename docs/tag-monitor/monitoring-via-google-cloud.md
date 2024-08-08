@@ -41,7 +41,8 @@ This implementation is designed to set up Cloud Run monitoring and server-side e
 3. **Enable Cloud Run Monitoring:**
     - Turn on the toggle for Cloud Run monitoring.
 4. **Enter Project Information:**
-    - In the project number field, enter your GCP project number.
+    - In the project number field, enter your GCP project number.       
+    ([Click here to learn how to find your project number](#find-project-number))
 5. **Upload Service Account Key:**
     - Upload your service account key.               
     ([Click here to learn how to create the service account key?](#create-service-account-key))
@@ -79,6 +80,18 @@ If you wish to enable both Cloud Run monitoring and server-side error logging:
 2. **Follow the Steps:**
     - Follow the respective steps for each configuration as outlined above.
 
+---
+### How to Find Your GCP Project Number {#find-project-number}
+
+1. **Log in to the Google Cloud Console**:
+    - Visit [Google Cloud Console](https://console.cloud.google.com/).
+    - Sign in with your Google account if you're not already logged in.
+2. **Select Your Project**:
+    - In the top navigation bar, click on the project drop-down menu (typically displaying the name of your currently selected project).
+    - If you have multiple projects, select the one you want from the list.
+3. **Locate the Project Number**:
+    - After selecting your project, the **Project Info** panel will appear on the dashboard.
+    - Your **Project number** will be displayed in this panel, usually right below the project name. 
 ---
 ### Creating a Service Account and Generating a Key {#create-service-account-key}
 
@@ -127,6 +140,8 @@ Assign the following roles to the service account to grant it the necessary perm
     - Role: `roles/config.writer`
     - After adding all the roles, click `DONE`.  
 
+**Note**: You can also set the **owner** role to include all above-mentioned permissions to the service account at once. 
+
 #### Step 3: Create and Download the Service Account Key
 
 1. **Generate a New Key:**
@@ -151,7 +166,7 @@ Assign the following roles to the service account to grant it the necessary perm
 By completing these steps, you will have successfully created a service account with the required permissions and provided the necessary credentials for our portal to automate and manage processes effectively.
 
 ---    
-### Identifying Cloud Run Services and Their Regions {#spot-cloud-run-resources}
+### Identifying Cloud Run Services and Their Regions {#locate-cloud-run-resources}
 
 To manage and monitor your Cloud Run services, you need to know the name and region of each service used for your tagging service. Follow these steps to locate your Cloud Run services and identify their corresponding names and regions.
 
