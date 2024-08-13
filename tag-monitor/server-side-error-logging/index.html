@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../consent-monitoring/">
+        <link rel="prev" href="../cloud-run-monitoring/">
       
       
-        <link rel="next" href="../monitoring-via-google-cloud/">
+        <link rel="next" href="../../datalayer-guard/intro/">
       
       
       <link rel="icon" href="../../logo.png">
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#monitoring-server-side-gtm-logs" class="md-skip">
+        <a href="#feature-description" class="md-skip">
           Skip to content
         </a>
       
@@ -534,6 +534,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-run-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Run Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -542,8 +563,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -573,8 +592,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -583,28 +600,88 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#set-up-of-logging-in-your-google-cloud-project-setup" class="md-nav__link">
+  <a href="#feature-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Set-up of logging in your Google Cloud Project Setup
+      Feature description
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Set-up of logging in your Google Cloud Project Setup">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How it works">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#navigate-to-create-sink" class="md-nav__link">
+  <a href="#GCP-respurces" class="md-nav__link">
     <span class="md-ellipsis">
-      Navigate to “Create Sink”
+      Resources Created in your GCP project
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-logs-routing-sink" class="md-nav__link">
+  <a href="#how-to-enable-server-side-error-logging" class="md-nav__link">
     <span class="md-ellipsis">
-      Create logs routing sink
+      How to Enable server-side error logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-service-account-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Service Account and Generating a Key
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Service Account and Generating a Key">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create a Service Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-assign-roles-to-the-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Assign Roles to the Service Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-and-download-the-service-account-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create and Download the Service Account Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-measures-and-implementation-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Measures and Implementation Safeguards
     </span>
   </a>
   
@@ -615,40 +692,10 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#manage-access-to-the-sink" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manage Access to the sink
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../monitoring-via-google-cloud/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Monitoring via Google Cloud
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -864,8 +911,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -874,28 +919,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#set-up-of-logging-in-your-google-cloud-project-setup" class="md-nav__link">
+  <a href="#feature-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Set-up of logging in your Google Cloud Project Setup
+      Feature description
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Set-up of logging in your Google Cloud Project Setup">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How it works">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#navigate-to-create-sink" class="md-nav__link">
+  <a href="#GCP-respurces" class="md-nav__link">
     <span class="md-ellipsis">
-      Navigate to “Create Sink”
+      Resources Created in your GCP project
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-logs-routing-sink" class="md-nav__link">
+  <a href="#how-to-enable-server-side-error-logging" class="md-nav__link">
     <span class="md-ellipsis">
-      Create logs routing sink
+      How to Enable server-side error logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-service-account-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Service Account and Generating a Key
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Service Account and Generating a Key">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create a Service Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-assign-roles-to-the-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Assign Roles to the Service Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-and-download-the-service-account-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create and Download the Service Account Key
     </span>
   </a>
   
@@ -905,13 +996,18 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-access-to-the-sink" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#security-measures-and-implementation-safeguards" class="md-nav__link">
     <span class="md-ellipsis">
-      Manage Access to the sink
+      Security Measures and Implementation Safeguards
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -930,92 +1026,241 @@
                   
 
 
-<h1 id="monitoring-server-side-gtm-logs">Monitoring server-side GTM logs</h1>
+  <h1>Server-side error logging</h1>
+
+<h2 id="feature-description">Feature description</h2>
 <p>❕This feature is only available with the Tag Monitor's premium and enterprise licenses.</p>
-<p>Logs play a essential role in monitoring your server-side tagging. They assist in troubleshooting request issues, identifying missing data, and understanding how a vendor processed a request.</p>
+<p>Logs play an essential role in monitoring your server-side tagging. They assist in troubleshooting request issues, identifying missing data, and understanding how a vendor processed a request.</p>
 <p>Logs are available for all tags that support the "logging to console" option in the server-side GTM container. However, it's important to note that you <strong>can not</strong> retrieve log data for Google Analytics and Google Ads tags, as these default templates do not support the logging option.</p>
 <p>The logging will be configured in the Google Cloud Project where your GTM server-side container operates in a Cloud Run instance. From this instance, you can connect the logs to the Code Cube environment. These logs will then be paired with other error information and integrated into dashboarding and notifications.</p>
-<p>We'll cover the following steps:</p>
+<hr />
+<h2 id="how-it-works">How it works</h2>
+<p>Our system works by setting up a log monitoring mechanism within your Google Cloud Project. It starts by configuring a router log that collects logs from your GTM server-side container, specifically targeting logs that meet certain criteria.</p>
+<p>The filtering logic is applied to ensure only relevant logs are captured, with the filter being: logName=~"stdout" AND textPayload!~"https://www.googletagmanager.com/sgtm/a" AND textPayload!~"Listening". </p>
+<p>Filter explanation:
+logName=~"stdout": Filter logs based on stdout.
+textPayload!~"https://www.googletagmanager.com/sgtm/a": Exclude GTM analytics pings.
+textPayload!~"Listening": Excludes instance initializations.</p>
+<p>Once the relevant logs are collected, they are sent to a dataset in our Google Cloud Project. This dataset serves as a repository for the logs, which can then be used to create insights, create dashboards, and track various metrics.</p>
+<hr />
+<h3 id="GCP-respurces">Resources Created in your GCP project</h3>
 <ol>
-<li><strong>Configure Logging Sink</strong>: Establish a logging sink in the Google Cloud Platform project where server-side Tag Management is enabled via a Cloud Run instance.</li>
-<li><strong>Grant Access</strong>: Ensure that the Code Cube project has access to this sink and its logs.</li>
-</ol>
-<h2 id="set-up-of-logging-in-your-google-cloud-project-setup"><strong>Set-up of logging in your Google Cloud Project Setup</strong></h2>
-<h3 id="navigate-to-create-sink">Navigate to “Create Sink”</h3>
-<ol>
-<li>Open the Google Cloud Platform project with the server-side tagging Cloud Run service enabled.</li>
-<li>
-<p>Go to the <a href="https://console.cloud.google.com/logs/router">Log Router</a> in the Google Cloud Platform, located under the Logging page.</p>
-<p><img alt="router-nav" src="../../images/log-router-nav.png" /></p>
-</li>
-<li>
-<p>On this page, click the 'Create sink' option at the top.  <br />
-<img alt="router-create-sink" src="../../images/logging-creae-sink.png" /></p>
-</li>
-</ol>
-<h3 id="create-logs-routing-sink">Create logs routing sink</h3>
-<ol>
-<li>
-<p>Add <strong>sink details</strong></p>
-<ul>
-<li><strong>Sink name</strong>:  ‘codecube-serverside-logs’</li>
-<li>
-<p><strong>Sink description:</strong> Add an optional description for the sink</p>
-<p><img alt="sink-details" src="../../images/logging-sink-details.png" /></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Add <strong>sink destination</strong></p>
-<ul>
-<li><strong>Select sink service:</strong> Choose ‘Other resource’</li>
-<li>
-<p><strong>Sink destination:</strong> <code>bigquery.googleapis.com/projects/code-cube/datasets/{{dataset}}</code></p>
-<ul>
-<li>Find your {{dataset}} value on the configuration page in the portal.</li>
-</ul>
-<p><img alt="sink-destination" src="../../images/logging-sink-destination.png" /></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Choose logs to include in sink</strong></p>
-<ul>
-<li>Enter the following query in the log filters section:
-<code>logName=~"stdout" AND textPayload!~"https://www.googletagmanager.com/sgtm/a" AND textPayload!~"Listening"</code></li>
-</ul>
-<p>Explanation:</p>
-<ul>
-<li><code>logName=~"stdout"</code>: Filter logs based on stdout.</li>
-<li><code>textPayload!~"https://www.googletagmanager.com/sgtm/a"</code>: Exclude GTM analytics pings.</li>
-<li><code>textPayload!~"Listening"</code>: Excludes instance initializations.</li>
+<li><strong>Logging Sink</strong><ul>
+<li>A logging sink named codecube-serverside-logs routing logs to BigQuery dataset in our GCP project.</li>
 </ul>
 </li>
 </ol>
-<p>Note: You can refine with more filters. Test them in the logs explorer before applying to avoid disrupting log writing.</p>
-<p><img alt="create-filter" src="../../images/logging-create-filter.png" /></p>
+<hr />
+<h3 id="how-to-enable-server-side-error-logging">How to Enable server-side error logging</h3>
+<p>To enable the feature you need to take the steps below:</p>
 <ol>
-<li>Choose logs to filter out of sink <ul>
-<li>This step is optional. Click 'Create sink' to skip.</li>
+<li><strong>Navigate to the Configuration Page:</strong><ul>
+<li>Go to the <a href="https://portal.code-cube.io/tag_monitor_config" target="_blank">Tag Monitor Configuration Page</a> on our portal.</li>
+</ul>
+</li>
+<li><strong>Access the Monitoring Tab:</strong><ul>
+<li>Click on the <code>Monitoring via Google Cloud Platform</code> tab.                          <br />
+<img src="/../images/GCP-monitoring/monitoring-tab.png"
+alt="Monitoring via GCP tab"
+height=800
+width=800
+class="big-img"
+    ></li>
+</ul>
+</li>
+<li><strong>Enable server-side error logging:</strong><ul>
+<li>Turn on the toggle for server-side error logging.                 <br />
+<img src="/../images/GCP-monitoring/server-side-toggle.png"
+alt="Enabling toggle for server-side error logging"
+height=800
+width=800
+class="big-img"
+    >                     </li>
+</ul>
+</li>
+<li><strong>Upload Service Account Key:</strong><ul>
+<li>Upload your service account key.             <br />
+<a href="#create-service-account-key">How to create the service account key?</a></li>
+<li><strong>Note:</strong> This service account key will not be stored in any of our systems for privacy and security purposes.  Find more about 
+    the security Measures and Implementation safeguards <a href="#security-measures-and-implementation-safeguards">here</a>.                   <br />
+<img src="/../images/GCP-monitoring/upload-key-ss-logs.png"
+alt="Field of upload service account key"
+height=800
+width=800
+class="big-img"
+    >            </li>
+</ul>
+</li>
+<li>
+<p><strong>Start Configuration:</strong></p>
+<ul>
+<li>Click on <code>Start Configuration</code> to initiate the process.            <br />
+<img src="/../images/GCP-monitoring/start-config-ss-logs.png"
+alt="Start configuration button"
+height=800
+width=800
+class="big-img"
+    ></li>
+</ul>
+</li>
+<li>
+<p><strong>Confirm the implementation:</strong></p>
+<ul>
+<li>Once the following message appears on your screen, you can confirm that the implementation was successful.                 <br />
+<img src="/../images/GCP-monitoring/success-msg-ss-log.png" 
+alt="Success message"
+height=800
+width=800
+class="big-img"
+        ></li>
 </ul>
 </li>
 </ol>
-<p>After clicking 'Create sink', you'll be redirected to a page with a succes message at the top.</p>
-<p><img alt="sink-succesfull" src="../../images/logging-sink-succesfull.png" /></p>
-<h2 id="manage-access-to-the-sink"><strong>Manage Access to the sink</strong></h2>
-<p>When creating a logging sink in your Google Cloud Platform, a <strong>service account</strong> is automatically created. Find this service account through IAM and share the name with Code Cube at support@code-cube.io.</p>
-<p><strong>Steps to find the service account:</strong></p>
+<hr />
+<h3 id="create-service-account-key">Creating a Service Account and Generating a Key</h3>
+<p>To enable the automation of monitoring and management processes, you need to create a Google Cloud Service Account with specific permissions. Follow these steps to create the service account, assign the necessary roles, and generate a service account key for upload to our <a href="https://portal.code-cube.io/tag_monitor_config" target="_blank">portal</a>.</p>
+<h4 id="step-1-create-a-service-account">Step 1: Create a Service Account</h4>
 <ol>
-<li>Navigate to IAM and admin → <a href="https://console.cloud.google.com/iam-admin/iam">IAM</a>.</li>
-<li>
-<p>Activate Google-provided role grants at the top right of the page.</p>
-<p><img alt="google-accounts" src="../../images/logging-include-google-accounts.png" /></p>
+<li><strong>Navigate to the Google Cloud Console</strong><ul>
+<li>Open the <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</li>
+</ul>
 </li>
-<li>
-<p>Search for the service account ending with logging.iam.gserviceaccount.com.</p>
+<li><strong>Select Your Project:</strong><ul>
+<li>Ensure you have the correct project selected from the project selector dropdown at the top of the page.</li>
+</ul>
 </li>
-<li>Copy and share the name of this service account with support@code-cube.io. This account will be granted write permissions on the relevant dataset.</li>
+<li><strong>Go to the Service Accounts Page</strong>             <ul>
+<li>Navigate to <code>IAM &amp; Admin</code> &gt; <code>Service Accounts</code>.                                        <br />
+<img src="/../images/GCP-monitoring/service-account.png"
+alt="Service Accounts Page in GCP"
+height=900
+width=900
+class="big-img"
+    ></li>
+</ul>
+</li>
+<li><strong>Create a New Service Account</strong><ul>
+<li>Click the <code>+ CREATE SERVICE ACCOUNT</code> button.
+<img src="/../images/GCP-monitoring/create-service-account.png"
+alt="CREATE SERVICE ACCOUNT Button"
+height=900
+width=900
+class="big-img"
+    ></li>
+<li>Enter a name, ID, and description for the service account.</li>
+<li>Click <code>CREATE AND CONTINUE</code>.</li>
+<li>Copy the service account email into your clipboard for the next step.</li>
+</ul>
+</li>
 </ol>
+<h4 id="step-2-assign-roles-to-the-service-account">Step 2: Assign Roles to the Service Account</h4>
+<ul>
+<li>Navigate to <code>IAM &amp; Admin</code> &gt; <code>IAM</code>.                   <br />
+    <img src="/../images/GCP-monitoring/IAM-tab.png"
+        alt="IAM page in GCP"
+        height=900
+        width=900
+        class="big-img"
+        ></li>
+<li>Click on <code>GRANT ACCESS</code> button.            <br />
+    <img src="/../images/GCP-monitoring/grant-access-btn.png"
+        alt="Grant access Button"
+        height=900
+        width=900
+        class="big-img"
+        ></li>
+<li>Paste your service account email from the previous step into the <code>New principals</code> field.           <br />
+    <img src="/../images/GCP-monitoring/add-principals.png"
+        alt="Add principals Button"
+        height=900
+        width=900
+        class="big-img"
+        ></li>
+<li>
+<p>Assign the following roles to the service account to grant it the necessary permissions:
+    <img src="/../images/GCP-monitoring/add-role.png"
+        alt="Add role Button"
+        height=900
+        width=900
+        class="big-img"
+        ></p>
+</li>
+<li>
+<p><strong>Logging Admin:</strong></p>
+<ul>
+<li>Resource: <code>google_logging_project_sink</code></li>
+<li>Role: <code>roles/logging.admin</code></li>
+</ul>
+</li>
+<li><strong>Config Writer:</strong><ul>
+<li>Resource: <code>google_logging_project_sink</code></li>
+<li>Role: <code>roles/config.writer</code></li>
+<li>After adding all the roles, click <code>DONE</code>.  </li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> You can set the <strong>owner</strong> role to grant all of the permissions mentioned above to the service account in one step. However, be aware that this will also grant full access to the service account.</p>
+<h4 id="step-3-create-and-download-the-service-account-key">Step 3: Create and Download the Service Account Key</h4>
+<ol>
+<li><strong>Generate a New Key:</strong><ul>
+<li>In the <code>Service Accounts</code> page, find the service account you created.</li>
+<li>Click the <code>⋮</code> (three vertical dots) at the end of the service account row, then click <code>Manage keys</code>.
+<img src="/../images/GCP-monitoring/manage-key-btn.png"
+alt="Manage key Button"
+height=900
+width=900
+class="big-img"
+    ></li>
+</ul>
+</li>
+<li><strong>Add Key:</strong><ul>
+<li>Click <code>ADD KEY</code> &gt; <code>Create new key</code>.
+<img src="/../images/GCP-monitoring/add-key-btn.png"
+alt="Add key Button"
+height=900
+width=900
+class="big-img"
+    ></li>
+</ul>
+</li>
+<li><strong>Select Key Type:</strong><ul>
+<li>Choose the <code>JSON</code> key type and click <code>CREATE</code>.
+<img src="/../images/GCP-monitoring/create-json-key.png"
+alt="Create JSON key Button"
+height=900
+width=900
+class="big-img"
+    ></li>
+</ul>
+</li>
+<li><strong>Download Key:</strong><ul>
+<li>The key will automatically download to your computer. Keep this file secure, as it contains the credentials required to access the service account.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="security-measures-and-implementation-safeguards">Security Measures and Implementation Safeguards</h3>
+<p>Our implementation process is built around a strong security framework that safeguards user data and blocks unauthorized access. Here's how we maintain top-level security throughout the process:</p>
+<ol>
+<li><strong>One-Time Use of Service Account Key:</strong><ul>
+<li>We keep your service account key secure by using it only once. The service account key, necessary for implementation, is never stored in our databases. This means that after the initial implementation, the key is discarded. Should you need to update your setup, you will be required to upload the key again. This approach eliminates any potential vulnerabilities associated with key storage.</li>
+</ul>
+</li>
+<li><strong>Strict Separation of Front-End and Back-End Processing:</strong><ul>
+<li>To minimize risk, the service account key file is never handled on the front-end. Instead, when you upload the key, it is sent as a binary file via secure HTTPS requests directly to our servers. By processing the key exclusively on the back-end, we prevent any exposure of sensitive information in the front-end environment, adding an extra layer of protection against potential security breaches.</li>
+</ul>
+</li>
+<li><strong>No Credentials Stored:</strong><ul>
+<li>In the event of a security breach, your credentials remain safe. Since we do not store the service account key or any sensitive credentials in our system, even a successful hack would yield no access to your Google Cloud resources. This ensures that your data and accounts remain secure, regardless of external threats.</li>
+</ul>
+</li>
+<li><strong>Limited Scope of Resource Creation:</strong><ul>
+<li>Our implementation is highly targeted and precise. We only create the resources explicitly required for the project within your Google Cloud environment, and nothing more. This controlled and minimalistic approach ensures that there are no unnecessary permissions or resources that could be exploited, further tightening security.          <br />
+<a href="#GCP-respurces">See the list of resources that will be created in your GCP project</a></li>
+</ul>
+</li>
+</ol>
+<p>By following these strict security practices, we secure your implementation, reducing risk and protecting your Google Cloud environment.</p>
 
 
 

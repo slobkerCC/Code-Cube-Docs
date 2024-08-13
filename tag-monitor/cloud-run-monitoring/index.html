@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../serverside-error-logging/">
+        <link rel="prev" href="../consent-monitoring/">
       
       
-        <link rel="next" href="../../datalayer-guard/intro/">
+        <link rel="next" href="../server-side-error-logging/">
       
       
       <link rel="icon" href="../../logo.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Monitoring via Google Cloud - Code Cube documentation library</title>
+        <title>Cloud Run Monitoring - Code Cube documentation library</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cloud-run-monitoring-and-error-logging-automation" class="md-skip">
+        <a href="#feature-description" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Monitoring via Google Cloud
+              Cloud Run Monitoring
             
           </span>
         </div>
@@ -534,27 +534,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../serverside-error-logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Server-side error logging
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -569,7 +548,7 @@
           
   
   <span class="md-ellipsis">
-    Monitoring via Google Cloud
+    Cloud Run Monitoring
   </span>
   
 
@@ -580,7 +559,7 @@
         
   
   <span class="md-ellipsis">
-    Monitoring via Google Cloud
+    Cloud Run Monitoring
   </span>
   
 
@@ -600,50 +579,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cloud-run-monitoring-and-error-logging-automation" class="md-nav__link">
+  <a href="#feature-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloud Run Monitoring and Error Logging Automation
+      Feature description
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cloud Run Monitoring and Error Logging Automation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How it works">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloud-run-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloud Run Monitoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-side-error-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      Server-Side Error Logging
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources-created-in-your-gcp-project" class="md-nav__link">
+  <a href="#GCP-respurces" class="md-nav__link">
     <span class="md-ellipsis">
       Resources Created in your GCP project
     </span>
@@ -655,24 +610,6 @@
   <a href="#how-to-enable-cloud-run-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
       How to Enable Cloud Run Monitoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-enable-server-side-error-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Enable Server-Side Error Logging
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enabling-both-configurations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enabling Both Configurations
     </span>
   </a>
   
@@ -719,15 +656,6 @@
   <a href="#step-3-create-and-download-the-service-account-key" class="md-nav__link">
     <span class="md-ellipsis">
       Step 3: Create and Download the Service Account Key
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-upload-the-service-account-key-to-our-portal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Upload the Service Account Key to Our Portal
     </span>
   </a>
   
@@ -781,6 +709,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#security-measures-and-implementation-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Measures and Implementation Safeguards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Next Steps
@@ -798,6 +735,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-side-error-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-side error logging
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1021,50 +979,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cloud-run-monitoring-and-error-logging-automation" class="md-nav__link">
+  <a href="#feature-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloud Run Monitoring and Error Logging Automation
+      Feature description
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cloud Run Monitoring and Error Logging Automation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How it works">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloud-run-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloud Run Monitoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-side-error-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      Server-Side Error Logging
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources-created-in-your-gcp-project" class="md-nav__link">
+  <a href="#GCP-respurces" class="md-nav__link">
     <span class="md-ellipsis">
       Resources Created in your GCP project
     </span>
@@ -1076,24 +1010,6 @@
   <a href="#how-to-enable-cloud-run-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
       How to Enable Cloud Run Monitoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-enable-server-side-error-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Enable Server-Side Error Logging
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enabling-both-configurations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enabling Both Configurations
     </span>
   </a>
   
@@ -1140,15 +1056,6 @@
   <a href="#step-3-create-and-download-the-service-account-key" class="md-nav__link">
     <span class="md-ellipsis">
       Step 3: Create and Download the Service Account Key
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-upload-the-service-account-key-to-our-portal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Upload the Service Account Key to Our Portal
     </span>
   </a>
   
@@ -1202,6 +1109,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#security-measures-and-implementation-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Measures and Implementation Safeguards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Next Steps
@@ -1230,32 +1146,27 @@
                   
 
 
-  <h1>Monitoring via Google Cloud</h1>
+  <h1>Cloud Run Monitoring</h1>
 
-<h2 id="cloud-run-monitoring-and-error-logging-automation">Cloud Run Monitoring and Error Logging Automation</h2>
-<p>This implementation is designed to set up Cloud Run monitoring and server-side error logging in your Google Cloud Platform (GCP) project. Below is an overview of how the process works and the resources it will create in your GCP project.</p>
+<h2 id="feature-description">Feature description</h2>
+<p>This feature helps you monitor your Google Tag Manager (GTM) tagging servers on Google Cloud Platform (GCP) using the Cloud Run service. It ensures that your servers stay healthy, secure, and running smoothly. It automatically sets up monitoring rules in your GCP project, such as checking memory and CPU usage, verifying SSL certificates, and making sure your servers are always up and running. This allows you to keep an eye on your tagging servers and make sure they are working properly.</p>
+<p>The main goal of this feature is to keep your tagging servers reliable so your data collection is uninterrupted. This way, you can focus on analyzing and improving your marketing campaigns without worrying abut technical problems.
+If anything goes wrong, you’ll be notified right away through your preferred method, whether by email or Slack. This helps you quickly fix any issues that is detected to make sure your GTM server continues to provide the data you need.</p>
 <hr />
-<h3 id="features">Features</h3>
-<h4 id="cloud-run-monitoring">Cloud Run Monitoring</h4>
-<ul>
-<li><strong>CPU and Memory Alert Policies:</strong> Alerts are set up to monitor CPU and memory usage of specified Cloud Run services for your tagging services.</li>
-<li><strong>Uptime Check:</strong> Regular checks to ensure the Cloud Run services are operational.</li>
-<li><strong>SSL Certificate Expiration Alert:</strong> Alerts for SSL certificate expiration of Cloud Run services.</li>
-</ul>
-<h4 id="server-side-error-logging">Server-Side Error Logging</h4>
-<ul>
-<li><strong>Logging Sink:</strong> Server logs are routed to BigQuery for detailed analysis and storage. The logs will be stored in a dataset in our GCP project for dashboarding and further analysis purposes.</li>
-</ul>
-<hr />
-<h3 id="resources-created-in-your-gcp-project">Resources Created in your GCP project</h3>
+<h2 id="how-it-works">How it works</h2>
+<p>To get started with this monitoring feature, you'll first need to provide us with a service account key from your GCP project. This key should have the necessary permissions to create and manage resources within your project. The instructions of how to create the service account key and the necessary permissions are explained in further steps.</p>
+<p>The setup involves configuring a comprehensive set of alert policies to monitor the performance and health of your Cloud Run services. These policies include tracking CPU and memory usage to ensure your services are operating efficiently, performing uptime checks to verify continuous service availability, and monitoring SSL certificate expiration to maintain security. Additionally, a Pub/Sub topic is configured along with a corresponding subscription that receives messages from the notification channels defined in the alert policies. These messages are then forwarded to a Cloud Function within our GCP project, enabling efficient handling and routing of notifications. This setup ensures that any issues are promptly detected and addressed, maintaining the reliability and security of your services.</p>
+<p>Additionally, we will set up a service account specifically for monitoring with the necessary IAM roles to manage and access these resources.</p>
+<p>Once everything is in place, the monitoring system will actively keep an eye on your Cloud Run services. If any issues arise, you will receive notifications through your preferred channels, such as email or Slack, so you can quickly address any problems and ensure your tagging infrastructure remains reliable.</p>
+<h3 id="GCP-respurces">Resources Created in your GCP project</h3>
 <ol>
-<li><strong>Pub/Sub Topic and Subscription</strong>      <ul>
-<li>A Pub/Sub topic.</li>
-<li>A Pub/Sub subscription with push configuration for Cloud Functions.</li>
+<li><strong>Notification Channel</strong><ul>
+<li>A notification channel linked to the alert policies that pushes messages to a pub/sub topic in your project.</li>
 </ul>
 </li>
-<li><strong>Notification Channel</strong><ul>
-<li>A notification channel linked to the Pub/Sub topic for alerting.</li>
+<li><strong>Pub/Sub Topic and Subscription</strong>      <ul>
+<li>A Pub/Sub topic that receives the alert messages from the notification channel used in the alert policies.</li>
+<li>A Pub/Sub subscription with push configuration for Cloud Functions.</li>
 </ul>
 </li>
 <li><strong>Alert Policies</strong><ul>
@@ -1266,92 +1177,99 @@
 </ul>
 </li>
 <li><strong>Service Account</strong><ul>
-<li>A service account <code>cloud-run-monitoring@{project_id}.iam.gserviceaccount.com</code> with appropriate IAM bindings.</li>
-</ul>
-</li>
-<li><strong>Logging Sink</strong><ul>
-<li>A logging sink named <code>codecube-serverside-logs</code> routing logs to BigQuery dataset in our GCP project.</li>
-</ul>
-</li>
-<li><strong>IAM Bindings</strong><ul>
-<li>IAM roles for the service account and Pub/Sub topic.</li>
+<li>A service account named <code>cloud-run-monitoring@{project_id}.iam.gserviceaccount.com</code> with <code>Pub/Sub Publisher</code> role.</li>
 </ul>
 </li>
 </ol>
 <hr />
 <h3 id="how-to-enable-cloud-run-monitoring">How to Enable Cloud Run Monitoring</h3>
+<p>To enable the feature you need to take the steps below:</p>
 <ol>
 <li><strong>Navigate to the Configuration Page:</strong><ul>
 <li>Go to the <a href="https://portal.code-cube.io/tag_monitor_config" target="_blank">Tag Monitor Configuration Page</a> on our portal.</li>
 </ul>
 </li>
 <li><strong>Access the Monitoring Tab:</strong><ul>
-<li>Click on the <code>Monitoring via Google Cloud Platform</code> tab.  </li>
+<li>Click on the <code>Monitoring via Google Cloud Platform</code> tab.                          <br />
+<img src="/../images/GCP-monitoring/monitoring-tab.png"
+alt="Monitoring via GCP tab"
+height=800
+width=800
+class="big-img"
+    ></li>
 </ul>
 </li>
 <li><strong>Enable Cloud Run Monitoring:</strong><ul>
-<li>Turn on the toggle for Cloud Run monitoring.</li>
+<li>Turn on the toggle for Cloud Run monitoring.                 <br />
+<img src="/../images/GCP-monitoring/cloud-monitoring-toggle.png"
+alt="Enabling toggle for cloud run monitoring"
+height=800
+width=800
+class="big-img"
+    >          </li>
 </ul>
 </li>
 <li><strong>Enter Project Information:</strong><ul>
 <li>In the project number field, enter your GCP project number.     <br />
-(<a href="#find-project-number">Click here to learn how to find your project number</a>)</li>
+<a href="#find-project-number">Where to find your project number?</a>             <br />
+<img src="/../images/GCP-monitoring/add-project-number.png"
+alt="Click here to learn how to find your project number"
+height=800
+width=800
+class="big-img"
+    >             </li>
 </ul>
 </li>
 <li><strong>Upload Service Account Key:</strong><ul>
 <li>Upload your service account key.             <br />
-(<a href="#create-service-account-key">Click here to learn how to create the service account key?</a>)</li>
-<li><strong>Note:</strong> This service account key will not be stored in any of our systems for privacy and security purposes.</li>
+<a href="#create-service-account-key">How to create the service account key?</a></li>
+<li><strong>Note:</strong> This service account key will not be stored in any of our systems for privacy and security purposes. Find more about 
+the security Measures and Implementation safeguards <a href="#security-measures-and-implementation-safeguards">here</a>.
+<img src="/../images/GCP-monitoring/upload-service-account-key.png"
+alt="Field of upload service account key"
+height=800
+width=800
+class="big-img"
+    >       </li>
 </ul>
 </li>
 <li><strong>Provide Cloud Run Details:</strong><ul>
 <li>Enter the name and the region of your Cloud Run resources for your tagging service.             <br />
-(<a href="#spot-cloud-run-resources">Click here to learn how to find the Cloud Run Details</a>)</li>
+<a href="#spot-cloud-run-resources">How to find the Cloud Run Details</a>                       <br />
+<img src="/../images/GCP-monitoring/add-cloud-run-resources.png"
+alt="Cloud run resource details field"
+height=800
+width=800
+class="big-img"
+    >            </li>
 </ul>
 </li>
-<li><strong>Start Configuration:</strong><ul>
-<li>Click on <code>Start Configuration</code> to initiate the process.</li>
+<li>
+<p><strong>Start Configuration:</strong></p>
+<ul>
+<li>Click on <code>Start Configuration</code> to initiate the process.            <br />
+<img src="/../images/GCP-monitoring/start-configuration.png"
+alt="Start configuration button"
+height=800
+width=800
+class="big-img"
+    ></li>
 </ul>
 </li>
-</ol>
-<hr />
-<h3 id="how-to-enable-server-side-error-logging">How to Enable Server-Side Error Logging</h3>
-<ol>
-<li><strong>Navigate to the Configuration Page:</strong><ul>
-<li>Go to the <a href="https://portal.code-cube.io/tag_monitor_config" target="_blank">Tag Monitor Configuration Page</a> on our portal.</li>
+<li>
+<p><strong>Confirm the implementation:</strong></p>
+<ul>
+<li>Once the following message appears on your screen, you can confirm that the implementation was successful.                 <br />
+<img src="/../images/GCP-monitoring/success-msg.png" 
+alt="Success message"
+height=800
+width=800
+class="big-img"
+        ></li>
 </ul>
 </li>
-<li><strong>Access the Monitoring Tab:</strong><ul>
-<li>Click on the <code>Monitoring via Google Cloud Platform</code> tab.</li>
-</ul>
-</li>
-<li><strong>Enable Server-Side Error Logging:</strong><ul>
-<li>Turn on the toggle for server-side error logging.</li>
-</ul>
-</li>
-<li><strong>Upload Service Account Key:</strong><ul>
-<li>Upload your service account key.          <br />
-(<a href="#create-service-account-key">Click here to learn how to create the service account key?</a>)</li>
-<li><strong>Note:</strong> This service account key will not be stored in any of our systems for privacy and security purposes.</li>
-</ul>
-</li>
-<li><strong>Start Configuration:</strong><ul>
-<li>Click on <code>Start Configuration</code> to initiate the process.</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h3 id="enabling-both-configurations">Enabling Both Configurations</h3>
-<p>If you wish to enable both Cloud Run monitoring and server-side error logging:</p>
-<ol>
-<li><strong>Turn On Both Toggles:</strong><ul>
-<li>Enable the toggles for both Cloud Run monitoring and server-side error logging.</li>
-</ul>
-</li>
-<li><strong>Follow the Steps:</strong><ul>
-<li>Follow the respective steps for each configuration as outlined above.</li>
-</ul>
-</li>
+<li><strong>Enable the notifications</strong> <br />
+    Set up your preferred notification methods (e.g., email or Slack) to receive alerts when an event occurs. </li>
 </ol>
 <hr />
 <h3 id="find-project-number">How to Find Your GCP Project Number</h3>
@@ -1361,14 +1279,24 @@
 <li>Sign in with your Google account if you're not already logged in.</li>
 </ul>
 </li>
-<li><strong>Select Your Project</strong>:<ul>
+<li>
+<p><strong>Select Your Project</strong>:</p>
+<ul>
 <li>In the top navigation bar, click on the project drop-down menu (typically displaying the name of your currently selected project).</li>
 <li>If you have multiple projects, select the one you want from the list.</li>
 </ul>
 </li>
-<li><strong>Locate the Project Number</strong>:<ul>
-<li>After selecting your project, the <strong>Project Info</strong> panel will appear on the dashboard.</li>
-<li>Your <strong>Project number</strong> will be displayed in this panel, usually right below the project name. </li>
+<li>
+<p><strong>Locate the Project Number</strong>:</p>
+<ul>
+<li>After selecting your project, the <strong>Project Info</strong> panel will appear on the dashboard.              </li>
+<li>Your <strong>Project number</strong> will be displayed in this panel, usually right below the project name. 
+<img src="/../images/GCP-monitoring/project-number.png"
+alt="Locate the Project Number in GCP"
+height=900
+width=900
+class="big-img"
+    >         </li>
 </ul>
 </li>
 </ol>
@@ -1385,20 +1313,60 @@
 <li>Ensure you have the correct project selected from the project selector dropdown at the top of the page.</li>
 </ul>
 </li>
-<li><strong>Go to the Service Accounts Page</strong><ul>
-<li>Navigate to <code>IAM &amp; Admin</code> &gt; <code>Service Accounts</code>.</li>
+<li><strong>Go to the Service Accounts Page</strong>             <ul>
+<li>Navigate to <code>IAM &amp; Admin</code> &gt; <code>Service Accounts</code>.                                        <br />
+<img src="/../images/GCP-monitoring/service-account.png"
+alt="Service Accounts Page in GCP"
+height=900
+width=900
+class="big-img"
+    ></li>
 </ul>
 </li>
 <li><strong>Create a New Service Account</strong><ul>
-<li>Click the <code>+ CREATE SERVICE ACCOUNT</code> button.</li>
+<li>Click the <code>+ CREATE SERVICE ACCOUNT</code> button.
+<img src="/../images/GCP-monitoring/create-service-account.png"
+alt="CREATE SERVICE ACCOUNT Button"
+height=900
+width=900
+class="big-img"
+    ></li>
 <li>Enter a name, ID, and description for the service account.</li>
 <li>Click <code>CREATE AND CONTINUE</code>.</li>
+<li>Copy the service account email into your clipboard for the next step.</li>
 </ul>
 </li>
 </ol>
 <h4 id="step-2-assign-roles-to-the-service-account">Step 2: Assign Roles to the Service Account</h4>
-<p>Assign the following roles to the service account to grant it the necessary permissions:</p>
-<ol>
+<ul>
+<li>Navigate to <code>IAM &amp; Admin</code> &gt; <code>IAM</code>.                   <br />
+    <img src="/../images/GCP-monitoring/IAM-tab.png"
+        alt="IAM page in GCP"
+        height=900
+        width=900
+        class="big-img"
+        ></li>
+<li>Click on <code>GRANT ACCESS</code> button.            <br />
+    <img src="/../images/GCP-monitoring/grant-access-btn.png"
+        alt="Grant access Button"
+        height=900
+        width=900
+        class="big-img"
+        ></li>
+<li>Paste your service account email from the previous step into the <code>New principals</code> field.           <br />
+    <img src="/../images/GCP-monitoring/add-principals.png"
+        alt="Add principals Button"
+        height=900
+        width=900
+        class="big-img"
+        ></li>
+<li>Assign the following roles to the service account to grant it the necessary permissions:
+    <img src="/../images/GCP-monitoring/add-role.png"
+        alt="Add role Button"
+        height=900
+        width=900
+        class="big-img"
+        ></li>
 <li><strong>Pub/Sub Admin:</strong><ul>
 <li>Resource: <code>google_pubsub_topic</code></li>
 <li>Role: <code>roles/pubsub.admin</code></li>
@@ -1440,21 +1408,39 @@
 <li>After adding all the roles, click <code>DONE</code>.  </li>
 </ul>
 </li>
-</ol>
-<p><strong>Note</strong>: You can also set the <strong>owner</strong> role to include all above-mentioned permissions to the service account at once. </p>
+</ul>
+<p><strong>Note:</strong> You can set the <strong>owner</strong> role to grant all of the permissions mentioned above to the service account in one step. However, be aware that this will also grant full access to the service account.</p>
 <h4 id="step-3-create-and-download-the-service-account-key">Step 3: Create and Download the Service Account Key</h4>
 <ol>
 <li><strong>Generate a New Key:</strong><ul>
 <li>In the <code>Service Accounts</code> page, find the service account you created.</li>
-<li>Click the <code>⋮</code> (three vertical dots) at the end of the service account row, then click <code>Manage keys</code>.</li>
+<li>Click the <code>⋮</code> (three vertical dots) at the end of the service account row, then click <code>Manage keys</code>.
+<img src="/../images/GCP-monitoring/manage-key-btn.png"
+alt="Manage key Button"
+height=900
+width=900
+class="big-img"
+    ></li>
 </ul>
 </li>
 <li><strong>Add Key:</strong><ul>
-<li>Click <code>ADD KEY</code> &gt; <code>Create new key</code>.</li>
+<li>Click <code>ADD KEY</code> &gt; <code>Create new key</code>.
+<img src="/../images/GCP-monitoring/add-key-btn.png"
+alt="Add key Button"
+height=900
+width=900
+class="big-img"
+    ></li>
 </ul>
 </li>
 <li><strong>Select Key Type:</strong><ul>
-<li>Choose the <code>JSON</code> key type and click <code>CREATE</code>.</li>
+<li>Choose the <code>JSON</code> key type and click <code>CREATE</code>.
+<img src="/../images/GCP-monitoring/create-json-key.png"
+alt="Create JSON key Button"
+height=900
+width=900
+class="big-img"
+    ></li>
 </ul>
 </li>
 <li><strong>Download Key:</strong><ul>
@@ -1462,20 +1448,6 @@
 </ul>
 </li>
 </ol>
-<h4 id="step-4-upload-the-service-account-key-to-our-portal">Step 4: Upload the Service Account Key to Our Portal</h4>
-<ol>
-<li><strong>Access Our Portal:</strong><ul>
-<li>Log in to our <a href="https://portal.code-cube.io/tag_monitor_config" target="_blank">portal</a> where the key is required for upload.</li>
-</ul>
-</li>
-<li><strong>Upload the Key:</strong><ul>
-<li>Navigate to the section where the service account key upload is requested.</li>
-<li>Click the <code>Upload</code> button and select the JSON key file you downloaded earlier.</li>
-<li>Follow any additional instructions provided to complete the upload process.</li>
-</ul>
-</li>
-</ol>
-<p>By completing these steps, you will have successfully created a service account with the required permissions and provided the necessary credentials for our portal to automate and manage processes effectively.</p>
 <hr />
 <h3 id="locate-cloud-run-resources">Identifying Cloud Run Services and Their Regions</h3>
 <p>To manage and monitor your Cloud Run services, you need to know the name and region of each service used for your tagging service. Follow these steps to locate your Cloud Run services and identify their corresponding names and regions.</p>
@@ -1490,7 +1462,13 @@
 </ul>
 </li>
 <li><strong>Access Cloud Run:</strong><ul>
-<li>From the navigation menu, go to <code>Cloud Run</code> under the <code>Serverless</code> section.</li>
+<li>From the navigation menu, go to <code>Cloud Run</code> under the <code>Serverless</code> section.
+<img src="/../images/GCP-monitoring/cloud-run-tab.png"
+alt="Cloud Run tab"
+height=900
+width=900
+class="big-img"
+    ></li>
 </ul>
 </li>
 </ol>
@@ -1503,7 +1481,13 @@
 <li><strong>Service Details:</strong><ul>
 <li>Each row in the list represents a Cloud Run service. The primary details displayed include:<ul>
 <li><strong>Service Name:</strong> The name of the Cloud Run service.</li>
-<li><strong>Region:</strong> The region where the service is deployed.</li>
+<li><strong>Region:</strong> The region where the service is deployed.
+<img src="/../images/GCP-monitoring/cloud-run-details.png"
+alt="Cloud Run tab"
+height=900
+width=900
+class="big-img"
+    ></li>
 </ul>
 </li>
 </ul>
@@ -1522,11 +1506,34 @@
 </ol>
 <p>By following these steps, you will be able to easily locate all Cloud Run services within your project and identify their names and regions needed for the implementation.</p>
 <hr />
+<h3 id="security-measures-and-implementation-safeguards">Security Measures and Implementation Safeguards</h3>
+<p>Our implementation process is built around a strong security framework that safeguards user data and blocks unauthorized access. Here's how we maintain top-level security throughout the process:</p>
+<ol>
+<li><strong>One-Time Use of Service Account Key:</strong><ul>
+<li>We keep your service account key secure by using it only once. The service account key, necessary for implementation, is never stored in our databases. This means that after the initial implementation, the key is discarded. Should you need to update your setup, you will be required to upload the key again. This approach eliminates any potential vulnerabilities associated with key storage.</li>
+</ul>
+</li>
+<li><strong>Strict Separation of Front-End and Back-End Processing:</strong><ul>
+<li>To minimize risk, the service account key file is never handled on the front-end. Instead, when you upload the key, it is sent as a binary file via secure HTTPS requests directly to our servers. By processing the key exclusively on the back-end, we prevent any exposure of sensitive information in the front-end environment, adding an extra layer of protection against potential security breaches.</li>
+</ul>
+</li>
+<li><strong>No Credentials Stored:</strong><ul>
+<li>In the event of a security breach, your credentials remain safe. Since we do not store the service account key or any sensitive credentials in our system, even a successful hack would yield no access to your Google Cloud resources. This ensures that your data and accounts remain secure, regardless of external threats.</li>
+</ul>
+</li>
+<li><strong>Limited Scope of Resource Creation:</strong><ul>
+<li>Our implementation is highly targeted and precise. We only create the resources explicitly required for the project within your Google Cloud environment, and nothing more. This controlled and minimalistic approach ensures that there are no unnecessary permissions or resources that could be exploited, further tightening security.          <br />
+<a href="#GCP-respurces">See the list of resources that will be created in your GCP project</a></li>
+</ul>
+</li>
+</ol>
+<p>By following these strict security practices, we secure your implementation, reducing risk and protecting your Google Cloud environment.</p>
+<hr />
 <h3 id="next-steps">Next Steps</h3>
-<p>By following these steps, Cloud Run monitoring and/or server-side error logging will be implemented and enabled for you. </p>
-<p><strong>What's Next?</strong>          </p>
 <p><strong>Enable Notification Methods</strong>    <br />
-Set up your preferred notification methods (e.g., email or Slack) to receive alerts when an event occurs. </p>
+Set up your preferred notification methods (e.g., email or Slack) to receive alerts when an event occurs. 
+You can enable the notifications from <a href="https://portal.code-cube.io/tag_monitor_config" target="_blank">Tag Monitor Configuration Page</a> on 
+our portal.</p>
 
 
 
