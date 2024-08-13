@@ -79,7 +79,7 @@ To enable the feature you need to take the steps below:
         >       
 6. **Provide Cloud Run Details:**
     - Enter the name and the region of your Cloud Run resources for your tagging service.               
-    [How to find the Cloud Run Details](#spot-cloud-run-resources)                         
+    [How to find the Cloud Run Details](#locate-cloud-run-resources)                         
     <img src="/../images/GCP-monitoring/add-cloud-run-resources.png"
     alt="Cloud run resource details field"
     height=800
