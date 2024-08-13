@@ -24,8 +24,8 @@ nav:
           - Enabling Tag Inactivity: tag-monitor/tag-inactivity.md
           - Access to Tag Monitor dataset(s) in BigQuery: tag-monitor/access-to-bigquery-dataset.md
           - Consent Monitoring: tag-monitor/consent-monitoring.md
-          - Server-side error logging: tag-monitor/serverside-error-logging.md
-          - Monitoring via Google Cloud: tag-monitor/monitoring-via-google-cloud.md
+          - Cloud Run Monitoring: tag-monitor/cloud-run-monitoring.md
+          - Server-side error logging: tag-monitor/server-side-error-logging.md
   - DataLayer Guard:
       - Introduction: datalayer-guard/intro.md
       - Monitoring via scraped events: datalayer-guard/scraped-events.md
