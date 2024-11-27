@@ -18,11 +18,7 @@ For more specific insights on the Code Cube errors you can enable the BigQuery o
 
 1. Make sure the ‘UET config’ tag is installed and fires on every page.
     
-    ![image.png](image.png)
-    
 2. Make sure to add the right variable for the parameter ‘UETQ variable ID’. This is for example ‘uetq’.
-    
-    ![image.png](image%201.png)
     
 3. Make sure Microsoft Consent Mode is configured correctly.
 
