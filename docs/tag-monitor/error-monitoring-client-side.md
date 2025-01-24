@@ -1,4 +1,4 @@
-# Google Tag Manager Client-Side: Configuring Tag Monitor
+# Setting up the Tag Monitor: client-side Google Tag Manager
 
 This guide will walk you through the steps to set up the Tag Monitor for your Google Tag Manager client-side container. Make sure to finalize the configuration on step **product settings** on the Tag Monitor [configuration page](https://portal.code-cube.io/tag_monitor_config) first, before starting on these steps.
 
